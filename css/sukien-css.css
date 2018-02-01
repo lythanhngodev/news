@@ -1,0 +1,53 @@
+/* CSS Document */
+/*
+  Author Groups: Ly - Linh - Thanh
+*/
+.su-kien-sk{
+  width: 100%;
+  margin: 0 auto;
+  float: left;
+  background-color: #ffffff;
+  margin-top: 2rem;
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  padding-left: 2rem;
+}
+.tieu-de-sk h2:hover{
+  color: #dc3939;
+}
+.khung-chua-hinh-sk{
+  width: 28%;
+  float: left;
+}
+.khung-chua-hinh-sk img{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* */
+
+.khung-chua-tin-sk{
+  width: 70%;
+  float: left;
+  padding-left: 1rem;
+  text-align: left;
+}
+.khung-chua-tin-sk .tieu-de-sk{
+  color: #484848;
+  font-weight: bold;
+  font-family: Arial;
+}
+.khung-chua-tin-sk .tieu-de-sk > h2{font-size: 21px;margin: 0;font-weight: 400;}
+.khung-chua-tin-sk .mo-ta-sk{
+  font-size: 13px;
+  color: #757575;
+  font-family: sans-serif;
+}
+.ngay-thang-sk{
+  height: 12%;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #212121;
+}

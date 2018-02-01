@@ -1,0 +1,16 @@
+/* CSS Document */
+
+.xem-them-hot{
+	height:3rem;
+	text-align:center;
+	float: left;
+	width:100%;
+}
+#xem-them-btn{
+	width: 18rem;
+	font-size: 120%;
+	color: #fff;
+}
+#xem-them-btn:hover{
+	text-decoration:none;
+}

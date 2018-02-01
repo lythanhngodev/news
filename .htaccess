@@ -1,0 +1,5 @@
+RewriteEngine On
+ErrorDocument 404 http://localhost/congngheviet/loi.php
+RewriteRule "^(.*)-(.*).html$" "?p=chitiet&id=$2&khongdau=$1"
+RewriteRule "^chuyenmuc/(.*)/(.*)$" "?p=chuyenmuc&id=$1&tenchuyenmuc=$2"
+RewriteRule "^author/(.*)/(.*)$" "?p=author&iduser=$1&linkuser=$2"

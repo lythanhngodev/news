@@ -1,0 +1,393 @@
+/* CSS Document */
+/*
+Author: Ly
+Facebook: https://fb.com/ly.ngothanh
+*/
+/*
+.fadeInBlock {
+    opacity:0;
+}*/
+
+
+*{
+	padding: 0;
+	margin:0;
+	}
+body{
+	background:#fff;
+	box-shadow: #737373;
+	width: 100%;
+}
+#container{
+	width: 85%;
+	margin: 0 auto;
+	margin-top: 2rem;
+	box-shadow: -1px 1px 0px rgba(33, 33, 33, 0.14);
+}
+#logo-head{
+width:  100%;
+float:left;
+}
+.banner{
+	float: right;
+}
+
+#logo-head img{height: 90px;margin-left: 6.5rem;margin-right: 8.5rem;padding-top: 10px;padding: 8px;float:  left;}
+#logo-head .banner img{
+}
+/* Menu */
+#menu{
+	margin: 0 auto;
+	width: 85%;
+	border-bottom: 3px solid #fff;
+}
+#menu ul{
+	list-style-type:none;
+	height: 48px;
+	margin: 0;
+	}
+#menu ul li{
+	font-family: 'Open Sans', arial, sans-serif;
+	font-size: 16px;
+	text-align:center;
+	text-decoration:none;
+	text-transform:uppercase;
+	color:#444;
+	float:left;
+	height: 45px;
+	line-height: 48px;
+	transition:all 0.6s;
+	-webkit-transition:all 0.6s;
+	-moz-transition:all 0.6s;
+}
+.active{
+	border-bottom: 4px solid #b32e2e;
+}
+#main-menu{
+	
+box-shadow: 0px 9px 15px -9px #2121214d;
+	
+width:  100%;
+	
+float:  left;
+}
+/* bai viet moi */
+.bai-viet-moi{
+	margin-top: 1.5rem;
+	padding: 8px 12px;
+	width: fit-content;
+	font-family: sans-serif;
+	font-size: 12px;
+	margin-left: 1.5rem;
+	color: rgba(255, 255, 255, 0.95);
+	font-weight: 400;
+	background: #dc3939;
+	float: left;
+	}
+.gach-chan{
+	width: 97%;
+	height:2px;
+	float:left;
+	bottom:0;
+	left:0;
+	margin-left: 1.5rem;
+	margin-top: -1rem;
+	background-color: rgb(220, 57, 57);
+	}
+.cong-nghe{
+	width: 10rem;
+	margin-left: 0rem;
+}
+.cong-nghe:hover{
+	background-color:#e74c3c;
+	}
+.su-kien{
+	width: 8rem;
+}
+.su-kien:hover{
+	background-color:#16a085;
+	}
+.danh-gia{
+	width: 9rem;
+}
+.danh-gia:hover{
+	background-color:#2980b9;
+	}
+.thu-thuat-ung-dung{
+	width:19rem;
+	}
+.thu-thuat-ung-dung:hover{
+	background-color: #56847e;
+	}
+.khuyen-mai-qc{
+	width: 21rem;
+}
+
+.khuyen-mai-qc:hover{
+	background-color: #8e44ad;
+}
+
+#menu ul li a{
+	color: #000;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	display:block;
+	padding: 0px 14px;
+	font-weight: 700;
+}
+#menu ul li a:hover{
+	border-bottom: 4px solid #b32e2e;
+}
+#tim-kiem{
+	margin-right:0.0rem;
+	}
+#tim-kiem:hover{
+	transition: all 0.6s;
+	-webkit-transition: all 0.6s;
+	-moz-transition: all 0.6s;
+	background-color:#dadada;
+	}
+	/* Phan tim kiem*/
+.black-mask{
+	background: #fff;
+}
+dropdown-menu-right{
+	position: absolute;
+	z-index: 1000;
+	margin: 0 auto;
+	top: 20%;
+	width: 100%;
+	margin: 0 auto;
+	display: none;
+	}
+.dropdown-menu-right form,
+.dropdown-menu-right form input{
+    width: 100%;
+}
+.dropdown-menu-right .form-group{
+    margin-bottom: 0;
+    vertical-align: middle;
+    width: 80%;
+    margin: 16rem;
+    margin-top: 12rem;
+}
+.dropdown-menu-right form input{
+    width: 100%;
+    border: none;
+    background: rgba(0, 0, 0, 0.07);
+    padding: 10px;
+    font-size: 20px;
+}
+.dropdown-menu-right .close-button{
+    position: fixed;
+    padding: 20px;
+    z-index: 1021;
+    top: 10px;
+    right: 10px;
+}
+.black-mask:
+/* Phan Logo*/
+.logo{
+	}
+.logo img{
+	display: block;
+	position: static;
+	width: 32px;
+	height: auto;
+	margin: 1rem;
+}
+.logo:hover{
+	background-color:#D0D0D0;
+}
+/* -- menu --*/
+
+/*-- Tin moi dang --*/
+#tin-moi{
+	width:100%;
+	float:left;
+	margin-top:0.2rem;
+}
+#tin-moi .dong{
+	float:left;
+	position: relative;
+}
+#dong1, #dong2{}
+#dong1{
+	position:  relative;
+	}
+#dong1:hover,#dong3:hover,#dong4:hover,#dong5:hover{
+	transition: all 0.234s;
+    background-blend-mode: overlay;
+	}
+#dong1:hover .nen-noi,#dong3:hover .nen-noi,#dong4:hover .nen-noi,#dong5:hover .nen-noi{
+	transition: all 0.234s;
+	background-color: #5d5d5d00;
+}
+#dong1:hover .ten-cm,#dong3:hover .ten-cm,#dong4:hover .ten-cm,#dong5:hover .ten-cm{
+	transition: all 0.234s;
+	background-color: #dc3939;
+}
+#tin-hot{
+	width:100%;
+	float:left;
+	border: 1px solid #f1f1f1;
+	padding:0px 10px;
+	margin-bottom: 2rem;
+	margin-top: 2.6rem;
+}
+#tin-hot div{
+	margin: 0.6rem 1rem;
+	float: left;
+}
+#tin-hot .toi-lui{
+	float:right;
+	margin:12px 2px;
+	margin-top: 16px;
+}
+#tin-hot .toi-lui i{
+	font-size: 22px;
+	padding: 0px 8px;
+	border: 1px solid #e4e4e4;
+	color: #a9a9a9;
+}
+#tin-hot .toi-lui i:hover{
+	transition: all 0.234s;
+	border: 1px solid #9e9e9e;
+	color: #444444;
+}
+
+#tin-hot div h4{
+	background: #dc3939;
+	width:fit-content;
+	padding: 5px 8px;
+	color: #fff;
+	font-weight:bold;
+	font-size:14px;
+}
+#tin-hot div span{
+	margin: 12px 0px;
+	float:  left;
+	color: #212121;
+}
+#tin-hot div span:hover{
+	color:#dc3939;
+}
+#dong2{
+}
+.anh-thu-nho-1{
+	width:100%;
+	max-height: 34rem;
+}
+.anh-thu-nho-13{
+	width: 100%;
+	height: 16.5rem;
+}
+/* -- Tieu de bai viet -- */
+.nam-tren-hinh{
+	}
+.tieu-de-ngan{
+	font-size: 90%;
+	}
+.ten-cm{
+	width:fit-content;
+	background: #5d5d5d;
+	padding:3px 5px;
+	font-size: 10px;
+	font-weight:600;
+	margin-left:2rem;
+	margin-top: 1rem;
+	text-transform:  uppercase;
+}
+.ngay-thang-dang{
+	font-size: 100%;
+	padding-left: 2rem;
+	margin-bottom: 1rem;
+	margin-top: -10px;
+	}
+.nen-noi{
+	position: absolute;
+	color: #fff;
+	font-family: Arial;
+	font-size: 14px;
+	bottom: 0;
+	}
+.nen-noi:hover{
+	background-color: #5d5d5d;
+	transition: all 0.234s;
+}
+/* -- Tieu de bai viet 33 -- */
+#dong4, #dong5{
+	width: 24.5%;
+	margin-left: 0.5rem;
+	position: relative;
+	margin-top: 0.5rem;
+	}
+.nam-tren-hinh33{
+	}
+.tieu-de-ngan h2,.tieu-de-ngan33 h2{
+	padding: 8px 16px 16px 16px;
+	margin: 0;
+	font-size: 25px;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.tieu-de-ngan33{
+	font-size: 85%;
+	}
+.ngay-thang-dang33{
+	font-size: 69%;
+	padding-left: 2rem;
+	margin-top: -10px;
+	}
+.nen-noi33{
+	position: absolute;
+	bottom: 0;
+	color: #fff;
+	font-family: Arial;
+	font-size: 121%;
+	}
+
+/* Hieu ung khi re chuot qua cac bai viet moi
+.dong:hover .nen-noi,.dong:hover .nen-noi33{
+	background-color: rgba(185, 61, 48, 0.8);
+	}*/
+
+/* Clear */
+.clear{
+	width:100%;
+	height:1rem;
+	display:block;
+	float:left;
+	}
+
+/* Toi uu hoa website*/
+@media all and (min-width: 1025px){
+
+}
+/* Danh cho dien thoai - theo chieu doc */
+@media all and (max-width: 320px) {
+
+}
+/* Danh cho dien thoai - theo chieu ngang */
+@media all and (max-width: 480px) {
+
+}
+/* Danh cho may tinh bang - theo chieu doc */
+@media all and (max-width: 600px) {
+
+}
+/* Danh cho may tinh bang - theo chieu ngang */
+@media all and (max-width: 800px) {
+
+}
+/* Danh cho may tinh bang loai TO - theo chieu doc */
+@media all and (max-width: 768px) {
+
+}
+/* Danh cho may tinh bang loai TO - theo chieu ngang */
+@media all and (max-width: 1024px) {
+
+}
+/* Danh cho may tinh bang - theo chieu ngang */
+
+/* Back to top*/

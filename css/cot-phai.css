@@ -1,0 +1,45 @@
+/* CSS Document */
+#cot-phai{
+	float:left;
+	width: 27.5%;
+	margin-top: 1.5em;
+}
+.tieu-de-xem-nhieu{
+	background-color: rgba(0, 0, 0, 0.51);
+	margin-top: -6.5rem;
+	color: #fff;
+	font-family: Arial;
+	font-weight: bold;
+	height: 65px;
+	text-align: left;
+	padding-top: 0.4rem;
+	padding-left: 0.4rem;
+	position: relative;
+	}
+.fb-page{
+	padding-left: 12px;
+}
+#fanpage{
+	width: 90% !important;
+	margin: 0 auto;
+}
+#xem-nhieu{
+	}
+#xem-nhieu h2{
+	font-size: 100%;
+	font-family: arial;
+	color: rgba(33, 33, 33, 0.76);
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-left: 0.8rem;
+	}
+.khung-chua-xem-nhieu{
+	width: 98%;
+	margin: 0 auto;
+	margin-bottom: 1.5rem;
+	margin-right: 0rem;
+	margin-left: 1rem;
+	}
+.khung-chua-xem-nhieu a{
+	text-decoration: none;
+	}
