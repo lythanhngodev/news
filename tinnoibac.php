@@ -35,7 +35,7 @@
 										<div class="tieu-de-ngan">
 											<h2 style="font-size: 34px;"><?php echo $row["tenbv"] ?></h2>
 										</div>
-									<div class="ngay-thang-dang"><span class="fa fa-calendar" itemprop="dateCreated">&nbsp;&nbsp;<?php echo $row["ngaydang"] ?></span></div>
+									<div class="ngay-thang-dang"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;<span><?php echo $row['ngaydang'] ?></span></div>
 									</div>
 							</a>
 					</article>
@@ -51,7 +51,7 @@
 								<div class="tieu-de-ngan33">
 									<h2 style="font-size: 18px;"><?php echo $row["tenbv"] ?></h2>
 							</div>
-							<div class="ngay-thang-dang"><span class="fa fa-calendar" itemprop="dateCreated">&nbsp;&nbsp;<?php echo $row["ngaydang"] ?></span></div>
+							<div class="ngay-thang-dang"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;<span><?php echo $row['ngaydang'] ?></span></div>
 							</div>
 					</a>
 			</article>
@@ -67,7 +67,7 @@
                 	<div class="tieu-de-ngan33">
                     <h2 style="font-size: 18px;"><?php echo $row["tenbv"] ?></h2>
                 </div>
-                <div class="ngay-thang-dang33"><span class="fa fa-calendar" itemprop="dateCreated">&nbsp;&nbsp;<?php echo $row["5"] ?></span></div>
+                <div class="ngay-thang-dang33"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;<span><?php echo $row['ngaydang'] ?></span></div>
                 </div>
             </a>
 
@@ -84,7 +84,7 @@
                 	<div class="tieu-de-ngan33">
                     <h2 style="font-size: 18px;"><?php echo $row["tenbv"] ?></h2>
                 </div>
-                <div class="ngay-thang-dang33"><span class="fa fa-calendar" itemprop="dateCreated">&nbsp;&nbsp;<?php echo $row["ngaydang"] ?></span></div>
+                <div class="ngay-thang-dang33"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;<span><?php echo $row['ngaydang'] ?></span></div>
                 </div>
             </a>
 
@@ -101,7 +101,7 @@
                 	<div class="tieu-de-ngan33">
                     <h2 style="font-size: 18px;"><?php echo $row["tenbv"] ?></h2>
                 </div>
-                <div class="ngay-thang-dang33"><span class="fa fa-calendar" itemprop="dateCreated">&nbsp;&nbsp;<?php echo $row["ngaydang"] ?></span></div>
+                <div class="ngay-thang-dang33"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;<span><?php echo $row['ngaydang'] ?></span></div>
                 </div>
             </a>
 

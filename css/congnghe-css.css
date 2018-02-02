@@ -4,21 +4,21 @@ Author: Ly Thanh Ngo - Tran Thi Tuyet Linh, Le Huyen Thanh
 Facebook: https://fb.com/ly.ngothanh
 */
 #cot-trai{
-	width:72%;
+	width: 68%;
 	background-color: rgb(255, 255, 255);
 	float:left;
-    margin-top: 1em;
+	margin-top: 1em;
 }
-/* Ã„â€˜ÃƒÂ¢y lÃƒÂ  Ã„â€˜oÃ¡ÂºÂ¡n comment....*/
+/* ÃƒÆ’Ã¢â‚¬Å¾ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢y lÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  ÃƒÆ’Ã¢â‚¬Å¾ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“oÃƒÆ’Ã‚Â¡Ãƒâ€šÃ‚ÂºÃƒâ€šÃ‚Â¡n comment....*/
 #khung-bai-viet{
 
 }
 .khung-chua-bai-viet-cn{
-	width: 32.3%;
-	margin-left: 0.65rem;
+	width: 23.6%;
+	margin-left: 1rem;
 	margin-top: 0.8rem;
 	background-color: #fff;
-	box-shadow: 0px 0px 8px px rgba(33, 33, 33, 0.1);  
+	box-shadow: 0px 0px 8px px rgba(33, 33, 33, 0.1);
 	float: left;
 	transition:all 0.3s;
 	-webkit-transition:all 0.3s;
@@ -33,12 +33,11 @@ Facebook: https://fb.com/ly.ngothanh
 .cong-nghe-moi{
 	}
 .tieu-de-ngan-nho-cn h3{
-	font-family: arial;
-	font-size: 110%;
-	padding-left: 0.4rem;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
 	color: #4e4e4e;
-	padding-right: 0.4rem;
-	font-weight: bold;
+	font-weight: 600;
+	margin-top: 1rem;
 	}
 .ngay-thang-dang-nho-cn{
 	font-family: Arial;

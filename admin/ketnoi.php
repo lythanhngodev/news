@@ -41,7 +41,7 @@
 		/* 6 bai viet hot nhat */
 		function get_bai_viet_moi(){
 			$kn = $this->connect();
-			$lenh = "SELECT idbv, tenbv, idcm, thumb, linkbv, mota, ngaydang FROM `tblbaiviet` where hienthi=1 ORDER BY idbv DESC LIMIT 6";
+			$lenh = "SELECT idbv, tenbv, idcm, thumb, linkbv, mota, ngaydang FROM `tblbaiviet` where hienthi=1 ORDER BY idbv DESC LIMIT 4";
 			$kq = mysql_query($lenh,$kn);
 			$kiemtra = mysql_num_rows($kq);
 			mysql_close();
@@ -52,7 +52,7 @@
 		/* 6 bai viet hot nhat */
 		function get_congnghe_news(){
 			$kn = $this->connect();
-			$lenh = "SELECT idbv, tenbv, idcm, thumb, linkbv, mota, ngaydang FROM tblbaiviet where idcm = 1 ORDER BY idbv DESC LIMIT 6";
+			$lenh = "SELECT idbv, tenbv, idcm, thumb, linkbv, mota, ngaydang FROM tblbaiviet where idcm = 1 ORDER BY idbv DESC LIMIT 8";
 			$kq = mysql_query($lenh,$kn);
 			$kiemtra = mysql_num_rows($kq);
 			mysql_close();
@@ -62,7 +62,7 @@
 		}
 		function get_danhgia_news(){
 			$kn = $this->connect();
-			$lenh = "SELECT idbv, tenbv, idcm, thumb, linkbv, mota, ngaydang FROM tblbaiviet where idcm = 3 ORDER BY idbv DESC LIMIT 6";
+			$lenh = "SELECT idbv, tenbv, idcm, thumb, linkbv, mota, ngaydang FROM tblbaiviet where idcm = 3 ORDER BY idbv DESC LIMIT 8";
 			$kq = mysql_query($lenh,$kn);
 			$kiemtra = mysql_num_rows($kq);
 			mysql_close();
@@ -250,7 +250,7 @@
                 WHERE hienthi = 1
                 and idcm = 2
                 ORDER BY idbv DESC
-                LIMIT 0,5
+                LIMIT 4
             ";
 			$kq = mysql_query($lenh,$kn);
 			return $kq;
@@ -359,7 +359,15 @@
 					From tblbaiviet
 					WHERE ngaydang <= '$today' and ngaydang >= '$week'
 					ORDER by luotxem DESC
-					Limit 0,6
+					Limit 0,8
+			";
+			return mysql_query($lenh,$kn);
+		}
+		/* Lấy tin ngẫu nhiên */
+		function get_content_random($today,$week){
+			$kn = $this->connect();
+			$lenh = "
+					SELECT idbv,tenbv,idcm,thumb,linkbv FROM tblbaiviet ORDER BY RAND() LIMIT 8
 			";
 			return mysql_query($lenh,$kn);
 		}

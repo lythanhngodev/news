@@ -11,6 +11,7 @@
   -moz-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   padding-left: 2rem;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .tieu-de-sk h2:hover{
   color: #dc3939;
@@ -18,6 +19,11 @@
 .khung-chua-hinh-sk{
   width: 28%;
   float: left;
+}
+.hinh-anh-thumb{
+  height:130px;
+  background-size: cover;
+  background-position: center;
 }
 .khung-chua-hinh-sk img{
   width: 100%;
@@ -32,13 +38,14 @@
   float: left;
   padding-left: 1rem;
   text-align: left;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .khung-chua-tin-sk .tieu-de-sk{
   color: #484848;
   font-weight: bold;
   font-family: Arial;
 }
-.khung-chua-tin-sk .tieu-de-sk > h2{font-size: 21px;margin: 0;font-weight: 400;}
+.khung-chua-tin-sk .tieu-de-sk > h2{font-size: 20px;margin: 0;font-weight: 400;}
 .khung-chua-tin-sk .mo-ta-sk{
   font-size: 13px;
   color: #757575;
@@ -47,7 +54,13 @@
 .ngay-thang-sk{
   height: 12%;
   width: 100%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  color: #212121;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #545454;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.ngay-thang-sk > span{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  font-size: 12px;
 }

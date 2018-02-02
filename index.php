@@ -60,9 +60,6 @@
     <!--- 6 tin moi -->
     <?php require_once("tinmoi.php");?>
     <!--- Xem thêm -->
-    <div class="xem-them-hot">
-    	 <a href="chuyenmuc/1/cong-nghe" class="waves-effect waves-light btn-large" id="xem-them-btn">Xem thêm</a>
-    </div>
     <!--- Clear FIX ->
     <div class="clear"></div>
     <!- Ban tin cong nghe -->
@@ -110,11 +107,6 @@
         require_once("chuyenmuc/cm-thu-thuat-ung-dung.php");
     }
 	else
-	if(isset($_GET["p"]) && $_GET["p"] == "chuyenmuc" && isset($_GET["id"]) && $_GET["id"]=="5"){
-        # Chuyển sang trang chuyên mục
-        require_once("chuyenmuc/cm-km-qc.php");
-    }
-	else
 	# nội dung bài viết chi tiết
 	if(isset($_GET["p"]) && $_GET["p"] == "chitiet" && isset($_GET["id"])){
         # Chuyển sang trang chuyên mục
@@ -140,10 +132,19 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
             </div>
-		<div class="fb-page" data-href="https://www.facebook.com/DevelopXperiaVN/" data-small-header="false" data-adapt-container-width="true" data-width="285px" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/DevelopXperiaVN/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/DevelopXperiaVN/">Cộng đồng phát triển Xperia</a></blockquote></div>
-   <div id="xem-nhieu">
+		<div class="fb-page" data-href="https://www.facebook.com/DevelopXperiaVN/" data-small-header="false" data-adapt-container-width="true" data-width="333px" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/DevelopXperiaVN/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/DevelopXperiaVN/">Cộng đồng phát triển Xperia</a></blockquote></div>
+   <div class="xem-nhieu">
    	<h2>XEM NHIỀU TRONG TUẦN</h2>
+    <div class="line"></div>
         <?php require_once("tinxemnhieu.php") ?>
+    </div>
+    <div class="banner-1">
+        <a href="#"><img src="images/banner.png"></a>
+    </div>
+   <div class="xem-nhieu">
+    <h2>TIN NGẪU NHIÊN</h2>
+    <div class="line"></div>
+        <?php require_once("tinngaunhien.php") ?>
    </div>
 </div>
 <!-- Cot phai -->
@@ -154,7 +155,6 @@
         <li class="su-kien-ft"><a href="?p=chuyenmuc&id=2" id="xanh-la">Sự kiện</a></li>
         <li class="danh-gia-ft"><a href="?p=chuyenmuc&id=3" id="xanh-duong">Đánh giá</a></li>
         <li class="thu-thuat-ung-dung-ft"><a href="?p=chuyenmuc&id=4" id="xanh-reu">Thủ thuật - ứng dụng</a></li>
-        <li class="khuyen-mai-qc-ft"><a href="?p=chuyenmuc&id=5" id="tim">Khuyến mãi - Quảng cáo</a></li>
     </ul>
     <div class="ban-quyen">&copy; CÔNG NGHỆ VIỆT 2017 | Tel: +841214967197 | Author Groups: Lý Thanh Ngô - Trần Thị Tuyết Linh - Lê Huyền Thanh Who're students of Vinh Long University Of Technology Education</div>
     <div class="thuc-hien"></div>

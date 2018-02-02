@@ -4,11 +4,12 @@
   $week = strtotime(date("Y-m-d", strtotime($today))."-7day"); // trừ ngày hiejn tại cho 7  - tức 1 tuần
   $week = strftime("%Y-%m-%d", $week);
   $kn = new ketnoi();
-  $kq = $kn->get_content_of_week($today,$week);
+  $kq = $kn->get_content_random($today,$week);
   while ($row = mysql_fetch_array($kq)) {
     $tt="";
     $mang = explode(' ', trim($row['tenbv']));
     if (count($mang)>8) {
+      $tt="";
       for ($i=0; $i <8; $i++) { 
         $tt.=$mang[$i]." ";
       }
