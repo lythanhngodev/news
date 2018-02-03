@@ -1,0 +1,155 @@
+@charset "utf-8";
+/*
+ *
+ *  CSS - VLUTE - ĐẠI HỌC SƯ PHẠM KỸ THUẬT VĨNH LONG
+ *  Author: Ngô Thanh Lý
+ *  Facebook: https://facebook.com/ly.ngothanh
+ *  Flickr: https://www.flickr.com/lythanhngo
+ *  500px: https://500px.com/alphotographyvn
+ *  Mail: lythanhngodev@gmail.com
+ *  Phone: +841214967197
+ *  Orther: Students of Vinh Long University Of Technology Education - Faculty of Information Technology
+ *  Version: 1.0.0 beta
+ *
+ *
+ *  ---        ---   222         96      69    $$$$$$$$$$$  !!!!!!!!!!!
+ *   ---      ---    222         69      96        $$$      !!!
+ *    ---    ---     222         96      69        $$$      !!!
+ *     ---  ---      222         69      96        $$$      !!!!!!!!!
+ *      ------       222         96      69        $$$      !!!
+ *       ++++        222ooooooo   QQQ  QQQ         $$$      !!!
+ *        ++         555ooooooo    %%%%%%          $$$      !!!!!!!!!!!
+ *
+ */
+ .line{
+    height: 2px;
+    background-color: #ccc;
+ }
+ .giua{
+    text-align: center;
+ }
+ .cach{
+    height: 10px;
+ }
+.khung-slider{
+    background: #efefef;
+    border: 1px solid rgba(220, 220, 220, 0.5);
+    border-radius: 4px;
+    padding: 0;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+ }
+ .khung-them-slider{
+    background: #efefef;
+    border: 5px dashed rgba(220, 220, 220, 0.5);
+    border-radius: 4px;
+    padding: 0;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+ }
+ .khung-them-slider:hover,.khung-them-slider:hover .khung-them-slider p{
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    background-color: #e8e8e8;
+    cursor: pointer;
+    color: #2793e8;
+ }
+ .giua .btn,.btn{
+    padding: 3px 8px;
+ }
+ .khung-slider:hover{
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    box-shadow: 4px 4px 10px 1px #e2e2e2;
+ }
+ .khung-tin-trai{
+    background: #efefef;
+    padding-top: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-left: -12px;
+ }
+ .khung-tin-bu{
+    background: #efefef;
+    padding-top: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+ }
+ .khung-tin-phai{
+    background: #efefef;
+    padding-top: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-left: 12px;
+ }
+ .khung-chua-bai{
+    padding-right: 0px;
+ }
+ .chua-hinh-anh{
+  width: 100%;
+ }
+ #id-hinhanh,#id-hinhanh-edit,#id-hinhanh-sua{
+    width: 100%;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 6px;
+ }
+ .khung-loi-bai-viet{
+    height: 50px;
+    line-height: 46px;
+    background-color: rgba(255, 151, 151, 0.17);
+    color: #f00;
+    border: 2px dashed #ff6363;
+ }
+ .hinh-anh-user{
+    padding: 0;
+    text-align: center;
+ }
+ .khung-tin-mk{
+    background: #efefef;
+    padding-top: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+ }
+.reset{
+    padding: 4px;
+}
+.rows{
+
+}
+.container{
+    width: 100%;
+}
+.left{
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    padding: 5px;
+}
+.cach-p{
+    margin-bottom: 0;
+}
+.hinh-slider{
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px 5px 0px 0px;
+}
+.xoa-modal{
+    font-size: 30px;
+    border-radius: 4px;
+    background-color: rgba(199, 55, 44, 0.31);
+    padding: 10px;
+    border: 2px dashed rgba(199, 55, 44, 0.31);
+}
+strike{
+    padding: 0;
+    margin: 0;
+}
+p{
+    margin: 0;
+}
