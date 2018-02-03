@@ -44,23 +44,29 @@
                   <input type="button" class="btn btn-info" onclick="BrowseServer()" value="Chọn từ ...">
                 </div>
                 <div class="form-group chua-hinh-anh">
-                  <img src="../<?php echo $hinhanh; ?>" id="id-hinhanh" />
+                  <img src="../<?php echo $thumb; ?>" id="id-hinhanh" />
                   <input type="text" hidden="hidden" name="hinhanh" id="id-hinhanh-ct" value="">
                 </div>
                 <div class="form-group">
+                  <label>Tên bài viết (SEO)</label>
+                  <input type="text" class="form-control" name="tukhoaseo" id="" placeholder="Tên bài viết SEO" value="<?php echo $tieude; ?>">
+                  <p class="help-block">Tiêu đề SEO của bài viết.</p>
+                </div>
+
+                <div class="form-group">
                   <label>Từ khóa</label>
-                  <input type="text" class="form-control" name="tukhoa" id="" placeholder="Từ khóa" value="<?php echo $tukhoa; ?>">
+                  <input type="text" data-role="tagsinput" value="jQuery,Script,Net">
                   <p class="help-block">Các từ khóa cách nhau bằng dấu phẩy.</p>
                 </div>
                 <div class="form-group">
                   <label>Link bài viết</label>
                   <input type="text" class="form-control" name="linkbaiviet" id="lbv" placeholder="Link bài viết" required autocomplete="on" value="<?php echo $linkbv; ?>">
                 </div>
-                <div class="form-group">
+                <div class="form-group hide">
                   <label>Ngày đăng</label>
                   <input type="date" class="form-control" name="ngaydang" id="ngaydangtin" value="<?php echo $ngaydang; ?>">
                 </div>
-                <div class="form-group">
+                <div class="form-group hide">
                   <label>Lượt xem</label>
                   <input type="text" class="form-control" name="luotxem" id="" placeholder="Lượt xem" value="<?php echo $luotxem; ?>">
                 </div>
@@ -69,6 +75,12 @@
                   <br>
                   <input type="checkbox" <?php if($hienthi=='1'){echo "checked=\"checked\"";} ?> class="" name="anhien" id=""> Ẩn/Hiện bài viết
                   <p class="help-block">Nếu được kích hoạt bài viết sẽ được phép hiển thị trên trang web</p>
+                </div>
+                <div class="form-group">
+                  <label>Bật/Tắt bài viết nổi bật</label>
+                  <br>
+                  <input type="checkbox" <?php if($tinnoibac=='1'){echo "checked=\"checked\"";} ?> class="" name="anhien" id=""> Bật/Tắt bài viết nổi bật
+                  <p class="help-block">Nếu được kích hoạt bài viết sẽ hiển thị nổi bật trên trang web</p>
                 </div>
               </div>
 
@@ -84,6 +96,7 @@
           </div>
       </div>
     </div>
+
 <script>
     CKEDITOR.replace( 'noidungbaiviet', {
       filebrowserBrowseUrl : 'ckfinder/ckfinder.html',
@@ -121,3 +134,4 @@
     	$("#baiviet").addClass("active");
 	});
 </script>
+

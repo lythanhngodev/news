@@ -3,7 +3,7 @@
 	$suathanhcong = 1;
 	function vlu_load_chuyen_muc_khong_chua_chuyen_muc_bai_viet($idbv){
 		$ketnoi = new clsKetnoi();
-		$hoi = "SELECT * FROM chuyenmuc WHERE idcm not in (SELECT idcm FROM baiviet WHERE idbv = '$idcm') and hienthi='1'";
+		$hoi = "SELECT * FROM tblcm WHERE idcm not in (SELECT idcm FROM tblbaiviet WHERE idbv = '$idcm') and hienthi='1'";
 		$chuyenmuc = mysqli_query($ketnoi->ketnoi(), $hoi);
 		while ($row_cm = mysqli_fetch_assoc($chuyenmuc)) {
 		?>
@@ -13,7 +13,7 @@
 	}
 	function vlu_load_chuyen_muc_tu_bai_viet($idbv){
 		$ketnoi = new clsKetnoi();
-		$hoi = "SELECT * FROM chuyenmuc WHERE idcm in (SELECT idcm FROM baiviet WHERE idbv = '$idbv') and hienthi='1'";
+		$hoi = "SELECT * FROM tblcm WHERE idcm in (SELECT idcm FROM tblbaiviet WHERE idbv = '$idbv') and hienthi='1'";
 		$chuyenmuc = mysqli_query($ketnoi->ketnoi(), $hoi);
 		while ($row_cm = mysqli_fetch_assoc($chuyenmuc)) {
 		?>
@@ -23,7 +23,7 @@
 	}
 	function vlu_lay_bai_chinh_sua($idbv){
 		$ketnoi = new clsKetnoi();
-		$hoi = "SELECT * FROM baiviet WHERE idbv = '$idbv'";
+		$hoi = "SELECT * FROM tblbaiviet WHERE idbv = '$idbv'";
 		$baiviet = mysqli_query($ketnoi->ketnoi(), $hoi);
 		return $baiviet;
 	}

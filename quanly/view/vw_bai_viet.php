@@ -22,7 +22,7 @@
                 <tr role="row">
                   <tr style="background-color: #f7f7f7;color: #232d33;">
                     <th class="giua">STT</th>
-                    <th class="giua">Nổi bậc</th>
+                    <th class="giua">Nổi bật</th>
                     <th class="giua">Tên bài viết</th>
                     <th class="giua">Ngày tạo</th>
                     <th class="giua">Ẩn/Hiện</th>
@@ -38,10 +38,10 @@
                   <tr>
                     <th class="giua"><?php echo $stt; ?></th>
                     <?php if ($row['tinnoibac']=='1') { ?>
-                            <td class="giua nuttt" id="noibac-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a><i class="fa fa-star sao" aria-hidden="true"></i></a></td>
+                            <td class="giua nutnb" id="noibat-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a><i class="fa fa-star sao" aria-hidden="true"></i></a></td>
                     <?php }
                           else{ ?>
-                            <td class="giua nuttt" id="noibac-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a><i class="fa fa-star-o sao" aria-hidden="true"></i></a></td>
+                            <td class="giua nutnb" id="noibat-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a><i class="fa fa-star-o sao" aria-hidden="true"></i></a></td>
                     <?php } ?>
                     <td><a href="#"><?php echo $row['tenbv']; ?></a></td>
                     <td class="giua"><?php echo $row['ngaydang']; ?></td>
@@ -82,6 +82,21 @@
           },
           success : function (data){
               $("#anhienbai-"+id).html(data);
+          }
+        });
+      });
+      // đánh dấu bài viết nổi bậc
+      $(".nutnb").click(function(){
+        var id = $(this).attr("data-vlute");
+        $.ajax({
+          url : "ajax/ajax_bai_viet_noi_bat.php",
+          type : "post",
+          dataType:"text",
+          data : {
+            id: id
+          },
+          success : function (data){
+              $("#noibat-"+id).html(data);
           }
         });
       });

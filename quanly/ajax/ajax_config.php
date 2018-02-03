@@ -4,7 +4,7 @@
 		private $maychu ="localhost";
 		private $tendangnhap="root";
 		private $matkhau="";
-		private $csdl="vlute";
+		private $csdl="newsdb";
 
 		public function ketnoi(){
 			$conn=@mysqli_connect($this->maychu, $this->tendangnhap, $this->matkhau);
@@ -20,7 +20,7 @@
 		$password = md5($password);
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$hoi = "select * from user where (email = '$username' or tendn = '$username') and matkhau = '$password' and quyen!='0'";
+		$hoi = "SELECT quyen, thumbus,tennd,iduser, admin from tbluser WHERE (tendn=N'$username' or gmail = '$username') and matkhau = N'$password'";
 		$thucthi = mysqli_query($conn, $hoi);
 		$dem_user = mysqli_num_rows($thucthi);
 		if ($dem_user > 0)

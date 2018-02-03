@@ -50,11 +50,13 @@
       $idcm = $row_bv['idcm'];
       $mota = $row_bv['mota'];
       $noidung = $row_bv['noidung'];
-      $hinhanh = $row_bv['hinhanh'];
+      $thumb = $row_bv['thumb'];
       $tukhoa = $row_bv['tukhoa'];
       $linkbv = $row_bv['linkbv'];
       $ngaydang = $row_bv['ngaydang'];
       $luotxem = $row_bv['luotxem'];
+      $tieude = $row_bv['tieude'];
+      $tinnoibac = $row_bv['tinnoibac'];
       $hienthi = 0; // là ko cho hiện bài viết
       if ($row_bv['hienthi']=='1')
         $hienthi=1;
