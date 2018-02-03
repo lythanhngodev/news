@@ -23,7 +23,7 @@
 <div id="main-menu">
     <div id="menu">
         <ul>
-        	<li><a href="" class="active">TRANG CHỦ</a></li>
+        	<li><a id="me-tc" href="">TRANG CHỦ</a></li>
         	<li><a id="me-cn" href="chuyenmuc/1/cong-nghe">Công nghệ</a></li>
             <li><a id="me-sk" href="chuyenmuc/2/su-kien">Sự kiện</a></li>
             <li><a id="me-dg" href="chuyenmuc/3/danh-gia">Đánh giá</a></li>
@@ -60,22 +60,27 @@
     <!--- 6 tin moi -->
     <?php require_once("tinmoi.php");?>
     <!--- Xem thêm -->
-    <!--- Clear FIX ->
-    <div class="clear"></div>
-    <!- Ban tin cong nghe -->
-    <header style="width: 100%;float: left;height: 6rem;">
-		<h2 class="bai-viet-moi cong-nghe-moi">CÔNG NGHỆ</h2>
-		<span class="gach-chan"></span>
-	   </header>
-    <?php require_once("congnghe.php"); ?>
     <!--- Clear FIX -->
     <div class="clear"></div>
+    <div class="quang-cao">
+        <div id="qc-1" class="animated fadeIn"><a href="#"><img src="images/banner-1.jpg"></a></div>
+        <div id="qc-2" class="hide"><a href="#"><img src="images/banner-2.jpg"></a></div>
+        <div id="qc-3" class="hide"><a href="#"><img src="images/banner-3.jpg"></a></div>
+    </div>
     <!--- Su kien -->
-	<header style="width: 100%;float: left;height: 6rem;">
-		<h2 class="bai-viet-moi">SỰ KIỆN</h2>
-		<span class="gach-chan"></span>
-	</header>
-		<?php require_once("sukien.php") ?>
+    <header style="width: 100%;float: left;height: 6rem;">
+        <h2 class="bai-viet-moi">SỰ KIỆN</h2>
+        <span class="gach-chan"></span>
+    </header>
+        <?php require_once("sukien.php") ?>
+    <!--- Clear FIX -->
+    <div class="clear"></div>
+    <!-- Ban tin cong nghe -->
+    <header style="width: 100%;float: left;height: 6rem;">
+        <h2 class="bai-viet-moi cong-nghe-moi">CÔNG NGHỆ</h2>
+        <span class="gach-chan"></span>
+       </header>
+    <?php require_once("congnghe.php"); ?>
     <!--- Clear FIX -->
     <div class="clear"></div>
     <!--- Danh gia -->
@@ -149,20 +154,46 @@
 </div>
 <!-- Cot phai -->
 <div id="footer">
-	<ul>
-    	<li class="logo-ft"><img src="mstile-144x144.png" alt="" title="CÔNG NGHỆ VIỆT" onClick="home()"/></li>
-        <li class="cong-nghe-ft"><a href="?p=chuyenmuc&id=1" id="do">Công nghệ</a></li>
-        <li class="su-kien-ft"><a href="?p=chuyenmuc&id=2" id="xanh-la">Sự kiện</a></li>
-        <li class="danh-gia-ft"><a href="?p=chuyenmuc&id=3" id="xanh-duong">Đánh giá</a></li>
-        <li class="thu-thuat-ung-dung-ft"><a href="?p=chuyenmuc&id=4" id="xanh-reu">Thủ thuật - ứng dụng</a></li>
-    </ul>
-    <div class="ban-quyen">&copy; CÔNG NGHỆ VIỆT 2017 | Tel: +841214967197 | Author Groups: Lý Thanh Ngô - Trần Thị Tuyết Linh - Lê Huyền Thanh Who're students of Vinh Long University Of Technology Education</div>
+    <div class="ban-quyen">&copy; CÔNG NGHỆ VIỆT 2017</div>
     <div class="thuc-hien"></div>
 </div>
 <!-- Footer -->
 </div>
 <!-- Màu sắc cho 5 bài viết nổi bậc -->
-<script src="js/mau-sac.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    var bb = 2;
+    function chayqc(){
+        setTimeout(function(){  
+            if (bb==4||bb>4) {bb=1;}
+            var idtin = "qc-"+bb;
+            if(idtin=="qc-1"){
+                $("#qc-2").addClass("hide");
+                $("#qc-3").addClass("hide");
+                $("#qc-1").removeClass("hide");
+                $("#qc-1").addClass("animated fadeIn");
+            }
+            if(idtin=="qc-2"){
+                $("#qc-1").addClass("hide");
+                $("#qc-3").addClass("hide");
+                $("#qc-2").removeClass("hide");
+                $("#qc-2").addClass("animated fadeIn");
+            }
+            if(idtin=="qc-3"){
+                $("#qc-1").addClass("hide");
+                $("#qc-2").addClass("hide");
+                $("#qc-3").removeClass("hide");
+                $("#qc-3").addClass("animated fadeIn");
+            }
+            bb++;
+            chayqc();
+        }, 4000);
+    }
+    $(document).ready(function(){
+        chayqc();
+    });
+    });
+</script>
 <!-- Back to top -->
 <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
 </body>

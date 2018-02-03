@@ -151,3 +151,6 @@
 		chaytin();
 	});
 </script>
+  <script type="text/javascript">
+    $("#me-tc").addClass("active");
+  </script>

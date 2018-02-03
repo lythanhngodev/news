@@ -12,48 +12,6 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="css/bai-viet-chi-tiet.css">
-		<script type="text/javascript">
-			function doidaymau(xet) {
-				if (xet==1){
-					document.getElementById("mau-cm").style = "background: rgb(231, 76, 60);";
-					document.getElementById("author-content").style = "border-left: 9px solid rgb(231, 76, 60);";
-				}
-				else
-				if (xet==2){
-					document.getElementById("mau-cm").style = "background: rgb(22, 160, 133);";
-					document.getElementById("author-content").style = "border-left: 9px solid rgb(22, 160, 133);";
-				}
-				else
-				if (xet==3){
-					document.getElementById("mau-cm").style = "background: rgb(41, 128, 185);";
-					document.getElementById("author-content").style = "border-left: 9px solid rgb(41, 128, 185);";
-				}
-				else
-				if (xet==4){
-					document.getElementById("mau-cm").style = "background: rgb(86, 132, 126);";
-					document.getElementById("author-content").style = "border-left: 9px solid rgb(86, 132, 126);";
-				}
-				else
-				if (xet==5){
-					document.getElementById("mau-cm").style = "background: #8e44ad;";
-					document.getElementById("author-content").style = "border-left: 9px solid #8e44ad;";
-				}
-			}
-		</script>
-		<script type="text/javascript">
-			var sotrang = 2;
-			$(document).ready(function(){
-				$(".xem-them-hot").click(function(){
-						$.get("chitiet/bai-viet-cung-chuyen-muc.php",{trang:sotrang,idcm:<?php echo $row["idcm"] ?>,idbv: <?php echo $row["idbv"] ?>},function(data){
-								$(".cung-chuyen-muc").append(data);
-						});
-						sotrang = sotrang+1;
-						if(sotrang==4){
-							document.getElementById("xem-them").style = "display:none;";
-						}
-				});
-			});
-		</script>
 </head>
 
 <div class="chia-se-bai-viet">
@@ -74,6 +32,7 @@
 
 <div class="thu-muc">
 	<a href="http://localhost/congngheviet/" class="muc-cha-con">TRANG CHỦ</a>
+	<a href="#" class="ngan-cach">/</a>
 	<a href="http://localhost/congngheviet/chuyenmuc/<?php echo $idcm ?>/<?php echo $row1["linkcm"] ?>" id="mau-cm" class="muc-cha-con"><?php echo $row1["tencm"] ?></a>
 </div>
 
@@ -98,7 +57,7 @@
 	<!-- This is Author -->
 	<div class="hinh-author"><img src="admin/<?php echo $row2["thumbus"] ?>" title="" width=123 height=auto /></div>
 	<div class="description-author">
-		<a href="author/<?php echo $row2["iduser"] ?>/<?php echo $row2["linkuser"] ?>"><b><h3>Author | &nbsp;<?php echo $row2["tennd"] ?></h3></b></a>
+		<a href="author/<?php echo $row2["iduser"] ?>/<?php echo $row2["linkuser"] ?>"><b><h3><?php echo $row2["tennd"] ?></h3></b></a>
 		<p><?php echo $row2["slogan"] ?></p>
 		<a href="<?php echo $row2["facebook"] ?>" target="_blank" class="author-fb"><i class="fa fa-facebook" style="font-size:18px;" ></i></a>
 	</div>
@@ -110,51 +69,32 @@
 <div class="clear"></div>
 <!-- Bài viết cùng chuyên mục -->
 <div class="cung-chuyen-muc">
+	<div class="dong-ngang-cn">
 <?php
 	$kn = new ketnoi();
-	$kq = $kn->get_content_of_ategories($row["idcm"],0,3,$row["idbv"]); //Lấy 3 bài đầu tiên khi có bài được select từ csdl
-	$xet = 0;
-	while($row = mysql_fetch_array($kq)){ ?>
-        <?php if($xet==0){ /* Mo dau if thuc if */ $xet=2; ?>
-        <!--- 1 --->
-		<div class="dong-ngang-cn">
-			<div class="khung-chua-bai-viet-cn animated zoomIn">
-				<a class="hinh-anh-cn" href="<?php echo $row["linkbv"] ?>-<?php echo $row["idbv"] ?>.html">
-			<img src="<?php echo $row["thumb"] ?>" width="100%" height="auto" alt="<?php echo $row["tenbv"] ?>" class="hinh-thumb-nho-cn" />
-				<div class="tieu-de-ngan-nho-cn"><h3><?php echo $row["tenbv"] ?></h3></div>
-					<div class="ngay-thang-dang-nho-cn"><i class="fa fa-calendar" style="font-size:14px;"></i><span>&nbsp; &nbsp;</span><?php echo $row["ngaydang"] ?></div>
-	<!--<div class="noi-dung-tom-tat-nho-cn"><?php //echo $row["mota"] ?></div>-->
-		</a>
+	$kq = $kn->get_content_of_ategories($row["idcm"],0,8,$row["idbv"]); //Lấy 8 bài đầu tiên khi có bài được select từ csdl
+	while($row = mysql_fetch_array($kq)){ 
+	    $tt="";
+	    $mang = explode(' ', trim($row['tenbv']));
+	    if (count($mang)>8) {
+	      $tt="";
+	      for ($i=0; $i <8; $i++) { 
+	        $tt.=$mang[$i]." ";
+	      }
+	    }
+	    else $tt = $row['tenbv'];
+		?>
+        <div class="khung-chua-bai-viet-cn">
+            <a class="hinh-anh-cn" href="<?php echo $row["linkbv"] ?>-<?php echo $row["idbv"] ?>.html">
+                <img src="<?php echo $row["thumb"] ?>" width="100%" height="auto" alt="<?php echo $row["tenbv"] ?>" class="hinh-thumb-nho-cn" />
+                <div class="tieu-de-ngan-nho-cn"><h3><?php echo $tt ?></h3></div>
+                <div class="ngay-thang-dang-nho-cn"><i class="fa fa-calendar" style="font-size:14px;"></i><span>&nbsp; &nbsp;</span><?php echo $row["ngaydang"] ?></div>
+            </a>
+        </div>
+	<?php } ?>
 	</div>
-    <?php }
-	else
-		if($xet==2){ ?>
-    	<!--- 2 --->
-        <div class="khung-chua-bai-viet-cn animated zoomIn">
-            <a class="hinh-anh-cn" href="<?php echo $row["linkbv"] ?>-<?php echo $row["idbv"] ?>.html">
-                <img src="<?php echo $row["thumb"] ?>" width="100%" height="auto" alt="<?php echo $row["tenbv"] ?>" class="hinh-thumb-nho-cn" />
-                <div class="tieu-de-ngan-nho-cn"><h3><?php echo $row["tenbv"] ?></h3></div>
-                <div class="ngay-thang-dang-nho-cn"><i class="fa fa-calendar" style="font-size:14px;"></i><span>&nbsp; &nbsp;</span><?php echo $row["ngaydang"] ?></div>
-                <!--<div class="noi-dung-tom-tat-nho-cn"><//?php echo $row["mota"] ?></div>-->
-            </a>
-        </div>
-        <?php $xet=4;}
-    else
-    if ($xet==4) { ?>
-      <!--- 3 --->
-        <div class="khung-chua-bai-viet-cn animated zoomIn">
-            <a class="hinh-anh-cn" href="<?php echo $row["linkbv"] ?>-<?php echo $row["idbv"] ?>.html">
-                <img src="<?php echo $row["thumb"] ?>" width="100%" height="auto" alt="<?php echo $row["tenbv"] ?>" class="hinh-thumb-nho-cn" />
-                <div class="tieu-de-ngan-nho-cn"><h3><?php echo $row["tenbv"] ?></h3></div>
-                <div class="ngay-thang-dang-nho-cn"><i class="fa fa-calendar" style="font-size:14px;"></i><span>&nbsp; &nbsp;</span><?php echo $row["ngaydang"] ?></div>
-                <!--<div class="noi-dung-tom-tat-nho-cn"><?php //echo $row["mota"] ?></div>-->
-            </a>
-        </div>
-      </div>
-    <?php $xet=0; continue; } ?>
-<?php } ?>
 </div>
 <div class="clear"></div>
 <div class="xem-them-hot" id="xem-them" style="width:100%;height: 6.9rem;margin-top: 1rem;">
-	 <a class="waves-effect waves-light btn-large" id="xem-them-btn">Xem thêm</a>
+	 <a class="waves-effect waves-light btn-large" id="xem-them-btn" href="#">Xem thêm</a>
 </div>

@@ -40,6 +40,7 @@ float:left;
 	margin: 0 auto;
 	width: 85%;
 	border-bottom: 3px solid #fff;
+	box-shadow: 0px 9px 15px -9px #bfbfbf54;
 }
 #menu ul{
 	list-style-type:none;
@@ -363,7 +364,17 @@ dropdown-menu-right{
 	display:block;
 	float:left;
 	}
-
+.quang-cao{
+	width:100%;
+	float:left;
+}
+.quang-cao img{
+	width:96%;
+	margin-left:2rem
+}
+.quang-cao img:hover{
+	opacity: 0.9;
+}
 /* Toi uu hoa website*/
 @media all and (min-width: 1025px){
 

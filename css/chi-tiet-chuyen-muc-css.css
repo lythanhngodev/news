@@ -3,9 +3,16 @@
 	width:99.1%;
 	height:auto;
 	margin:0 auto;
+	margin-top: 1.5rem;
 }
 .khung-chua-tin-cm a{
 	text-decoration:none;
+	}
+.anh-tieu-de-cm{
+	width:100%;
+	height: 393px;
+	background-size:  cover;
+	background-position: center;
 	}
 .khung-chua-tin-cm a:hover{
 	text-decoration:none;

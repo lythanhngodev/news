@@ -1,11 +1,6 @@
 <head>
   <link rel="stylesheet" type="text/css" href="css/sukien-css.css">
   <link rel="stylesheet" type="text/css" href="css/chi-tiet-chuyen-muc-css.css">
-  <style type="text/css">
-    .nam-tren-hinh-cm:hover .nen-noi-cm{
-      background-color: rgba(41, 128, 185, 0.8);
-    }
-  </style>
 </head>
 <?php
     require_once("admin/ketnoi.php");
@@ -18,7 +13,7 @@
 		if($kt==1){ ?>
         	<div class="khung-chua-tin-cm">
 	<a class="nam-tren-hinh-cm" href="<?php echo $row["linkbv"] ?>-<?php echo $row["idbv"] ?>.html">
-    	<img src="<?php echo $row['thumb'] ?>" width="1176" height="auto" alt="<?php echo $row['tenbv'] ?>" class="anh-thu-nho-cm" />
+    	<div class="anh-tieu-de-cm" style="background-image: url('<?php echo $row['thumb'] ?>');"></div>
             <div class="nen-noi-cm">
                 <div class="tieu-de-ngan-cm">
                 <h2><?php echo $row['tenbv'] ?></h2>
@@ -32,14 +27,27 @@
     <div class="su-kien-sk">
         <a href="<?php echo $row["linkbv"] ?>-<?php echo $row["idbv"] ?>.html" class="" id="">
         <div class="khung-chua-hinh-sk">
-          <img src="<?php echo $row['thumb'] ?>" alt="" class="" title="<?php echo $row['tenbv'] ?>" />
+          <div class="hinh-anh-thumb" style="background-image: url('<?php echo $row["thumb"] ?>');" title="<?php echo $row["tenbv"] ?>"></div>
         </div>
       <div class="khung-chua-tin-sk">
             <div class="tieu-de-sk"><h2><?php echo $row['tenbv'] ?></h2></div>
             <div class="ngay-thang-sk"><i class="fa fa-calendar" style="font-size:14px;">&nbsp;&nbsp;<?php echo $row['ngaydang'] ?></i></div>
-            <div class="mo-ta-sk"><?php echo $row['mota'] ?></div>
+            <div class="mo-ta-sk">
+            <?php
+                $mang = explode(' ', $row['mota']);
+                if (count($mang)>38) {
+                  for ($i=0; $i <38; $i++) { 
+                    echo $mang[$i]." ";
+                  } echo "...";
+                }
+                else echo $row['mota']." ... ";
+              ?>  
+            </div>
       </div>
         </a>
     </div>
 <?php }
 	} ?>
+  <script type="text/javascript">
+    $("#me-dg").addClass("active");
+  </script>

@@ -61,12 +61,11 @@
 		background: #3b5998;
 		color: #fff;
 	}
-	.author-post{
-		width:100%;
-		margin:0rem 1rem 1rem 1rem;
-		padding:1rem;
-		float:left;
-		}
+.author-post {
+    width: 100%;
+    margin: 0rem 1rem 2rem 0rem;
+    float: left;
+}
 	.author-post > span{
 		width:30px;
 		height:2px;
@@ -91,7 +90,7 @@
 	<!-- This is Author -->
 	<div class="hinh-author"><img src="admin/<?php echo $row1["thumbus"] ?>" title="" width=123 height=auto class="animated zoomIn" style="animation-delay:0.123456789s;" /></div>
 	<div class="description-author">
-		<b><h3>Author | &nbsp;<?php echo $row1["tennd"] ?></h3></b>
+		<b><h3><?php echo $row1["tennd"] ?></h3></b>
 		<p><?php echo $row1["slogan"] ?></p>
 		<a href="<?php echo $row1["facebook"] ?>" target="_blank" class="author-fb"><i class="fa fa-facebook" style="font-size:18px;" ></i></a>
 	</div>
@@ -124,12 +123,22 @@
     <div class="su-kien-sk">
         <a href="<?php echo $row["linkbv"] ?>-<?php echo $row["idbv"] ?>.html" class="" id="">
         <div class="khung-chua-hinh-sk">
-          <img src="<?php echo $row['thumb'] ?>" alt="" class="" title="<?php echo $row['tenbv'] ?>" />
+          <div class="hinh-anh-thumb" style="background-image: url('<?php echo $row["thumb"] ?>');" title="<?php echo $row["tenbv"] ?>"></div>
         </div>
       <div class="khung-chua-tin-sk">
             <div class="tieu-de-sk"><h2><?php echo $row['tenbv'] ?></h2></div>
             <div class="ngay-thang-sk"><i class="fa fa-calendar" style="font-size:14px;">&nbsp;&nbsp;<?php echo $row['ngaydang'] ?></i></div>
-            <div class="mo-ta-sk"><?php echo $row['mota'] ?></div>
+            <div class="mo-ta-sk">
+            <?php
+                $mang = explode(' ', $row['mota']);
+                if (count($mang)>38) {
+                  for ($i=0; $i <38; $i++) { 
+                    echo $mang[$i]." ";
+                  } echo "...";
+                }
+                else echo $row['mota']." ... ";
+              ?>  
+            </div>
       </div>
         </a>
     </div>
