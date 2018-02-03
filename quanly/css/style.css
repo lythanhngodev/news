@@ -66,6 +66,10 @@
     -webkit-transition: all 0.4s;
     box-shadow: 4px 4px 10px 1px #e2e2e2;
  }
+ .sao{s
+    text-shadow: 2px 1px 4px #ababab;
+    font-size: 26px;
+ }
  .khung-tin-trai{
     background: #efefef;
     padding-top: 15px;

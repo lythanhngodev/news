@@ -20,7 +20,7 @@
         <table id="vlute" class="table">
             <thead>
                 <tr role="row">
-                  <tr style="background-color: #3c8dbc;color: #fff;">
+                  <tr style="background-color: #f7f7f7;color: #232d33;">
                     <th class="giua">STT</th>
                     <th class="giua">Nổi bậc</th>
                     <th class="giua">Tên bài viết</th>
@@ -37,7 +37,12 @@
                 ?>
                   <tr>
                     <th class="giua"><?php echo $stt; ?></th>
-                    <td></td>
+                    <?php if ($row['tinnoibac']=='1') { ?>
+                            <td class="giua nuttt" id="noibac-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a><i class="fa fa-star sao" aria-hidden="true"></i></a></td>
+                    <?php }
+                          else{ ?>
+                            <td class="giua nuttt" id="noibac-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a><i class="fa fa-star-o sao" aria-hidden="true"></i></a></td>
+                    <?php } ?>
                     <td><a href="#"><?php echo $row['tenbv']; ?></a></td>
                     <td class="giua"><?php echo $row['ngaydang']; ?></td>
                     <?php if ($row['hienthi']=='1') { ?>
