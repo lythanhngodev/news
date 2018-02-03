@@ -1,7 +1,7 @@
 <?php 
 	include_once('config.php');
 	if($quyen_user=='1'){
-    	$truyvan = "SELECT * FROM `baiviet` ORDER BY `idbv` DESC";
+    	$truyvan = "SELECT * FROM `tblbaiviet` ORDER BY `idbv` DESC";
 	 }
 	 else
 	 if($quyen_user=='2')

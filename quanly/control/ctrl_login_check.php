@@ -9,7 +9,7 @@
 	else
 		header("Location: login.php");
 	$ketnoi = new clsKetnoi();
-	$hoi_user = "SELECT quyen, thumbus,tennd,iduser, admin from tbluser WHERE (tendn=N'".$_SESSION['username']."' or gmail = '".$_SESSION['username']."') and matkhau = N'".$_SESSION['password']."'";
+	$hoi_user = "SELECT quyen, thumbus,tennd,iduser, admin from tbluser WHERE (tendn=N'".$_SESSION['username']."' or gmail = '".$_SESSION['username']."') and matkhau = N'".md5($_SESSION['password'])."'";
 	$thucthi_user = mysqli_query($ketnoi->ketnoi(), $hoi_user);
 	$row_user = mysqli_fetch_assoc($thucthi_user);
 	$id_user = $row_user['iduser'];

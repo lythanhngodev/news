@@ -17,11 +17,12 @@
         <div class="col-md-12 col-ms-12 cach"></div>
       </div>
       <div class="windows-table">
-        <table id="vlute" class="table table-striped table-bordered">
+        <table id="vlute" class="table">
             <thead>
                 <tr role="row">
                   <tr style="background-color: #3c8dbc;color: #fff;">
                     <th class="giua">STT</th>
+                    <th class="giua">Nổi bậc</th>
                     <th class="giua">Tên bài viết</th>
                     <th class="giua">Ngày tạo</th>
                     <th class="giua">Ẩn/Hiện</th>
@@ -36,6 +37,7 @@
                 ?>
                   <tr>
                     <th class="giua"><?php echo $stt; ?></th>
+                    <td></td>
                     <td><a href="#"><?php echo $row['tenbv']; ?></a></td>
                     <td class="giua"><?php echo $row['ngaydang']; ?></td>
                     <?php if ($row['hienthi']=='1') { ?>
