@@ -1,6 +1,13 @@
+<script src="js/jquery.tagsinput.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.tagsinput.min.css">
 <script src="ckeditor/ckeditor.js"></script>
 <script src="ckfinder/ckfinder.js"></script>
 <script src="js/lslug-tien-bai-viet.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $('#tags').tagsInput();
+  });
+</script>
 <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -48,7 +55,7 @@
                 </div>
                 <div class="form-group">
                   <label>Từ khóa</label>
-                  <input type="text" class="form-control" name="tukhoa" id="" placeholder="Từ khóa">
+                  <input name="tags" id="tags" value="" />
                   <p class="help-block">Các từ khóa cách nhau bằng dấu phẩy.</p>
                 </div>
                 <div class="form-group">

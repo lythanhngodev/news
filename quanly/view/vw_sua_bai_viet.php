@@ -1,6 +1,13 @@
+<script src="js/jquery.tagsinput.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.tagsinput.min.css">
 <script src="ckeditor/ckeditor.js"></script>
 <script src="ckfinder/ckfinder.js"></script>
 <script src="js/lslug-tien-bai-viet.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $('#tags').tagsInput();
+  });
+</script>
 <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -13,7 +20,6 @@
       <div class="row">
         <div class="col-md-12">
     <!-- Main content -->
-          <form action="" method="POST">
             <div class="col-md-12 khung-chua-bai">
               <!-- Cột trái -->
               <div class="col-md-8 khung-tin-trai">
@@ -23,14 +29,14 @@
                 </div>
                 <div class="form-group">
                   <label>Chọn chuyên mục</label>
-                  <select class="form-control" name="chuyenmuc">
+                  <select class="form-control" name="chuyenmuc" id="chuyenmuc-sua">
                     <?php vlu_load_chuyen_muc_khong_chua_chuyen_muc_bai_viet($idbv); ?>
                     <?php vlu_load_chuyen_muc_tu_bai_viet($idbv) ?>
                   </select>
                 </div>
                 <div class="form-group">
                   <label>Tóm tắt</label>
-                  <textarea type="text" class="form-control" name="tomtat" id="" placeholder="Tóm tắt" required autocomplete="on"><?php echo $mota; ?></textarea>
+                  <textarea type="text" class="form-control" id="tomtat-sua" name="tomtat" id="" placeholder="Tóm tắt" required autocomplete="on" rows="8"><?php echo $mota; ?></textarea>
                 </div>
                 <div class="form-group">
                   <label>Nội dung</label>
@@ -55,12 +61,8 @@
 
                 <div class="form-group">
                   <label>Từ khóa</label>
-                  <input type="text" data-role="tagsinput" value="jQuery,Script,Net">
+                  <input name="tags" id="tags" value="" />
                   <p class="help-block">Các từ khóa cách nhau bằng dấu phẩy.</p>
-                </div>
-                <div class="form-group">
-                  <label>Link bài viết</label>
-                  <input type="text" class="form-control" name="linkbaiviet" id="lbv" placeholder="Link bài viết" required autocomplete="on" value="<?php echo $linkbv; ?>">
                 </div>
                 <div class="form-group hide">
                   <label>Ngày đăng</label>
@@ -73,26 +75,24 @@
                 <div class="form-group">
                   <label>Ẩn/Hiện bài viết</label>
                   <br>
-                  <input type="checkbox" <?php if($hienthi=='1'){echo "checked=\"checked\"";} ?> class="" name="anhien" id=""> Ẩn/Hiện bài viết
+                  <input type="checkbox" <?php if($hienthi=='1'){echo "checked=\"checked\"";} ?> class="iCheck-helper" name="anhien" id=""> Ẩn/Hiện bài viết
                   <p class="help-block">Nếu được kích hoạt bài viết sẽ được phép hiển thị trên trang web</p>
                 </div>
                 <div class="form-group">
                   <label>Bật/Tắt bài viết nổi bật</label>
                   <br>
-                  <input type="checkbox" <?php if($tinnoibac=='1'){echo "checked=\"checked\"";} ?> class="" name="anhien" id=""> Bật/Tắt bài viết nổi bật
+                  <input type="checkbox" <?php if($tinnoibac=='1'){echo "checked=\"checked\"";} ?> class="iCheck-helper" name="noibat" id=""> Bật/Tắt bài viết nổi bật
                   <p class="help-block">Nếu được kích hoạt bài viết sẽ hiển thị nổi bật trên trang web</p>
                 </div>
               </div>
 
               <div class="col-md-4">
                 <div class="cach"></div>
-                  <input type="submit" class="btn btn-success" value="Lưu chỉnh sửa" name="luuBai">
-                  <button type="reset" class="btn btn-warning">Nhập lại</button>
+                  <button class="btn btn-success" id="cap-nhat-bai-viet">Cập nhật</button>
                   <a href="?p=baiviet" class="btn btn-danger">Hủy</a>
                 <div class="cach"></div>
               </div>
             </div>
-          </form>
           </div>
       </div>
     </div>
@@ -132,6 +132,10 @@
 	$(document).ready(function() {
     document.getElementById('ngaydangtin').valueAsDate = new Date();
     	$("#baiviet").addClass("active");
+    $("#cap-nhat-bai-viet").click(function(){
+      alert($("#tags").val());
+    });
 	});
+
 </script>
 
