@@ -17,8 +17,8 @@
               <div class="col-md-8">
                 <div class="col-md-4 hinh-anh-user">
                   <div class="col-md-12">
-                    <img id="id-hinhanh" src="../<?php echo $row_tv['hinhanh'] ?>" style="width: 100%;height: auto;">
-                    <input type="text" hidden="hidden" value="<?php echo $row_tv['hinhanh'] ?>" id="id-hinhanh-ct" name="anhdaidien">
+                    <img id="id-hinhanh" src="../<?php echo $row_tv['thumbus'] ?>" style="width: 100%;height: auto;">
+                    <input type="text" hidden="hidden" value="<?php echo $row_tv['thumbus'] ?>" id="id-hinhanh-ct" name="anhdaidien">
                   </div>
                   <div class="col-md-12">
                     <input type="button" class="btn btn-info col-md-12 col-ms-12" onclick="BrowseServer()" value="Chọn ảnh đại diện">
@@ -28,7 +28,7 @@
                 <div class="col-md-8">
                   <div class="form-group">
                     <label>Tên thành viên</label>
-                    <input type="text" class="form-control" name="tenuser" id="tnd" placeholder="Tên thành viên" required autocomplete="on" value="<?php echo $row_tv['tenuser'] ?>">
+                    <input type="text" class="form-control" name="tenuser" id="tnd" placeholder="Tên thành viên" required autocomplete="on" value="<?php echo $row_tv['tennd'] ?>">
                   </div>
                   <div class="form-group">
                     <label>Tên đăng nhập</label>
@@ -46,20 +46,24 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label>Ngày tham gia</label>
-                    <input type="date" class="form-control" name="ngaythamgia" id="ngaythamgiaa" value="<?php echo $row_tv['ngaythamgia'] ?>">
+                    <label>Địa chỉ</label>
+                    <textarea class="form-control" rows="5"><?php echo $row_tv['diachi'] ?></textarea>
                   </div>
                 </div>
               </div>
               <!-- Cột phải -->
               <div class="col-md-4">
                 <div class="form-group">
+                  <label>Slogan</label>
+                  <textarea class="form-control" rows="5"><?php echo $row_tv['slogan'] ?></textarea>
+                </div>
+                <div class="form-group">
                   <label>Đường dẫn Facebook cá nhân</label>
                   <input type="text" class="form-control" name="facebook" id="" placeholder="Facebook" autocomplete="on" value="<?php echo $row_tv['facebook'] ?>">
                 </div>
                 <div class="form-group">
                   <label>Địa chỉ mail</label>
-                  <input type="text" class="form-control" name="email" id="" placeholder="Email" autocomplete="on" value="<?php echo $row_tv['email'] ?>">
+                  <input type="text" class="form-control" name="email" id="" placeholder="Email" autocomplete="on" value="<?php echo $row_tv['gmail'] ?>">
                 </div>
                 <div class="form-group">
                   <label>Số điện thoại</label>
@@ -71,13 +75,12 @@
                 <div class="cach"></div>
                   <input type="submit" class="btn btn-success" value="Hoàn tất" name="luuTT">
                   <button type="reset" class="btn btn-warning">Nhập lại</button>
-                  <a href="?p=thanhvien" class="btn btn-danger">Hủy</a>
                 <div class="cach"></div>
               </div>
             </div>
           </form>
           <div class="row"><div class="col-md-12"><div class="cach"></div></div></div>
-          <div class="col-md-8">
+          <div class="col-md-12">
             <h3>
               Đổi mật khẩu
               <div class="line"></div>
@@ -85,21 +88,24 @@
             </h3>
           </div>
           <form action="" method="POST">
-            <div class="col-md-8 khung-tin-mk">
-              <div class="form-group">
+            <div class="col-md-12 khung-tin-mk">
+              <div class="form-group col-md-4">
                   <label>Mật khẩu cũ</label>
                   <input type="password" class="form-control" name="password_o" id="tnd" placeholder="Mật khẩu cũ" required autocomplete="off">
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-4">
                   <label>Mật khẩu mới</label>
                   <input type="password" class="form-control" name="password_n" id="tnd" placeholder="Mật khẩu mới" required autocomplete="off">
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-4">
                   <label>Xác nhận mật khẩu mới</label>
                   <input type="password" class="form-control" name="tenuser" id="tnd" placeholder="Xác nhận mật khẩu mới" required autocomplete="off">
               </div>
-              <input type="submit" class="btn btn-success" value="Đổi mật khẩu" name="luuMK">
-              <button type="reset" class="btn btn-warning">Nhập lại</button>
+              <div class="form-group col-md-4">
+                  <input type="submit" class="btn btn-success" value="Đổi mật khẩu" name="luuMK">
+                  <button type="reset" class="btn btn-warning">Nhập lại</button>
+              </div>
+              
               <div class="cach"></div>
             </div>
           </form>
@@ -107,8 +113,10 @@
       </div>
     </div>
 <script type="text/javascript">
-    document.title = "VLUTE | Thêm thành viên";
+    document.title = "VLUTE | Profile";
     var finder = new CKFinder();
+    $("#thongtin").addClass("active");
+
 </script>
 
 <script type="text/javascript">

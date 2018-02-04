@@ -3,7 +3,7 @@
 	$suathanhcong=0;
 	function vlu_lay_user($iduser){
 		$ketnoi = new clsKetnoi();
-		$hoi = "SELECT * FROM user WHERE iduser = '$iduser'";
+		$hoi = "SELECT * FROM tbluser WHERE iduser = '$iduser'";
 		$user = mysqli_query($ketnoi->ketnoi(), $hoi);
 		return $user;
 	}

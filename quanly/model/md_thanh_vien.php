@@ -3,7 +3,7 @@
 	function vlu_all_user(){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$hoi = "select * from user";
+		$hoi = "select * from tbluser";
 		$dulieu = mysqli_query($conn, $hoi);
 		return $dulieu;
 	}

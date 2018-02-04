@@ -34,7 +34,7 @@ $idcm = $row["idcm"];
 						<h2><?php echo $row['tenbv'] ?></h2>
 						<b><i class="fa fa-clock-o"></i>&nbsp;&nbsp;<?php echo $row['ngaydang'] ?></b>
             &nbsp;
-            <img src="admin/<?php echo $row2["thumbus"] ?>" title="<?php echo $row2['tennd'] ?>" width=20>
+            <img src="<?php echo $row2["thumbus"] ?>" title="<?php echo $row2['tennd'] ?>" width=20>
 
             <a href="author/<?php echo $row2["iduser"] ?>/<?php echo $row2['linkuser'] ?>" title="<?php echo $row2['tennd'] ?>" style="color:#f1f1f1;"><?php echo $row2['tennd'] ?></a></span>
 				</div>

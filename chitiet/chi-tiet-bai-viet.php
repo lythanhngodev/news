@@ -55,7 +55,7 @@
  ?>
 <div class="tac-gia-bai-viet-ct" id="author-content">
 	<!-- This is Author -->
-	<div class="hinh-author"><img src="admin/<?php echo $row2["thumbus"] ?>" title="" width=123 height=auto /></div>
+	<div class="hinh-author"><img src="<?php echo $row2["thumbus"] ?>" title="" width=123 height=auto /></div>
 	<div class="description-author">
 		<a href="author/<?php echo $row2["iduser"] ?>/<?php echo $row2["linkuser"] ?>"><b><h3><?php echo $row2["tennd"] ?></h3></b></a>
 		<p><?php echo $row2["slogan"] ?></p>

@@ -18,10 +18,10 @@
         <div class="col-md-12 col-ms-12 cach"></div>
       </div>
       <div class="windows-table">
-        <table id="vlute" class="table table-striped table-bordered">
+        <table id="vlute" class="table">
             <thead>
                 <tr role="row">
-                  <tr style="background-color: #3c8dbc;color: #fff;">
+                  <tr style="background-color: #f7f7f7;color: #232d33;">
                     <th class="giua">STT</th>
                     <th class="giua">Tên thành viên</th>
                     <th class="giua">Tên đăng nhập</th>
@@ -38,9 +38,9 @@
                 ?>
                   <tr>
                     <th class="giua"><?php echo $stt; ?></th>
-                    <td><a><?php echo $row['tenuser']; ?></a></td>
+                    <td><a><b><?php echo $row['tennd']; ?></b></a></td>
                     <td class="giua"><?php echo $row['tendn']; ?></td>
-                    <td class="giua"><?php echo $row['email']; ?></td>
+                    <td class="giua"><?php echo $row['gmail']; ?></td>
                     <?php if ($row['quyen']=='1' || $row['quyen']=='2') { ?>
                             <td class="giua"><a class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></a></td>
                     <?php }

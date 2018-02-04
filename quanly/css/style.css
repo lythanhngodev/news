@@ -34,7 +34,7 @@
 .khung-slider{
     background: #efefef;
     border: 1px solid rgba(220, 220, 220, 0.5);
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 0;
     text-align: center;
     margin-right: 10px;
@@ -66,28 +66,30 @@
     -webkit-transition: all 0.4s;
     box-shadow: 4px 4px 10px 1px #e2e2e2;
  }
- .sao{s
+ .sao{
+    s
     text-shadow: 2px 1px 4px #ababab;
     font-size: 26px;
+    color: #f39c12;
  }
  .khung-tin-trai{
-    background: #efefef;
+    background: #ececec;
     padding-top: 15px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
+    border: 1px solid #f7f7f7;
+    border-radius: 8px;
     margin-left: -12px;
  }
  .khung-tin-bu{
-    background: #efefef;
+    background: #ececec;
     padding-top: 15px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
+    border: 1px solid #f7f7f7;
+    border-radius: 8px;
  }
  .khung-tin-phai{
-    background: #efefef;
+    background: #ececec;
     padding-top: 15px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
+    border: 1px solid #f7f7f7;
+    border-radius: 8px;
     margin-left: 12px;
  }
  .khung-chua-bai{
@@ -99,7 +101,7 @@
  #id-hinhanh,#id-hinhanh-edit,#id-hinhanh-sua{
     width: 100%;
     border: 1px solid #cccccc;
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 6px;
  }
  .khung-loi-bai-viet{
@@ -114,10 +116,10 @@
     text-align: center;
  }
  .khung-tin-mk{
-    background: #efefef;
+    background: #ececec;
     padding-top: 15px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
+    border: 1px solid #f7f7f7;
+    border-radius: 8px;
  }
 .reset{
     padding: 4px;
@@ -156,4 +158,31 @@ strike{
 }
 p{
     margin: 0;
+}
+td > a{
+    color:#232d33;
+}
+td > a:hover{
+    color:#2d3b41;
+}
+.c-tag{
+    margin-left:1rem;
+    margin-top:0.5rem;
+    margin-bottom:0.5rem;
+    background:#10a1d8;
+    font-size:18px;
+    color:#fff;
+    padding:5px 8px;
+    border-radius:4px;
+    border:1px solid #30a2e4;
+}
+.c-tag:hover{
+    color:#fff;
+    text-decoration:none;
+}
+.nd-tag{
+    background:#6bc6e8;
+    padding:0px 6px;
+    border-radius:4px;
+    
 }

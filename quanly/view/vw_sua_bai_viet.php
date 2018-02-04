@@ -1,4 +1,4 @@
-<script src="js/jquery.tagsinput.min.js"></script>
+<script src="js/jquery.tagsinput.js"></script>
 <link rel="stylesheet" type="text/css" href="css/jquery.tagsinput.min.css">
 <script src="ckeditor/ckeditor.js"></script>
 <script src="ckfinder/ckfinder.js"></script>

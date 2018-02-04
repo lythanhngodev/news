@@ -1,13 +1,7 @@
-<script src="js/jquery.tagsinput.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css/jquery.tagsinput.min.css">
+
 <script src="ckeditor/ckeditor.js"></script>
 <script src="ckfinder/ckfinder.js"></script>
 <script src="js/lslug-tien-bai-viet.js"></script>
-<script type="text/javascript">
-  $(function(){
-    $('#tags').tagsInput();
-  });
-</script>
 <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -26,7 +20,7 @@
               <div class="col-md-8 khung-tin-trai">
                 <div class="form-group">
                   <label>Tên bài viết</label>
-                  <input type="text" class="form-control" name="tenbaiviet" id="tbv" placeholder="Tên bài viết" onKeyPress="lamlink('tbv','lbv')" required autocomplete="on">
+                  <input type="text" class="form-control" name="tenbaiviet" id="tbv" placeholder="Tên bài viết" onkeyup="lamlink('tbv','lbv')" onchange="lamlink('tbv','lbv')" required autocomplete="on">
                 </div>
                 <div class="form-group">
                   <label>Chọn chuyên mục</label>
@@ -36,7 +30,7 @@
                 </div>
                 <div class="form-group">
                   <label>Tóm tắt</label>
-                  <textarea type="text" class="form-control" name="tomtat" id="" placeholder="Tóm tắt" required autocomplete="on"></textarea>
+                  <textarea type="text" class="form-control" name="tomtat" id="" placeholder="Tóm tắt" required autocomplete="on" rows="9"></textarea>
                 </div>
                 <div class="form-group">
                   <label>Nội dung</label>
@@ -50,12 +44,17 @@
                   <input type="button" class="btn btn-info" onclick="BrowseServer()" value="Chọn từ ...">
                 </div>
                 <div class="form-group chua-hinh-anh">
-                  <img src="" id="id-hinhanh" />
-                  <input type="text" hidden="hidden" name="hinhanh" id="id-hinhanh-ct" value="">
+                  <img src="../images/mac-dinh.png" id="id-hinhanh" />
+                  <input type="text" hidden="hidden" name="hinhanh" id="id-hinhanh-ct" value="images/mac-dinh.png">
+                </div>
+                <div class="form-group">
+                  <label>Tên bài viết (SEO)</label>
+                  <input type="text" class="form-control" name="tukhoaseo" id="" placeholder="Tên bài viết SEO" value="">
+                  <p class="help-block">Tiêu đề SEO của bài viết.</p>
                 </div>
                 <div class="form-group">
                   <label>Từ khóa</label>
-                  <input name="tags" id="tags" value="" />
+                  <input name="tags" id="tags_1" value="" />
                   <p class="help-block">Các từ khóa cách nhau bằng dấu phẩy.</p>
                 </div>
                 <div class="form-group">
@@ -67,21 +66,22 @@
                   <input type="date" class="form-control" name="ngaydang" id="ngaydangtin">
                 </div>
                 <div class="form-group">
-                  <label>Lượt xem</label>
-                  <input type="text" class="form-control" name="luotxem" id="" placeholder="Lượt xem">
-                </div>
-                <div class="form-group">
                   <label>Ẩn/Hiện bài viết</label>
                   <br>
                   <input type="checkbox" checked="checked" class="" name="anhien" id=""> Ẩn/Hiện bài viết
                   <p class="help-block">Nếu được kích hoạt bài viết sẽ được phép hiển thị trên trang web</p>
                 </div>
+                <div class="form-group">
+                  <label>Bật/Tắt bài viết nổi bật</label>
+                  <br>
+                  <input type="checkbox" class="iCheck-helper" name="noibat" id=""> Bật/Tắt bài viết nổi bật
+                  <p class="help-block">Nếu được kích hoạt bài viết sẽ hiển thị nổi bật trên trang web</p>
+                </div>
               </div>
 
               <div class="col-md-4">
                 <div class="cach"></div>
-                  <input type="submit" class="btn btn-success" value="Lưu bài viết" name="luuBai">
-                  <button type="reset" class="btn btn-warning">Nhập lại</button>
+                  <button class="btn btn-success" name="luuBai">Lưu bài viết</button>
                   <a href="?p=baiviet" class="btn btn-danger">Hủy</a>
                 <div class="cach"></div>
               </div>
@@ -90,6 +90,13 @@
           </div>
       </div>
     </div>
+<script src="js/jquery.tagsinput.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.tagsinput.min.css">
+<script type="text/javascript">
+  $(function(){
+    $('#tags_1').tagsInput({width:'auto'});
+  });
+</script>
 <script>
     CKEDITOR.replace( 'noidungbaiviet', {
       filebrowserBrowseUrl : 'ckfinder/ckfinder.html',

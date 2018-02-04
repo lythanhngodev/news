@@ -17,7 +17,7 @@
               <div class="col-md-8 khung-tin-trai">
                 <div class="col-md-4 hinh-anh-user">
                   <div class="col-md-12">
-                    <img id="id-hinhanh" src="../images/author/author-mac-dinh.jpg" style="width: 100%;height: auto;">
+                    <img id="id-hinhanh" src="../images/mac-dinh.png" style="width: 100%;height: auto;">
                     <input type="text" hidden="hidden" value="" id="id-hinhanh-ct" name="anhdaidien">
                   </div>
                   <div class="col-md-12">
@@ -33,14 +33,6 @@
                   <div class="form-group">
                     <label>Tên đăng nhập</label>
                     <input type="text" class="form-control" name="tendn" id="tdn" placeholder="Tên đăng nhập" required autocomplete="on">
-                  </div>
-                  <div class="form-group">
-                    <label>Mật khẩu</label>
-                    <input type="password" class="form-control" name="matkhau" id="mk" placeholder="Mật khẩu" required autocomplete="on">
-                  </div>
-                  <div class="form-group">
-                    <label>Nhập lại mật khẩu</label>
-                    <input type="password" class="form-control" name="matkhau2" id="mk2" placeholder="Xác nhận mật khẩu" required autocomplete="on">
                   </div>
                   <div class="form-group">
                     <label>Ngày sinh</label>

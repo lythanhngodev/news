@@ -3,7 +3,7 @@
 	$themthanhcong = 1;
 	function vlu_load_chuyen_muc(){
 		$ketnoi = new clsKetnoi();
-		$hoi = "SELECT * FROM chuyenmuc WHERE hienthi='1'";
+		$hoi = "SELECT * FROM tblcm WHERE hienthi='1'";
 		$chuyenmuc = mysqli_query($ketnoi->ketnoi(), $hoi);
 		while ($row_cm = mysqli_fetch_assoc($chuyenmuc)) {
 		?>

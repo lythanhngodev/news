@@ -70,30 +70,10 @@
         <ul class="nav navbar-nav">
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <a href="?p=suathanhvien">
               <img src="../<?php echo $hinh_user; ?>" class="user-image" alt="User Image">
               <span class="hidden-xs"><?php echo $ten_user; ?></span>
             </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="../<?php echo $hinh_user; ?>" class="img-circle" alt="User Image">
-
-                <p>
-                  <?php echo $ten_user; ?>
-                  <small></small>
-                </p>
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="?p=suathanhvien" class="btn btn-default btn-flat">Hồ sơ</a>
-                </div>
-                <div class="pull-right">
-                  <a href="control/ctrl_login_out.php" class="btn btn-default btn-flat">Đăng xuất</a>
-                </div>
-              </li>
-            </ul>
           </li>
         </ul>
       </div>
@@ -137,58 +117,41 @@
         </li>
         <li class="treeview" id="thongtin">
           <a href="#">
-            <i class="fa fa-globe"></i>
-            <span>Thông tin Website</span>
+            <i class="fa fa-address-card"></i>
+            <span>Cá nhân</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+            <li><a href="?p=suathanhvien"><i class="fa fa-circle-o"></i> Thông tin cá nhân</a></li>
+            <li><a href="control/ctrl_login_out.php"><i class="fa fa-circle-o"></i> Đăng xuất</a></li>
           </ul>
         </li>
-        <li class="treeview" id="thongtin">
-          <a href="#">
-            <i class="fa fa-globe"></i>
-            <span>Bố cục website</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="?p=slider"><i class="fa fa-circle-o"></i> Slider</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Đơn vị trực thuộc</a></li>
-          </ul>
-        </li>
+        
       <?php if ($quyen_user=='1') { ?>
-        <li class="treeview" id="khoabomon">
+        <li id="danhmuc">
           <a href="#">
-            <i class="fa fa-graduation-cap"></i>
-            <span>Quản lý khoa - bộ môn</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+            <i class="fa fa-folder"></i>
+            <span>Danh mục</span>
           </a>
-          <ul class="treeview-menu">
-             <li><a href="?p=khoabomon"><i class="fa fa-circle-o"></i> Danh sách khoa - bộ môn</a></li> 
-          </ul>
         </li>
-        <li class="treeview" id="giaovien">
+        <li id="thongtin">
           <a href="#">
-            <i class="fa fa-graduation-cap"></i>
-            <span>Quản lý giáo viên</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+            <i class="fa fa-globe"></i>
+            <span>Thông tin website</span>
           </a>
-          <ul class="treeview-menu">
-             <li><a href="?p=giaovien"><i class="fa fa-circle-o"></i> Danh sách giáo viên</a></li> 
-          </ul>
         </li>
-        <li class="treeview" id="thanhvien">
+        <li id="thetags">
+          <a href="?p=tags">
+            <i class="fa fa-tag"></i>
+            <span>Thẻ (Tags)</span>
+          </a>
+        </li>
+        <li class="treeview" id="nhanvien">
           <a href="#">
             <i class="fa fa-users"></i>
-            <span>Quản lý thành viên</span>
+            <span>Nhân viên</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -199,6 +162,12 @@
           </ul>
         </li>
       <?php } ?>
+        <li>
+          <a href="control/ctrl_login_out.php">
+            <i class="fa fa-sign-out"></i>
+            <span>Đăng xuất</span>
+          </a>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -226,6 +195,8 @@
         include_once('control/ctrl_giao_vien.php');
       else if(isset($_GET['p']) && $_GET['p']=='khoabomon')
         include_once('control/ctrl_khoa_bo_mon.php');
+      else if(isset($_GET['p']) && $_GET['p']=='tags')
+        include_once('control/ctrl_tags.php');
       else
         include_once("control/ctrl_trang_chu.php");
      ?>
@@ -235,7 +206,7 @@
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0.0.beta</div>
-    <strong>&copy; 2017 | <a href="https://fb.com/ly.ngothanh/" target="_blank">Ngô Thanh Lý</a></strong>
+    <strong>&copy; 2018 | <a href="https://fb.com/ly.ngothanh/" target="_blank">Ngô Thanh Lý</a></strong>
   </footer>
   <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
