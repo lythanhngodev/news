@@ -24,7 +24,7 @@
             <a class="c-tag">
               <span class="ten-tag" title="Tân thẻ"><?php echo $row['tentag']; ?></span>
               <span class="nd-tag" title="Số bài viết có sử dụng thẻ"><?php echo vlu_count_content_of_tags($row['idtag']); ?></span>
-              <i class="fa fa-times-circle" title="Xóa thẻ" ></i>
+              <i class="fa fa-times-circle xoa-tag" title="Xóa thẻ" ></i>
             </a>
           <?php
         }
@@ -32,7 +32,7 @@
     </section>
 <!-- Modal: Thêm tag -->
 <div class="modal fade" id="qltv-modal-them-tag" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-sm" role="document">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
@@ -53,6 +53,25 @@
     </div>
   </div>
 </div><!-- Modal: Thêm tag -->
+<!-- Modal: Xoa tag -->
+<div class="modal fade in" id="qltv-modal-xoa-tags" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Xóa thẻ</h4>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-danger" role="alert">Bạn có chắc muốn xóa thẻ này?</div>
+      </div>
+      <input type="text" hidden="hidden" name="" id="ma-loai-sach-xoa">
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Tôi không chắc</button>
+        <button type="button" class="btn btn-danger" id="nut-xoa-loai-sach">Tôi chắc chắn</button>
+      </div>
+    </div> 
+  </div>
+</div>
 <script type="text/javascript">
     document.title = "VLUTE | Quản lý thành viên";
 </script>
@@ -66,6 +85,9 @@
         $('#vlute').DataTable();
         $("#them-the").click(function(){
           $("#qltv-modal-them-tag").modal("show");
+        });
+        $(".xoa-tag").click(function(){
+          $("#qltv-modal-xoa-tags").modal("show");
         });
       } );
 </script>
