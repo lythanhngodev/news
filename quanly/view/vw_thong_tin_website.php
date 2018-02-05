@@ -6,10 +6,6 @@
     </section>
     <!-- Main content -->
     <section class="content background-container">
-      <div class="row">
-        <div class="col-md-12 col-ms-12 cach"></div>
-        <div class="col-md-12 col-ms-12 cach"></div>
-      </div>
       <div class="windows-table">
         <div class="box">
           <div class="box-header with-border">
@@ -24,15 +20,67 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            <div class="form-group col-md-6">
+              <label>Tên trang web</label>
+                <input type="text" class="form-control" id="" placeholder="Tên website">
+                <span class="help-block">Tên chính thức trang web.</span>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Mô tả trang web</label>
+                <input type="text" class="form-control" id="" placeholder="Mô tả website">
+                <span class="help-block">Nội dung từ khóa chính (Thẻ meta Keyword) hiển thị.</span>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Từ khóa mô tả</label>
+                <input type="text" class="form-control" id="" placeholder="Tên website">
+                <span class="help-block">Nội dung thẻ meta Description hiển thị.</span>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Địa chỉ</label>
+                <input type="text" class="form-control" id="" placeholder="Tên website">
+                <span class="help-block">Địa chỉ của khách hàng.</span>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Hotline</label>
+                <input type="text" class="form-control" id="" placeholder="Tên website">
+                <span class="help-block">Hotline của khách hàng.</span>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Mail</label>
+              <div class="input-group">
+                <span class="input-group-addon">@</span>
+                  <input type="text" class="form-control" placeholder="">
+              </div>
+              <span class="help-block">Địa chỉ mail của khách hàng.</span>
+            </div>
+            <div class="col-md-3 hinh-anh-user">
+              <div class="col-md-12">
+                <img id="id-hinhanh" src="../images/mac-dinh.png" style="width: 100%;height: auto;">
+                <input type="text" hidden="hidden" value="" id="id-hinhanh-ct" name="anhdaidien">
+                <div class="cach"></div>
+              </div>
+              <div class="col-md-12">
+                <input type="button" class="btn btn-info col-md-12 col-ms-12" onclick="BrowseServer()" value="Chọn ảnh logo website">
+                <p class="help-block">Hình logo website (ảnh PNG, GIF, JPEG, JPG)</p>
+              </div>
+            </div>
+            <div class="col-md-3 hinh-anh-user">
+              <div class="col-md-12">
+                <img id="id-hinhanh" src="../images/mac-dinh.png" style="width: 100%;height: auto;">
+                <input type="text" hidden="hidden" value="" id="id-hinhanh-ct" name="anhdaidien">
+                <div class="cach"></div>
+              </div>
+              <div class="col-md-12">
+                <input type="button" class="btn btn-info col-md-12 col-ms-12" onclick="BrowseServer()" value="Chọn ảnh favicon website">
+                <p class="help-block">Hình favicon hiển thị ở phía trên tab của trình duyệt (ảnh PNG, ICO, JPEG, JPG)</p>
               </div>
             </div>
           </div>
           <!-- /.box-body -->
+          <div class="box-footer">
+            <button class="btn btn-primary pull-right">Lưu thông tin</button>
+          </div>
+          <!-- box-footer -->
         </div>
         <!-- /.box -->
       </div>
