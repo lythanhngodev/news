@@ -119,7 +119,7 @@
               <label>Xác nhận mật khẩu mới</label>
               <input type="password" class="form-control" name="tenuser" id="pa3" placeholder="Xác nhận mật khẩu mới" required>
           </div>
-          <div class="form-group col-md-4">
+          <div class="pull-right">
               <button class="btn btn-success">Lưu thay đổi</button>
               <button type="reset" class="btn btn-warning">Nhập lại</button>
           </div>
