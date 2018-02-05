@@ -173,6 +173,12 @@
           </a>
         </li>
       <?php if ($quyen_user=='1') { ?>
+        <li id="quangcao">
+          <a href="?p=quangcao">
+            <i class="fa fa-money"></i>
+            <span>Quảng cáo</span>
+          </a>
+        </li>
         <li id="danhmuc">
           <a href="?p=chuyenmuc">
             <i class="fa fa-folder"></i>
@@ -217,7 +223,7 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper" style=" background: url(../images/body-bg.png) rgb(247, 247, 247) repeat;padding-bottom: 10px;">
+  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <?php 
       if(isset($_GET['p']) && $_GET['p']=='baiviet')
@@ -242,6 +248,8 @@
         include_once('control/ctrl_tags.php');
       else if(isset($_GET['p']) && $_GET['p']=='chuyenmuc')
         include_once('control/ctrl_chuyen_muc.php');
+      else if(isset($_GET['p']) && $_GET['p']=='quangcao')
+        include_once('control/ctrl_quang_cao.php');
       else if(isset($_GET['p']) && $_GET['p']=='thongtinwebsite')
         include_once('control/ctrl_thong_tin_website.php');
       else

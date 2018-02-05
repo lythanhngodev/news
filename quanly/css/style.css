@@ -246,3 +246,19 @@ td > a:hover{
 .modal{
     background: none;
 }
+.qc-1,.qc-2,.qc-3{
+    padding: 0px 12px;
+    font-size: 18px;
+    color:  #fff;
+    font-weight:  600;
+    margin-right: 1rem;
+}
+.qc-1{
+    background: #0484e1;
+}
+.qc-2{
+    background: #e19821;
+}
+.qc-3{
+    background: #399c49;
+}

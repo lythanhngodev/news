@@ -21,15 +21,12 @@
         <!-- /.box-body -->
       </div>
       <!-- /.box -->
-      <div class="cach"></div>
     </section>
     <div class="container" style="width: 100%;">
       <div class="row">
         <div class="col-md-12">
     <!-- Main content -->
-            <div class="col-md-12 khung-chua-bai">
               <!-- Cột trái -->
-              <div class="col-md-12">
                 <div class="box">
                   <div class="box-header with-border">
                     <h3 class="box-title">Điền thông tin nhân viên</h3>
@@ -117,14 +114,12 @@
                   <!-- box-footer -->
                 </div>
                 <!-- /.box -->
-              </div> 
-            </div>
           </div>
       </div>
     </div>
 
 <script type="text/javascript">
-    document.title = "VLUTE | Thêm thành viên";
+    document.title = "CNV | Thêm thành viên";
     var finder = new CKFinder();
 </script>
 

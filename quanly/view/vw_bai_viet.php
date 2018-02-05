@@ -25,51 +25,51 @@
           <!-- /.box-header -->
           <div class="box-body">
              <table id="vlute" class="table">
-              <thead>
-                  <tr role="row">
-                    <tr style="background-color: #f7f7f7;color: #232d33;">
-                      <th class="giua">STT</th>
-                      <th class="giua">Nổi bật</th>
-                      <th class="giua">Tên bài viết</th>
-                      <th class="giua">Ngày tạo</th>
-                      <th class="giua">Ẩn/Hiện</th>
-                      <th class="giua">Chức năng</th>
+                <thead>
+                    <tr role="row">
+                      <tr style="background-color: #f7f7f7;color: #232d33;">
+                        <th class="giua">STT</th>
+                        <th class="giua">Nổi bật</th>
+                        <th class="giua">Tên bài viết</th>
+                        <th class="giua">Ngày tạo</th>
+                        <th class="giua">Ẩn/Hiện</th>
+                        <th class="giua">Chức năng</th>
+                      </tr>
                     </tr>
-                  </tr>
-              </thead>
-              <tbody>
-              <?php 
-                $stt = 1;
-                while ($row = mysqli_fetch_assoc($dulieu)) {
-                  ?>
-                    <tr>
-                      <th class="giua"><?php echo $stt; ?></th>
-                      <?php if ($row['tinnoibac']=='1') { ?>
-                              <td class="giua nutnb" id="noibat-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a><i class="fa fa-star sao" aria-hidden="true"></i></a></td>
-                      <?php }
-                            else{ ?>
-                              <td class="giua nutnb" id="noibat-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a><i class="fa fa-star-o sao" aria-hidden="true"></i></a></td>
-                      <?php } ?>
-                      <td><a href="#"><?php echo $row['tenbv']; ?></a></td>
-                      <td class="giua"><?php echo $row['ngaydang']; ?></td>
-                      <?php if ($row['hienthi']=='1') { ?>
-                              <td class="giua nuttt" id="anhienbai-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></a></td>
-                      <?php }
-                            else{ ?>
-                              <td class="giua nuttt" id="anhienbai-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a class="btn btn-warning"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                      <?php } ?>
-                      
-                      <td class="giua"><a href="?p=suabai&id=<?php echo $row['idbv']; ?>" class="btn btn-primary" title="Sửa"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                          <a class="btn btn-danger nutxx" title="Xóa"
-                          data-vlute="<?php echo $row['idbv']; ?>" ><i class="fa fa-trash" aria-hidden="true"></i></a>
-                      </td>
-                  </tr>
-                  <?php
-                  $stt++;
-                }
-              ?>
-              </tbody>
-          </table>
+                </thead>
+                <tbody>
+                <?php 
+                  $stt = 1;
+                  while ($row = mysqli_fetch_assoc($dulieu)) {
+                    ?>
+                      <tr>
+                        <th class="giua"><?php echo $stt; ?></th>
+                        <?php if ($row['tinnoibac']=='1') { ?>
+                                <td class="giua nutnb" id="noibat-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a><i class="fa fa-star sao" aria-hidden="true"></i></a></td>
+                        <?php }
+                              else{ ?>
+                                <td class="giua nutnb" id="noibat-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a><i class="fa fa-star-o sao" aria-hidden="true"></i></a></td>
+                        <?php } ?>
+                        <td><a href="#"><?php echo $row['tenbv']; ?></a></td>
+                        <td class="giua"><?php echo $row['ngaydang']; ?></td>
+                        <?php if ($row['hienthi']=='1') { ?>
+                                <td class="giua nuttt" id="anhienbai-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></a></td>
+                        <?php }
+                              else{ ?>
+                                <td class="giua nuttt" id="anhienbai-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a class="btn btn-warning"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                        <?php } ?>
+                        
+                        <td class="giua"><a href="?p=suabai&id=<?php echo $row['idbv']; ?>" class="btn btn-primary" title="Sửa"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a class="btn btn-danger nutxx" title="Xóa"
+                            data-vlute="<?php echo $row['idbv']; ?>" ><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    <?php
+                    $stt++;
+                  }
+                ?>
+                </tbody>
+              </table>
           </div>
           <!-- /.box-body -->
           <div class="box-footer">
