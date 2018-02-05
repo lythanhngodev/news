@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin | VLUTE</title>
+  <title>Admin | Công nghệ việt</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
    <base href="<?php echo $vlute['HOST']; ?>/" />
@@ -131,9 +131,9 @@
         
       <?php if ($quyen_user=='1') { ?>
         <li id="danhmuc">
-          <a href="#">
+          <a href="?p=chuyenmuc">
             <i class="fa fa-folder"></i>
-            <span>Danh mục</span>
+            <span>Chuyên mục</span>
           </a>
         </li>
         <li id="thongtin">
@@ -197,6 +197,8 @@
         include_once('control/ctrl_khoa_bo_mon.php');
       else if(isset($_GET['p']) && $_GET['p']=='tags')
         include_once('control/ctrl_tags.php');
+      else if(isset($_GET['p']) && $_GET['p']=='chuyenmuc')
+        include_once('control/ctrl_chuyen_muc.php');
       else
         include_once("control/ctrl_trang_chu.php");
      ?>

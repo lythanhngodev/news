@@ -16,49 +16,52 @@
           <a href="?p=themthanhvien" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i> Thêm thành viên</a>
         </div>
         <div class="col-md-12 col-ms-12 cach"></div>
+        <div class="col-md-12 col-ms-12 cach"></div>
+
       </div>
-      <div class="windows-table">
-        <table id="vlute" class="table">
-            <thead>
-                <tr role="row">
-                  <tr style="background-color: #f7f7f7;color: #232d33;">
-                    <th class="giua">STT</th>
-                    <th class="giua">Tên thành viên</th>
-                    <th class="giua">Tên đăng nhập</th>
-                    <th class="giua">Email</th>
-                    <th class="giua">Quyền truy cập</th>
-                    <th class="giua">Chức năng</th>
-                  </tr>
-                </tr>
-            </thead>
-            <tbody>
-            <?php 
-              $stt = 1;
-              while ($row = mysqli_fetch_assoc($dulieu)) {
-                ?>
-                  <tr>
-                    <th class="giua"><?php echo $stt; ?></th>
-                    <td><a><b><?php echo $row['tennd']; ?></b></a></td>
-                    <td class="giua"><?php echo $row['tendn']; ?></td>
-                    <td class="giua"><?php echo $row['gmail']; ?></td>
-                    <?php if ($row['quyen']=='1' || $row['quyen']=='2') { ?>
-                            <td class="giua"><a class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></a></td>
-                    <?php }
-                          else{ ?>
-                            <td class="giua"><a class="btn btn-warning"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                    <?php } ?>
-                    
-                    <td class="giua"><a href="?p=suathanhvien&id=<?php echo $row['iduser']; ?>" class="btn btn-primary" title="Sửa"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                        <a onclick="return confirm('Bạn có chắc không ?');" href="?p=xoabai&id=<?php echo $row['iduser']; ?>" class="btn btn-danger" title="Xóa"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                    </td>
-                </tr>
-                <?php
-                $stt++;
-              }
-            ?>
-            </tbody>
-        </table>
-      </div>
+      <?php 
+      $stt = 1;
+      while ($row = mysqli_fetch_assoc($dulieu)) {
+        ?>
+        <div class="col-md-4">
+        <div class="box box-widget widget-user">
+              <!-- Add the bg color to the header using any of the bg-* classes -->
+              <div class="widget-user-header bg-aqua-active">
+                <a href="#" class="trang"><h3 class="widget-user-username"><?php echo $row['tennd']; ?></h3></a>
+                <h5 class="widget-user-desc trang">
+                  <?php if ($row['admin']==0) {
+                    echo "Người đăng bài";
+                  }else echo "Người quản trị"; ?>
+                </h5>
+              </div>
+              <div class="widget-user-image">
+                <img class="img-circle" src="../<?php echo $row['thumbus']; ?>" alt="User Avatar">
+              </div>
+              <div class="box-footer">
+                <div class="row">
+                  <div class="col-sm-6 border-right">
+                    <div class="description-block">
+                      <h5 class="description-header"><?php echo vlu_count_content($row['iduser']); ?></h5>
+                      <span class="description-text">Bài viết</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-6">
+                    <div class="description-block">
+                      <h5 class="description-header">35</h5>
+                      <span class="description-text">PRODUCTS</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+            </div>
+        </div>
+        <?php
+          $stt++; } ?>
     </section>
 
 <script type="text/javascript">

@@ -21,6 +21,14 @@
  *        ++         555ooooooo    %%%%%%          $$$      !!!!!!!!!!!
  *
  */
+ .trang{
+     color:#d4e8ff;
+     text-decoration: none;
+ }
+ .trang:hover{
+     text-decoration: none;
+     color:#ffffff;
+ }
  .line{
     height: 2px;
     background-color: #ccc;

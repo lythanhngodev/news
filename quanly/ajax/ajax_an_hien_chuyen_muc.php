@@ -6,18 +6,18 @@
 
 	include_once("ajax_config.php");
 
-	function vlu_an_hien_bai($idbv){	
+	function vlu_an_hien_bai($idcm){	
 		$hoi ="";
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$hoi1 = "SELECT `hienthi` FROM tblbaiviet WHERE idbv='$idbv'";
+		$hoi1 = "SELECT `hienthi` FROM tblcm WHERE idcm='$idcm'";
 		$thucthi1 = mysqli_query($conn, $hoi1);
 		$kq1 = mysqli_fetch_assoc($thucthi1);
 		if ($kq1['hienthi']==0) {
-			$hoi = "UPDATE `tblbaiviet` SET `hienthi` = b'1' WHERE `tblbaiviet`.`idbv` = '$idbv'";
+			$hoi = "UPDATE `tblcm` SET `hienthi` = b'1' WHERE `tblcm`.`idcm` = '$idcm'";
 		}
 		else{
-			$hoi = "UPDATE `tblbaiviet` SET `hienthi` = b'0' WHERE `tblbaiviet`.`idbv` = '$idbv'";
+			$hoi = "UPDATE `tblcm` SET `hienthi` = b'0' WHERE `tblcm`.`idcm` = '$idcm'";
 		}
 		$thucthi = mysqli_query($conn, $hoi);
 		return $kq1['hienthi'];
