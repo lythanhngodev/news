@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th2 05, 2018 lúc 02:01 SA
+-- Thời gian đã tạo: Th2 05, 2018 lúc 02:44 SA
 -- Phiên bản máy phục vụ: 5.7.14
 -- Phiên bản PHP: 5.6.25
 
@@ -203,8 +203,8 @@ CREATE TABLE `tbluser` (
 
 INSERT INTO `tbluser` (`iduser`, `tendn`, `matkhau`, `tennd`, `diachi`, `sdt`, `gmail`, `facebook`, `quyen`, `ngaysinh`, `gioitinh`, `thumbus`, `slogan`, `linkuser`, `admin`) VALUES
 (1, 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'Lý Thanh Ngô', 'Vĩnh Long', '+841214967197', 'lythanhngodev@gmail.com', 'https://facebook.com/ly.ngothanh', b'1', '1996-01-06', 'Nam', 'images/admin/admin.png', 'Mỗi bức ảnh đều có một câu chuyên, câu chuyện càng hay bức ảnh càng đẹp!', 'lythanhngo', 1),
-(2, 'yenlinh', '827ccb0eea8a706c4c34a16891f84e7b', 'Nguyễn Ngọc Yến Linh', 'Vĩnh Long', '01862262818', '', 'https://facebook.com/tranthituyetlinh1511', b'1', '1996-03-23', 'Nữ', 'images/admin/admin-2.png', 'Giấc mơ của tôi là được ngủ thật nhiều =))', 'tranthituyetlinh', 0),
-(3, 'myphuong', '827ccb0eea8a706c4c34a16891f84e7b', 'Nguyễn Thị Mỹ Phượng', 'Vĩnh Long', '0909362563', '', 'https://facebook.com/huyenthanh.le.54', b'1', '1996-02-04', 'Nữ', 'images/admin/admin-3.png', 'Có những chuyện thầm kín ta không nên kể cho bạn bè!', 'lehuyenthanh', 0);
+(2, 'yenlinh', '827ccb0eea8a706c4c34a16891f84e7b', 'Nguyễn Ngọc Yến Linh', 'Vĩnh Long', '01862262818', '', 'https://facebook.com/LinhYenNguyenNgoc', b'0', '1996-03-23', 'Nữ', 'images/admin/admin-2.png', 'Giấc mơ của tôi là được ngủ thật nhiều =))', 'tranthituyetlinh', 0),
+(3, 'myphuong', '827ccb0eea8a706c4c34a16891f84e7b', 'Nguyễn Thị Mỹ Phượng', 'Vĩnh Long', '0909362563', '', 'https://facebook.com/huyenthanh.le.54', b'0', '1996-02-04', 'Nữ', 'images/admin/admin-3.png', 'Có những chuyện thầm kín ta không nên kể cho bạn bè!', 'lehuyenthanh', 0);
 
 --
 -- Chỉ mục cho các bảng đã đổ
