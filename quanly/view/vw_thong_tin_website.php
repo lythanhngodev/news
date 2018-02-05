@@ -78,7 +78,7 @@
           </div>
           <!-- /.box-body -->
           <div class="box-footer">
-            <button class="btn btn-primary pull-right">Lưu thông tin</button>
+            <button class="btn btn-success pull-right">Lưu thông tin</button>
           </div>
           <!-- box-footer -->
         </div>

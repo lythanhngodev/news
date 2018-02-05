@@ -14,13 +14,12 @@
       <div class="row">
         <div class="col-md-12">
     <!-- Main content -->
-          <form action="" method="POST">
             <div class="col-md-12 khung-chua-bai">
               <!-- Cột trái -->
-              <div class="col-md-8">
+              <div class="col-md-12">
                 <div class="box">
                   <div class="box-header with-border">
-                    <h3 class="box-title"></h3>
+                    <h3 class="box-title">Điền thông tin bài viết</h3>
                     <div class="box-tools pull-right">
                       <!-- Collapse Button -->
                       <button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -31,7 +30,7 @@
                   </div>
                   <!-- /.box-header -->
                   <div class="box-body">
-                      <div class="col-md-12 khung-tin-trai">
+                      <div class="col-md-8 khung-tin-trai">
                         <div class="form-group">
                           <label>Tên bài viết</label>
                           <input type="text" class="form-control" name="tenbaiviet" id="tbv" placeholder="Tên bài viết" onkeyup="lamlink('tbv','lbv')" onchange="lamlink('tbv','lbv')" required autocomplete="on">
@@ -50,6 +49,8 @@
                           <label>Nội dung</label>
                           <textarea class="form-control" name="noidung" id="noidungbaiviet" ></textarea>
                         </div>
+                      </div>
+                      <div class="col-md-4 khung-tin-phai">
                         <div class="form-group">
                           <label>Chọn hình ảnh</label>
                           <input type="button" class="btn btn-info" onclick="BrowseServer()" value="Chọn từ ...">
@@ -58,72 +59,46 @@
                           <img src="../images/mac-dinh.png" id="id-hinhanh" />
                           <input type="text" hidden="hidden" name="hinhanh" id="id-hinhanh-ct" value="images/mac-dinh.png">
                         </div>
+                        <div class="form-group">
+                          <label>Tên bài viết (SEO)</label>
+                          <input type="text" class="form-control" name="tukhoaseo" id="" placeholder="Tên bài viết SEO" value="">
+                          <p class="help-block">Tiêu đề SEO của bài viết.</p>
+                        </div>
+                        <div class="form-group">
+                          <label>Từ khóa</label>
+                          <input name="tags" id="tags_1" value="" />
+                          <p class="help-block">Các từ khóa cách nhau bằng dấu phẩy.</p>
+                        </div>
+                        <div class="form-group">
+                          <label>Link bài viết</label>
+                          <input type="text" class="form-control" name="linkbaiviet" id="lbv" placeholder="Link bài viết" required autocomplete="on">
+                        </div>
+                        <div class="form-group">
+                          <label>Ngày đăng</label>
+                          <input type="date" class="form-control" name="ngaydang" id="ngaydangtin">
+                        </div>
+                        <div class="form-group">
+                          <input type="checkbox" checked="checked" class="" name="anhien" id="">&nbsp;&nbsp;<b>Ẩn/Hiện bài viết</b>
+                          <p class="help-block">Nếu được kích hoạt bài viết sẽ được phép hiển thị trên trang web</p>
+                        </div>
+                        <div class="form-group">
+                          <input type="checkbox" class="iCheck-helper" name="noibat" id="">&nbsp;&nbsp;<b>Bật/Tắt bài viết nổi bật</b>
+                          <p class="help-block">Nếu được kích hoạt bài viết sẽ hiển thị nổi bật trên trang web</p>
+                        </div>
+                    <div class="pull-right">
+                      <button class="btn btn-success" name="luuBai">Lưu bài viết</button>
+                      <a href="?p=baiviet" class="btn btn-danger">Hủy</a>
+                    </div>
                       </div>
                   </div>
                   <!-- /.box-body -->
-                </div>
-                <!-- /.box -->
-              </div>
-              <!-- Cột phải -->
-              <div class="col-md-4">
-                <div class="box">
-                  <div class="box-header with-border">
-                    <h3 class="box-title"></h3>
-                    <div class="box-tools pull-right">
-                      <!-- Collapse Button -->
-                      <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                        <i class="fa fa-minus"></i>
-                      </button>
-                    </div>
-                    <!-- /.box-tools -->
                   </div>
-                  <!-- /.box-header -->
-                  <div class="box-body">
-                <div class="col-md-12 khung-tin-phai">
-                  <div class="form-group">
-                    <label>Tên bài viết (SEO)</label>
-                    <input type="text" class="form-control" name="tukhoaseo" id="" placeholder="Tên bài viết SEO" value="">
-                    <p class="help-block">Tiêu đề SEO của bài viết.</p>
-                  </div>
-                  <div class="form-group">
-                    <label>Từ khóa</label>
-                    <input name="tags" id="tags_1" value="" />
-                    <p class="help-block">Các từ khóa cách nhau bằng dấu phẩy.</p>
-                  </div>
-                  <div class="form-group">
-                    <label>Link bài viết</label>
-                    <input type="text" class="form-control" name="linkbaiviet" id="lbv" placeholder="Link bài viết" required autocomplete="on">
-                  </div>
-                  <div class="form-group">
-                    <label>Ngày đăng</label>
-                    <input type="date" class="form-control" name="ngaydang" id="ngaydangtin">
-                  </div>
-                  <div class="form-group">
-                    <input type="checkbox" checked="checked" class="" name="anhien" id="">&nbsp;&nbsp;<b>Ẩn/Hiện bài viết</b>
-                    <p class="help-block">Nếu được kích hoạt bài viết sẽ được phép hiển thị trên trang web</p>
-                  </div>
-                  <div class="form-group">
-                    <input type="checkbox" class="iCheck-helper" name="noibat" id="">&nbsp;&nbsp;<b>Bật/Tắt bài viết nổi bật</b>
-                    <p class="help-block">Nếu được kích hoạt bài viết sẽ hiển thị nổi bật trên trang web</p>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="cach"></div>
-                    <button class="btn btn-success" name="luuBai">Lưu bài viết</button>
-                    <a href="?p=baiviet" class="btn btn-danger">Hủy</a>
-                  <div class="cach"></div>
-                </div>
-                  </div>
-                  <!-- /.box-body -->
-                  <!-- box-footer -->
-                </div>
                 <!-- /.box -->
               </div>
             </div>
-          </form>
           </div>
+        </div>
       </div>
-    </div>
 <script src="js/jquery.tagsinput.js"></script>
 <link rel="stylesheet" type="text/css" href="css/jquery.tagsinput.min.css">
 <script type="text/javascript">

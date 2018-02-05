@@ -5,7 +5,7 @@
     <section class="content">
       <div class="row">
         <div class="col-md-12 col-ms-12">
-          <a href="?p=thembai" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i> Thêm bài viết</a>
+          <a href="?p=thembai" class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i> Thêm bài viết</a>
         </div>
         <div class="col-md-12 col-ms-12 cach"></div>
         <div class="col-md-12 col-ms-12 cach"></div>

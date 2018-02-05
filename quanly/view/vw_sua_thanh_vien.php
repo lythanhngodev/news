@@ -39,11 +39,11 @@
             <div class="col-md-8">
               <div class="form-group">
                 <label>Tên thành viên</label>
-                <input type="text" class="form-control" name="tenuser" id="tnd" placeholder="Tên thành viên" required autocomplete="on" value="<?php echo $row_tv['tennd'] ?>">
+                <input type="text" class="form-control" id="tennd" placeholder="Tên thành viên" required autocomplete="on" value="<?php echo $row_tv['tennd'] ?>">
               </div>
               <div class="form-group">
                 <label>Tên đăng nhập</label>
-                <input type="text" class="form-control" name="tendn" id="tdn" placeholder="Tên đăng nhập" required autocomplete="on" value="<?php echo $row_tv['tendn'] ?>">
+                <input type="text" class="form-control" id="tendn" placeholder="Tên đăng nhập" required autocomplete="on" value="<?php echo $row_tv['tendn'] ?>">
               </div>
               <div class="form-group">
                 <label>Ngày sinh</label>
@@ -70,15 +70,15 @@
             </div>
             <div class="form-group">
               <label>Đường dẫn Facebook cá nhân</label>
-              <input type="text" class="form-control" name="facebook" id="" placeholder="Facebook" autocomplete="on" value="<?php echo $row_tv['facebook'] ?>">
+              <input type="text" class="form-control" id="facebook" placeholder="Facebook" autocomplete="on" value="<?php echo $row_tv['facebook'] ?>">
             </div>
             <div class="form-group">
               <label>Địa chỉ mail</label>
-              <input type="text" class="form-control" name="email" id="" placeholder="Email" autocomplete="on" value="<?php echo $row_tv['gmail'] ?>">
+              <input type="text" class="form-control" id="gmail" placeholder="Email" autocomplete="on" value="<?php echo $row_tv['gmail'] ?>">
             </div>
             <div class="form-group">
               <label>Số điện thoại</label>
-              <input type="text" class="form-control" name="sdt" id="" placeholder="Số điện thoại" autocomplete="on" value="<?php echo $row_tv['sdt'] ?>">
+              <input type="text" class="form-control" id="sdt" placeholder="Số điện thoại" autocomplete="on" value="<?php echo $row_tv['sdt'] ?>">
             </div>
           </div>
 
@@ -109,15 +109,15 @@
         <div class="col-md-12 khung-tin-mk">
           <div class="form-group col-md-4">
               <label>Mật khẩu cũ</label>
-              <input type="password" class="form-control" name="password_o" id="tnd" placeholder="Mật khẩu cũ" required autocomplete="off">
+              <input type="password" class="form-control" name="password_o" id="pa1" placeholder="Mật khẩu cũ" required autocomplete="off">
           </div>
           <div class="form-group col-md-4">
               <label>Mật khẩu mới</label>
-              <input type="password" class="form-control" name="password_n" id="tnd" placeholder="Mật khẩu mới" required autocomplete="off">
+              <input type="password" class="form-control" name="password_n" id="pa2" placeholder="Mật khẩu mới" required>
           </div>
           <div class="form-group col-md-4">
               <label>Xác nhận mật khẩu mới</label>
-              <input type="password" class="form-control" name="tenuser" id="tnd" placeholder="Xác nhận mật khẩu mới" required autocomplete="off">
+              <input type="password" class="form-control" name="tenuser" id="pa3" placeholder="Xác nhận mật khẩu mới" required>
           </div>
           <div class="form-group col-md-4">
               <button class="btn btn-success">Lưu thay đổi</button>

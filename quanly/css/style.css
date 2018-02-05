@@ -106,8 +106,8 @@ color: #212121;
   width: 100%;
  }
  #id-hinhanh,#id-hinhanh-edit,#id-hinhanh-sua{
-    width: 200px;
-    border: 1px solid #cccccc;
+    width: 100%;
+    border: 1px solid #cccccc2b;
     border-radius: 8px;
     padding: 6px;
  }

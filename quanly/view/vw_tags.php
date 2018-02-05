@@ -6,7 +6,7 @@
     <section class="content background-container">
       <div class="row">
         <div class="col-md-12 col-ms-12">
-          <a class="btn btn-success" id="them-the"><i class="fa fa-pencil" aria-hidden="true"></i> Thêm thẻ</a>
+          <a class="btn btn-primary" id="them-the"><i class="fa fa-pencil" aria-hidden="true"></i> Thêm thẻ</a>
         </div>
         <div class="col-md-12 col-ms-12 cach"></div>
         <div class="col-md-12 col-ms-12 cach"></div>
@@ -111,7 +111,7 @@
         <input type="text" hidden="hidden" name="" value="" id="id-id">
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-        <button type="button" class="btn btn-primary" id="nut-them-loai-sach">Lưu</button>
+        <button type="button" class="btn btn-success" id="nut-them-loai-sach">Lưu</button>
       </div>
     </div>
   </div>

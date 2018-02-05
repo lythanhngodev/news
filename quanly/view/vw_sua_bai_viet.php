@@ -21,11 +21,11 @@
         <div class="col-md-12">
     <!-- Main content -->
             <div class="col-md-12 khung-chua-bai">
-              <div class="col-md-8">
+              <div class="col-md-12">
                 <!-- Cột trái -->
                 <div class="box">
                   <div class="box-header with-border">
-                    <h3 class="box-title">Collapsible Box Example</h3>
+                    <h3 class="box-title">Điền thông tin bài viết</h3>
                     <div class="box-tools pull-right">
                       <!-- Collapse Button -->
                       <button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -36,7 +36,7 @@
                   </div>
                   <!-- /.box-header -->
                   <div class="box-body">
-                      <div class="col-md-12 khung-tin-trai">
+                      <div class="col-md-8 khung-tin-trai">
                         <div class="form-group">
                           <label>Tên bài viết</label>
                           <input type="text" class="form-control" name="tenbaiviet" id="tbv" placeholder="Tên bài viết" onKeyPress="lamlink('tbv','lbv')" required autocomplete="on" value="<?php echo $tenbv; ?>">
@@ -56,6 +56,8 @@
                           <label>Nội dung</label>
                           <textarea class="form-control" name="noidung" id="noidungbaiviet" ><?php echo $noidung; ?></textarea>
                         </div>
+                      </div>
+                      <div class="col-md-4 khung-tin-phai">
                         <div class="form-group">
                           <label>Chọn hình ảnh</label>
                           <input type="button" class="btn btn-info" onclick="BrowseServer()" value="Chọn từ ...">
@@ -64,59 +66,39 @@
                           <img src="../<?php echo $thumb; ?>" id="id-hinhanh" />
                           <input type="text" hidden="hidden" name="hinhanh" id="id-hinhanh-ct" value="">
                         </div>
+                        <div class="form-group">
+                          <label>Tên bài viết (SEO)</label>
+                          <input type="text" class="form-control" name="tukhoaseo" id="" placeholder="Tên bài viết SEO" value="<?php echo $tieude; ?>">
+                          <p class="help-block">Tiêu đề SEO của bài viết.</p>
+                        </div>
+                        <div class="form-group">
+                          <label>Từ khóa</label>
+                          <input name="tags" id="tags" value="" />
+                          <p class="help-block">Các từ khóa cách nhau bằng dấu phẩy.</p>
+                        </div>
+                        <div class="form-group hide">
+                          <label>Ngày đăng</label>
+                          <input type="date" class="form-control" name="ngaydang" id="ngaydangtin" value="<?php echo $ngaydang; ?>">
+                        </div>
+                        <div class="form-group hide">
+                          <label>Lượt xem</label>
+                          <input type="text" class="form-control" name="luotxem" id="" placeholder="Lượt xem" value="<?php echo $luotxem; ?>">
+                        </div>
+                        <div class="form-group">
+                          <input type="checkbox" <?php if($hienthi=='1'){echo "checked=\"checked\"";} ?> class="iCheck-helper" name="anhien" id="">&nbsp;&nbsp;<b>Ẩn/Hiện bài viết</b>
+                          <p class="help-block">Nếu được kích hoạt bài viết sẽ được phép hiển thị trên trang web</p>
+                        </div>
+                        <div class="form-group">
+                          <input type="checkbox" <?php if($tinnoibac=='1'){echo "checked=\"checked\"";} ?> class="iCheck-helper" name="noibat" id="">&nbsp;&nbsp;<b>Bật/Tắt bài viết nổi bật</b>
+                          <p class="help-block">Nếu được kích hoạt bài viết sẽ hiển thị nổi bật trên trang web</p>
+                        </div>
+                      <div class="pull-right">
+                        <div class="cach"></div>
+                          <button class="btn btn-success" id="cap-nhat-bai-viet">Cập nhật</button>
+                          <a href="?p=baiviet" class="btn btn-danger">Hủy</a>
+                        <div class="cach"></div>
                       </div>
-                  </div>
-                  <!-- /.box-body -->
-                </div>
-                <!-- /.box -->
-              </div>
-              <!-- Cột phải -->
-              <div class="col-md-4">
-                <div class="box">
-                  <div class="box-header with-border">
-                    <h3 class="box-title">Collapsible Box Example</h3>
-                    <div class="box-tools pull-right">
-                      <!-- Collapse Button -->
-                      <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                        <i class="fa fa-minus"></i>
-                      </button>
-                    </div>
-                    <!-- /.box-tools -->
-                  </div>
-                  <!-- /.box-header -->
-                  <div class="box-body">
-                      <div class="form-group">
-                        <label>Tên bài viết (SEO)</label>
-                        <input type="text" class="form-control" name="tukhoaseo" id="" placeholder="Tên bài viết SEO" value="<?php echo $tieude; ?>">
-                        <p class="help-block">Tiêu đề SEO của bài viết.</p>
                       </div>
-                      <div class="form-group">
-                        <label>Từ khóa</label>
-                        <input name="tags" id="tags" value="" />
-                        <p class="help-block">Các từ khóa cách nhau bằng dấu phẩy.</p>
-                      </div>
-                      <div class="form-group hide">
-                        <label>Ngày đăng</label>
-                        <input type="date" class="form-control" name="ngaydang" id="ngaydangtin" value="<?php echo $ngaydang; ?>">
-                      </div>
-                      <div class="form-group hide">
-                        <label>Lượt xem</label>
-                        <input type="text" class="form-control" name="luotxem" id="" placeholder="Lượt xem" value="<?php echo $luotxem; ?>">
-                      </div>
-                      <div class="form-group">
-                        <input type="checkbox" <?php if($hienthi=='1'){echo "checked=\"checked\"";} ?> class="iCheck-helper" name="anhien" id="">&nbsp;&nbsp;<b>Ẩn/Hiện bài viết</b>
-                        <p class="help-block">Nếu được kích hoạt bài viết sẽ được phép hiển thị trên trang web</p>
-                      </div>
-                      <div class="form-group">
-                        <input type="checkbox" <?php if($tinnoibac=='1'){echo "checked=\"checked\"";} ?> class="iCheck-helper" name="noibat" id="">&nbsp;&nbsp;<b>Bật/Tắt bài viết nổi bật</b>
-                        <p class="help-block">Nếu được kích hoạt bài viết sẽ hiển thị nổi bật trên trang web</p>
-                      </div>
-                    <div class="col-md-12">
-                      <div class="cach"></div>
-                        <button class="btn btn-success" id="cap-nhat-bai-viet">Cập nhật</button>
-                        <a href="?p=baiviet" class="btn btn-danger">Hủy</a>
-                      <div class="cach"></div>
-                    </div>
                   </div>
                   <!-- /.box-body -->
                 </div>

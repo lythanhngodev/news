@@ -8,7 +8,7 @@
     <section class="content background-container">
       <div class="row">
         <div class="col-md-12 col-ms-12">
-          <a class="btn btn-success" id="them-chuyen-muc"><i class="fa fa-pencil" aria-hidden="true"></i> Thêm chuyên mục</a>
+          <a class="btn btn-primary" id="them-chuyen-muc"><i class="fa fa-pencil" aria-hidden="true"></i> Thêm chuyên mục</a>
         </div>
         <div class="col-md-12 col-ms-12 cach"></div>
         <div class="col-md-12 col-ms-12 cach"></div>
