@@ -179,8 +179,8 @@
             <span>Chuyên mục</span>
           </a>
         </li>
-        <li id="thongtin">
-          <a href="#">
+        <li id="thongtinweb">
+          <a href="?p=thongtinwebsite">
             <i class="fa fa-globe"></i>
             <span>Thông tin website</span>
           </a>

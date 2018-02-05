@@ -14,5 +14,6 @@
 <script type="text/javascript">
 	$(document).ready(function() {
     	$("#trangchu").addClass("active");
+      $("#id-tieu-de-chinh").html("Trang chủ");
 	});
 </script>
