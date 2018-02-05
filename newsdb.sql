@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th2 05, 2018 lúc 03:07 CH
+-- Thời gian đã tạo: Th2 05, 2018 lúc 04:56 CH
 -- Phiên bản máy phục vụ: 5.7.14
 -- Phiên bản PHP: 5.6.25
 
@@ -77,15 +77,22 @@ CREATE TABLE `quangcao` (
   `tenqc` varchar(100) NOT NULL,
   `nguoidatqc` varchar(100) NOT NULL,
   `sdtnguoidat` varchar(20) NOT NULL,
-  `gia` float NOT NULL,
+  `gia` float NOT NULL DEFAULT '900000',
   `vitri` int(2) NOT NULL,
   `ngaydatqc` date NOT NULL,
   `ngaybdqc` date NOT NULL,
   `ngayktqc` date NOT NULL,
   `linkqc` varchar(255) NOT NULL,
   `hinhanh` varchar(255) NOT NULL,
-  `trangthai` int(1) NOT NULL
+  `hienthi` int(1) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `quangcao`
+--
+
+INSERT INTO `quangcao` (`idqc`, `iduser`, `tenqc`, `nguoidatqc`, `sdtnguoidat`, `gia`, `vitri`, `ngaydatqc`, `ngaybdqc`, `ngayktqc`, `linkqc`, `hinhanh`, `hienthi`) VALUES
+(1, 1, 'Maxmobile khuyến mãi tháng 01/2018', 'Cửa hàng Maxmobile', '0909897162', 900000, 1, '2018-02-05', '2018-02-06', '2018-02-12', '', 'images/banner.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -317,7 +324,7 @@ ALTER TABLE `info`
 -- AUTO_INCREMENT cho bảng `quangcao`
 --
 ALTER TABLE `quangcao`
-  MODIFY `idqc` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `idqc` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT cho bảng `tags`
 --
