@@ -13,7 +13,7 @@
       <div class="windows-table">
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Danh sách các chuyên mục</h3>
+            <h3 class="box-title">Cài đặt thông tin website</h3>
             <div class="box-tools pull-right">
               <!-- Collapse Button -->
               <button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -24,9 +24,13 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 
-
-
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+              </div>
+            </div>
           </div>
           <!-- /.box-body -->
         </div>
