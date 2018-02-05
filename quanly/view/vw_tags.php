@@ -2,12 +2,6 @@
 <script src="js/datatables.min.js" type="text/javascript"></script>
 
 <!-- Content Header (Page header) -->
-    <section class="content-header background-container">
-      <h1>
-        Thẻ
-      </h1>
-    </section>
-
     <!-- Main content -->
     <section class="content background-container">
       <div class="row">
@@ -17,38 +11,86 @@
         <div class="col-md-12 col-ms-12 cach"></div>
         <div class="col-md-12 col-ms-12 cach"></div>
       </div>
-<div class="box">
-  <div class="box-header with-border">
-    <h3 class="box-title">Danh sách các thẻ</h3>
-    <div class="box-tools pull-right">
-      <!-- Collapse Button -->
-      <button type="button" class="btn btn-box-tool" data-widget="collapse">
-        <i class="fa fa-minus"></i>
-      </button>
-    </div>
-    <!-- /.box-tools -->
-  </div>
-  <!-- /.box-header -->
-  <div class="box-body">
-      <?php 
-        while ($row = mysqli_fetch_assoc($dulieu)) {
-          ?>
-            <a class="c-tag">
-              <span class="ten-tag" title="Tân thẻ"><?php echo $row['tentag']; ?></span>
-              <span class="nd-tag" title="Số bài viết có sử dụng thẻ"><?php echo vlu_count_content_of_tags($row['idtag']); ?></span>
-              <i class="fa fa-times-circle xoa-tag" title="Xóa thẻ" ></i>
-            </a>
-          <?php
-        }
-      ?>
-  </div>
-  <!-- /.box-body -->
-  <div class="box-footer">
-    
-  </div>
-  <!-- box-footer -->
-</div>
-<!-- /.box -->
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Danh sách các thẻ</h3>
+          <div class="box-tools pull-right">
+            <!-- Collapse Button -->
+            <button type="button" class="btn btn-box-tool" data-widget="collapse">
+              <i class="fa fa-minus"></i>
+            </button>
+          </div>
+          <!-- /.box-tools -->
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <?php 
+              while ($row = mysqli_fetch_assoc($dulieu)) {
+                ?>
+                  <a class="c-tag">
+                    <span class="ten-tag" title="Tân thẻ"><?php echo $row['tentag']; ?></span>
+                    <span class="nd-tag" title="Số bài viết có sử dụng thẻ"><?php echo vlu_count_content_of_tags($row['idtag']); ?></span>
+                    <i class="fa fa-times-circle xoa-tag" title="Xóa thẻ" ></i>
+                  </a>
+                <?php
+              }
+            ?>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+          
+        </div>
+        <!-- box-footer -->
+      </div>
+      <div class="windows-table">
+        <div class="box">
+          <div class="box-header with-border">
+            <h3 class="box-title">Danh sách các thẻ dạng bảng</h3>
+            <div class="box-tools pull-right">
+              <!-- Collapse Button -->
+              <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                <i class="fa fa-minus"></i>
+              </button>
+            </div>
+            <!-- /.box-tools -->
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <table id="vlute" class="table">
+                <thead>
+                    <tr role="row">
+                      <tr style="background-color: #f7f7f7;color: #232d33;">
+                        <th class="giua">STT</th>
+                        <th class="giua">Tên thẻ</th>
+                        <th class="giua">Số bài viết</th>
+                        <th class="giua">Chức năng</th>
+                      </tr>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php 
+                  $stt = 1;
+                  while ($row = mysqli_fetch_assoc($dulieu1)) {
+                    ?>
+                      <tr>
+                        <th class="giua"><?php echo $stt; ?></th>
+                        <td id="id-ten-tag-<?php echo $row['idtag']; ?>" class="giua"><a><b><?php echo $row['tentag']; ?></b></a></td>
+                        <td id="id-so-bai-viet-<?php echo $row['idtag']; ?>" class="giua"><?php echo vlu_count_content_of_tags($row['idtag']); ?></td>
+                        <td class="giua"><a class="btn btn-primary sua-tag" title="Sửa" data-qltv="<?php echo $row['idtag']; ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a class="btn btn-danger xoa-tag" title="Xóa" data-qltv="<?php echo $row['idtag']; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    <?php
+                    $stt++; } ?>
+                </tbody>
+            </table>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </div>
+
+      <!-- /.box -->
 
     </section>
 <!-- Modal: Thêm tag -->
@@ -105,6 +147,7 @@
 </script>
 <script type="text/javascript" charset="utf-8">
       $(document).ready(function() {
+        $("#id-tieu-de-chinh").html("Thẻ");
         $('#vlute').DataTable();
         $("#them-the").click(function(){
           $("#qltv-modal-them-tag").modal("show");
@@ -112,5 +155,6 @@
         $(".xoa-tag").click(function(){
           $("#qltv-modal-xoa-tags").modal("show");
         });
+        $("#vlute").DataTable();
       } );
 </script>

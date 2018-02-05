@@ -3,11 +3,6 @@
 
 <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-        Nhân viên
-        <div class="cach"></div>
-        <div class="cach"></div>
-      </h1>
     </section>
 
     <!-- Main content -->
@@ -68,5 +63,6 @@
 <script type="text/javascript" charset="utf-8">
       $(document).ready(function() {
         $('#vlute').DataTable();
+        $("#id-tieu-de-chinh").html("Nhân viên");
       } );
 </script>

@@ -103,7 +103,7 @@
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
       </a>
-
+      <span id="id-tieu-de-chinh" class="tieu-de-chinh"></span>
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- User Account: style can be found in dropdown.less -->
@@ -200,8 +200,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="?p=themthanhvien"><i class="fa fa-circle-o"></i> Thêm thành viên</a></li>
-             <li><a href="?p=thanhvien"><i class="fa fa-circle-o"></i> Danh sách thành viên</a></li> 
+            <li><a href="?p=themthanhvien"><i class="fa fa-circle-o"></i> Thêm nhân viên</a></li>
+             <li><a href="?p=thanhvien"><i class="fa fa-circle-o"></i> Danh sách nhân viên</a></li> 
           </ul>
         </li>
       <?php } ?>

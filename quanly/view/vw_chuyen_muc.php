@@ -3,9 +3,6 @@
 <script src="js/lslug-tien-bai-viet.js"></script>
 <!-- Content Header (Page header) -->
     <section class="content-header background-container">
-      <h1>
-        Chuyên mục
-      </h1>
     </section>
     <!-- Main content -->
     <section class="content background-container">
@@ -17,44 +14,61 @@
         <div class="col-md-12 col-ms-12 cach"></div>
       </div>
       <div class="windows-table">
-        <table id="vlutenn" class="table">
-            <thead>
-                <tr role="row">
-                  <tr style="background-color: #f7f7f7;color: #232d33;">
-                    <th class="giua">STT</th>
-                    <th class="giua">Tên chuyên mục</th>
-                    <th class="giua">Mô tả</th>
-                    <th class="giua">Link chuyên mục</th>
-                    <th class="giua">Ẩn/Hiện</th>
-                    <th class="giua">Chức năng</th>
-                  </tr>
-                </tr>
-            </thead>
-            <tbody>
-            <?php 
-              $stt = 1;
-              while ($row = mysqli_fetch_assoc($dulieu)) {
-                ?>
-                  <tr>
-                    <th class="giua"><?php echo $stt; ?></th>
-                    <td id="id-ten-cm-<?php echo $row['idcm']; ?>"><a><b><?php echo $row['tencm']; ?></b></a></td>
-                    <td id="id-mo-ta-cm-<?php echo $row['idcm']; ?>"><?php echo $row['mota']; ?></td>
-                    <td id="id-link-cm-<?php echo $row['idcm']; ?>"><?php echo $row['linkcm']; ?></td>
-                    <td id="id-hien-thi-cm-<?php echo $row['idcm']; ?>" hidden ><?php echo $row['hienthi']; ?></td>
-                    <?php if ($row['hienthi']=='1') { ?>
-                            <td class="giua nutdoi" id="anhiencm-<?php echo $row['idcm']; ?>" data-vlute="<?php echo $row['idcm']; ?>" ><a class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></a></td>
-                    <?php }
-                          else{ ?>
-                            <td class="giua nutdoi" id="anhiencm-<?php echo $row['idcm']; ?>" data-vlute="<?php echo $row['idcm']; ?>" ><a class="btn btn-warning"><i class="fa fa-close" aria-hidden="true"></i></a></td>
-                    <?php } ?>
-                    <td class="giua"><a class="btn btn-primary sua-chuyen-muc" title="Sửa" data-qltv="<?php echo $row['idcm']; ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                        <a class="btn btn-danger xoa-chuyen-muc" title="Xóa" data-qltv="<?php echo $row['idcm']; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                    </td>
-                </tr>
-                <?php
-                $stt++; } ?>
-            </tbody>
-        </table>
+        <div class="box">
+          <div class="box-header with-border">
+            <h3 class="box-title">Danh sách các chuyên mục</h3>
+            <div class="box-tools pull-right">
+              <!-- Collapse Button -->
+              <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                <i class="fa fa-minus"></i>
+              </button>
+            </div>
+            <!-- /.box-tools -->
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <table id="vlutenn" class="table">
+                <thead>
+                    <tr role="row">
+                      <tr style="background-color: #f7f7f7;color: #232d33;">
+                        <th class="giua">STT</th>
+                        <th class="giua">Tên chuyên mục</th>
+                        <th class="giua">Mô tả</th>
+                        <th class="giua">Link chuyên mục</th>
+                        <th class="giua">Ẩn/Hiện</th>
+                        <th class="giua">Chức năng</th>
+                      </tr>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php 
+                  $stt = 1;
+                  while ($row = mysqli_fetch_assoc($dulieu)) {
+                    ?>
+                      <tr>
+                        <th class="giua"><?php echo $stt; ?></th>
+                        <td id="id-ten-cm-<?php echo $row['idcm']; ?>"><a><b><?php echo $row['tencm']; ?></b></a></td>
+                        <td id="id-mo-ta-cm-<?php echo $row['idcm']; ?>"><?php echo $row['mota']; ?></td>
+                        <td id="id-link-cm-<?php echo $row['idcm']; ?>"><?php echo $row['linkcm'] ?></td>
+                        <input type="text" hidden name="" id="id-hien-thi-cm-<?php echo $row['idcm']; ?>" value="<?php echo $row['linkcm']; ?>">
+                        <?php if ($row['hienthi']=='1') { ?>
+                                <td class="giua nutdoi" id="anhiencm-<?php echo $row['idcm']; ?>" data-vlute="<?php echo $row['idcm']; ?>" ><a class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></a></td>
+                        <?php }
+                              else{ ?>
+                                <td class="giua nutdoi" id="anhiencm-<?php echo $row['idcm']; ?>" data-vlute="<?php echo $row['idcm']; ?>" ><a class="btn btn-warning"><i class="fa fa-close" aria-hidden="true"></i></a></td>
+                        <?php } ?>
+                        <td class="giua"><a class="btn btn-primary sua-chuyen-muc" title="Sửa" data-qltv="<?php echo $row['idcm']; ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a class="btn btn-danger xoa-chuyen-muc" title="Xóa" data-qltv="<?php echo $row['idcm']; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    <?php
+                    $stt++; } ?>
+                </tbody>
+            </table>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
       </div>
     </section>
 <!-- Modal: Thêm nhân viên -->
@@ -149,7 +163,7 @@
 <!-- /.modal -->
 
 <script type="text/javascript">
-    document.title = "VLUTE | Quản lý thành viên";
+    document.title = "VLUTE | Quản lý chuyên mục";
 </script>
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -167,7 +181,7 @@
         $("#ten-chuyen-muc-sua").val($("#id-ten-cm-"+id).text().trim());
         $("#link-chuyen-muc-sua").val($("#id-link-cm-"+id).text().trim());
         $("#mo-ta-chuyen-muc-sua").val($("#id-mo-ta-cm-"+id).text().trim());
-        if ($("#id-hien-thi-cm-"+id).text().trim()=="1")
+        if ($("#id-hien-thi-cm-"+id).val().trim()=="1")
           document.getElementById('an-hien-chuyen-muc-sua').checked = true;
         $("#modal-sua-chuyen-muc").modal("show");
       });
@@ -175,6 +189,7 @@
 </script>
 <script type="text/javascript" charset="utf-8">
       $(document).ready(function() {
+        $("#id-tieu-de-chinh").html("Chuyên mục");
             $(".nutdoi").click(function(){
               var id = $(this).attr("data-vlute");
               $.ajax({
@@ -191,6 +206,6 @@
             });
       });
       $(document).ready(function(){
-        $('#vlutenn').DataTable();
+        $("#vlutenn").DataTable();
       });
 </script>

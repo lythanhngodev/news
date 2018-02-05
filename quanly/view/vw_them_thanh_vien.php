@@ -7,8 +7,6 @@
           Vui lòng check mail sau khi tạo tài khoản để có được mật khẩu đăng nhập.
       </div>
       <h1>
-        Thêm nhân viên
-        <div class="cach"></div>
         <div class="cach"></div>
       </h1>
     </section>
@@ -161,5 +159,6 @@
       document.getElementById('ngaythamgiaa').valueAsDate = new Date();
       document.getElementById("ngaythamgiaa").readOnly = true;
     	$("#nhanvien").addClass("active");
+      $("#id-tieu-de-chinh").html("Thêm nhân viên");
 	});
 </script>

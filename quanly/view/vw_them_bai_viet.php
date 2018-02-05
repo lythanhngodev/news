@@ -5,7 +5,6 @@
 <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Thêm bài viết
         <div class="cach"></div>
         <div class="cach"></div>
       </h1>
@@ -162,5 +161,6 @@
 	$(document).ready(function() {
     document.getElementById('ngaydangtin').valueAsDate = new Date();
     	$("#baiviet").addClass("active");
+      $("#id-tieu-de-chinh").html("Thêm bài viết");
 	});
 </script>

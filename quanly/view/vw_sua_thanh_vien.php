@@ -156,8 +156,7 @@
 </script>
 <script type="text/javascript">
   $(document).ready(function() {
-      document.getElementById('ngaythamgiaa').valueAsDate = new Date();
-      document.getElementById("ngaythamgiaa").readOnly = true;
       $("#thanhvien").addClass("active");
+      $("#id-tieu-de-chinh").html("Thông tin cá nhân");
   });
 </script>
