@@ -19,7 +19,9 @@
                   <div class="col-md-12">
                     <img id="id-hinhanh" src="../<?php echo $row_tv['thumbus'] ?>" style="width: 100%;height: auto;">
                     <input type="text" hidden="hidden" value="<?php echo $row_tv['thumbus'] ?>" id="id-hinhanh-ct" name="anhdaidien">
+                    <div class="cach"></div>
                   </div>
+
                   <div class="col-md-12">
                     <input type="button" class="btn btn-info col-md-12 col-ms-12" onclick="BrowseServer()" value="Chọn ảnh đại diện">
                     <p class="help-block">Nên chọn hình ảnh có tỉ lệ 1:1 để có ảnh đại diện đẹp nhất!</p>

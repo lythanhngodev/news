@@ -2,7 +2,7 @@
 <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Thêm thành viên
+        Thêm nhân viên
         <div class="line"></div>
         <div class="cach"></div>
       </h1>
@@ -19,6 +19,7 @@
                   <div class="col-md-12">
                     <img id="id-hinhanh" src="../images/mac-dinh.png" style="width: 100%;height: auto;">
                     <input type="text" hidden="hidden" value="" id="id-hinhanh-ct" name="anhdaidien">
+                    <div class="cach"></div>
                   </div>
                   <div class="col-md-12">
                     <input type="button" class="btn btn-info col-md-12 col-ms-12" onclick="BrowseServer()" value="Chọn ảnh đại diện">
