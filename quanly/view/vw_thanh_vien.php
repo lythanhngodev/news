@@ -4,27 +4,20 @@
 <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Thành viên
-        <div class="line"></div>
+        Nhân viên
+        <div class="cach"></div>
+        <div class="cach"></div>
       </h1>
     </section>
 
     <!-- Main content -->
     <section class="content">
-      <div class="row">
-        <div class="col-md-12 col-ms-12">
-          <a href="?p=themthanhvien" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i> Thêm thành viên</a>
-        </div>
-        <div class="col-md-12 col-ms-12 cach"></div>
-        <div class="col-md-12 col-ms-12 cach"></div>
-
-      </div>
       <?php 
       $stt = 1;
       while ($row = mysqli_fetch_assoc($dulieu)) {
         ?>
         <div class="col-md-4">
-        <div class="box box-widget widget-user">
+          <div class="box box-widget widget-user">
               <!-- Add the bg color to the header using any of the bg-* classes -->
               <div class="widget-user-header bg-aqua-active">
                 <a href="#" class="trang"><h3 class="widget-user-username"><?php echo $row['tennd']; ?></h3></a>
@@ -63,7 +56,7 @@
         <?php
           $stt++; } ?>
     </section>
-
+    <a href="?p=themthanhvien"><div class="nut-them-o-goc"><span>+</span></div></a>
 <script type="text/javascript">
     document.title = "VLUTE | Quản lý thành viên";
 </script>

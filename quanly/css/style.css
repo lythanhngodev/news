@@ -81,24 +81,11 @@
     color: #f39c12;
  }
  .khung-tin-trai{
-    background: #ececec;
-    padding-top: 15px;
-    border: 1px solid #f7f7f7;
-    border-radius: 8px;
-    margin-left: -12px;
  }
  .khung-tin-bu{
-    background: #ececec;
-    padding-top: 15px;
-    border: 1px solid #f7f7f7;
-    border-radius: 8px;
+
  }
  .khung-tin-phai{
-    background: #ececec;
-    padding-top: 15px;
-    border: 1px solid #f7f7f7;
-    border-radius: 8px;
-    margin-left: 12px;
  }
  .khung-chua-bai{
     padding-right: 0px;
@@ -107,7 +94,7 @@
   width: 100%;
  }
  #id-hinhanh,#id-hinhanh-edit,#id-hinhanh-sua{
-    width: 100%;
+    width: 200px;
     border: 1px solid #cccccc;
     border-radius: 8px;
     padding: 6px;
@@ -123,17 +110,42 @@
     padding: 0;
     text-align: center;
  }
- .khung-tin-mk{
-    background: #ececec;
-    padding-top: 15px;
-    border: 1px solid #f7f7f7;
-    border-radius: 8px;
- }
+
 .reset{
     padding: 4px;
 }
 .rows{
 
+}
+#nut-them-cong{
+
+}
+.nut-them-o-goc{
+    position: fixed;
+    bottom: 70px;
+    right: 18px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: 9999;
+    background:#2d82e4;
+    transition:all 0.234s;
+}
+.nut-them-o-goc span{
+    font-size: 64px;
+    line-height: 46px;
+    text-align:  center;
+    padding-left: 12px;
+    color:  #fff;
+    font-weight:  100;
+    transition:all 0.234s;
+    text-shadow: 2px 2px 0px #1d5eab;
+}
+.nut-them-o-goc:hover{
+    transform: rotate(90deg);
+    background: #3c763e;
+    text-shadow: 2px 2px 0px #426143;
+    cursor:pointer;
 }
 .container{
     width: 100%;
@@ -203,4 +215,14 @@ td > a:hover{
 .c-tag i:hover{
     transition:all 0.4s;
     transform:rotate(90deg);
+}
+.modal-open .background-container{
+    -webkit-filter: blur(8px);
+    -moz-filter: blur(8px);
+    -o-filter: blur(8px);
+    -ms-filter: blur(8px);
+    filter: blur(8px);
+}
+.modal{
+    background: none;
 }

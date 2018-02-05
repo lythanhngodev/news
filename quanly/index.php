@@ -50,6 +50,44 @@
   <![endif]-->
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+<script type="text/javascript">
+      function thanhcong(chuoi) {
+           $.notify(chuoi, {
+              animate: {
+                enter: 'animated fadeIn',
+                exit: 'animated fadeOut'
+              },
+              placement: {
+                from: 'bottom',
+                align: 'left'
+              },
+              type: 'success',
+              delay: 2000
+            });
+      }
+      function tailai() {
+        setTimeout(function(){ 
+          location.reload();
+        }, 3000);
+      }
+      function dongmodal(id) {
+        $("#"+id).modal("hide");
+      }
+      function khongthanhcong(chuoi) {
+           $.notify(chuoi, {
+              animate: {
+                enter: 'animated fadeIn',
+                exit: 'animated fadeOut'
+              },
+              placement: {
+                from: 'bottom',
+                align: 'left'
+              },
+              type: 'danger',
+              delay: 2000
+            });
+      }
+</script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini" style="min-height: 0%;">
 <div class="wrapper">
@@ -266,5 +304,6 @@
 <script src="plugin/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="plugin/dist/js/demo.js"></script>
+<script src="nonti/bootstrap-notify.min.js"></script>
 </body>
 </html>

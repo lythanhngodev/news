@@ -1,9 +1,14 @@
 <script src="ckfinder/ckfinder.js"></script>
 <!-- Content Header (Page header) -->
     <section class="content-header">
+      <div class="alert alert-info alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h4><i class="icon fa fa-info-circle"></i> Chú ý!</h4>
+          Vui lòng check mail sau khi tạo tài khoản để có được mật khẩu đăng nhập.
+      </div>
       <h1>
         Thêm nhân viên
-        <div class="line"></div>
+        <div class="cach"></div>
         <div class="cach"></div>
       </h1>
     </section>
@@ -11,86 +16,127 @@
       <div class="row">
         <div class="col-md-12">
     <!-- Main content -->
-          <form action="" method="POST">
             <div class="col-md-12 khung-chua-bai">
               <!-- Cột trái -->
-              <div class="col-md-8 khung-tin-trai">
-                <div class="col-md-4 hinh-anh-user">
+              <div class="col-md-8">
+                <div class="box">
+                  <div class="box-header with-border">
+                    <h3 class="box-title"></h3>
+                    <div class="box-tools pull-right">
+                      <!-- Collapse Button -->
+                      <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                        <i class="fa fa-minus"></i>
+                      </button>
+                    </div>
+                    <!-- /.box-tools -->
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body">
+                    <div class="col-md-12 khung-tin-trai">
+                      <div class="col-md-4 hinh-anh-user">
+                        <div class="col-md-12">
+                          <img id="id-hinhanh" src="../images/mac-dinh.png" style="width: 100%;height: auto;">
+                          <input type="text" hidden="hidden" value="" id="id-hinhanh-ct" name="anhdaidien">
+                          <div class="cach"></div>
+                        </div>
+                        <div class="col-md-12">
+                          <input type="button" class="btn btn-info col-md-12 col-ms-12" onclick="BrowseServer()" value="Chọn ảnh đại diện">
+                          <p class="help-block">Nên chọn hình ảnh có tỉ lệ 1:1 để có ảnh đại diện đẹp nhất!</p>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="form-group">
+                          <label>Tên nhân viên(*)</label>
+                          <input type="text" class="form-control" name="tenuser" id="tnd" placeholder="Tên nhân viên" required autocomplete="on">
+                        </div>
+                        <div class="form-group">
+                          <label>Tên đăng nhập(*)</label>
+                          <input type="text" class="form-control" name="tendn" id="tdn" placeholder="Tên đăng nhập" required autocomplete="on">
+                        </div>
+                        <div class="form-group">
+                          <label>Ngày sinh</label>
+                          <input type="date" class="form-control" name="ngaysinh" id="ns" required >
+                        </div>
+                        <div class="form-group">
+                          <label>Giới tính</label>
+                          <select name="gioitinh" class="form-control">
+                            <option value="1">Nam</option>
+                            <option value="0">Nữ</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label>Ngày tham gia</label>
+                          <input type="date" class="form-control" name="ngaythamgia" id="ngaythamgiaa">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.box-body -->
+                  <div class="box-footer">
+                    (*) Không được bỏ trống
+                  </div>
+                  <!-- box-footer -->
+                </div>
+                <!-- /.box -->
+              </div> 
+              <!-- Cột phải -->
+              <div class="col-md-4">
+                <div class="box">
+                  <div class="box-header with-border">
+                    <h3 class="box-title"></h3>
+                    <div class="box-tools pull-right">
+                      <!-- Collapse Button -->
+                      <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                        <i class="fa fa-minus"></i>
+                      </button>
+                    </div>
+                    <!-- /.box-tools -->
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body">
+                     <div class="col-md-12 khung-tin-phai">
+                    <div class="form-group">
+                      <label>Đường dẫn Facebook cá nhân</label>
+                      <input type="text" class="form-control" name="facebook" id="" placeholder="Facebook" autocomplete="on">
+                    </div>
+                    <div class="form-group">
+                      <label>Địa chỉ mail (*)</label>
+                      <input type="text" class="form-control" name="email" id="" placeholder="Email" autocomplete="on">
+                    </div>
+                    <div class="form-group">
+                      <label>Số điện thoại</label>
+                      <input type="text" class="form-control" name="sdt" id="" placeholder="Số điện thoại" autocomplete="on">
+                    </div>
+                    <div class="form-group">
+                      <label>Quyền hạn</label><br>
+                      <select name="quyen" class="form-control">
+                        <option value="0">Người quản trị</option>
+                        <option value="1">Người đăng bài</option>
+                      </select>
+                    </div>
+                  </div>
+
                   <div class="col-md-12">
-                    <img id="id-hinhanh" src="../images/mac-dinh.png" style="width: 100%;height: auto;">
-                    <input type="text" hidden="hidden" value="" id="id-hinhanh-ct" name="anhdaidien">
+                    <div class="cach"></div>
+                      <button class="btn btn-success">Thêm thành viên</button>
+                      <button type="reset" class="btn btn-warning">Nhập lại</button>
+                      <a href="?p=thanhvien" class="btn btn-danger">Hủy</a>
                     <div class="cach"></div>
                   </div>
-                  <div class="col-md-12">
-                    <input type="button" class="btn btn-info col-md-12 col-ms-12" onclick="BrowseServer()" value="Chọn ảnh đại diện">
-                    <p class="help-block">Nên chọn hình ảnh có tỉ lệ 1:1 để có ảnh đại diện đẹp nhất!</p>
                   </div>
-                </div>
-                <div class="col-md-8">
-                  <div class="form-group">
-                    <label>Tên thành viên</label>
-                    <input type="text" class="form-control" name="tenuser" id="tnd" placeholder="Tên thành viên" required autocomplete="on">
+                  <!-- /.box-body -->
+                  <div class="box-footer">
+                    (*) Không được bỏ trống
                   </div>
-                  <div class="form-group">
-                    <label>Tên đăng nhập</label>
-                    <input type="text" class="form-control" name="tendn" id="tdn" placeholder="Tên đăng nhập" required autocomplete="on">
-                  </div>
-                  <div class="form-group">
-                    <label>Ngày sinh</label>
-                    <input type="date" class="form-control" name="ngaysinh" id="ns" required >
-                  </div>
-                  <div class="form-group">
-                    <label>Giới tính</label>
-                    <select name="gioitinh" class="form-control">
-                      <option value="1">Nam</option>
-                      <option value="0">Nữ</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label>Ngày tham gia</label>
-                    <input type="date" class="form-control" name="ngaythamgia" id="ngaythamgiaa">
-                  </div>
+                  <!-- box-footer -->
                 </div>
-              </div>
-              <!-- Cột phải -->
-              <div class="col-md-4 khung-tin-phai">
-                <div class="form-group">
-                  <label>Đường dẫn Facebook cá nhân</label>
-                  <input type="text" class="form-control" name="facebook" id="" placeholder="Facebook" autocomplete="on">
-                </div>
-                <div class="form-group">
-                  <label>Địa chỉ mail</label>
-                  <input type="text" class="form-control" name="email" id="" placeholder="Email" autocomplete="on">
-                </div>
-                <div class="form-group">
-                  <label>Số điện thoại</label>
-                  <input type="text" class="form-control" name="sdt" id="" placeholder="Số điện thoại" autocomplete="on">
-                </div>
-                <div class="form-group">
-                  <label>Lựa chọn quyền hạn</label><br>
-                  <select name="quyen" class="form-control">
-                    <option value="0">Đóng băng</option>
-                    <option value="1">Toàn quyền</option>
-                    <option value="2">Đăng tin, chỉnh sửa</option>
-                  </select>
-                  <p class="help-block">- Đóng băng: Tài khoản sẽ được tạo nhưng không dược phép đăng nhập.</p>
-                  <p class="help-block">- Toàn quyên: Tài khoản có quyền quản lý toàn bộ hệ thống.</p>
-                  <p class="help-block">- Đóng tin: Chỉ cho phép thành viên đăng tin, sửa tin.</p>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="cach"></div>
-                  <input type="submit" class="btn btn-success" value="Tạo thành viên" name="luuTV">
-                  <button type="reset" class="btn btn-warning">Nhập lại</button>
-                  <a href="?p=thanhvien" class="btn btn-danger">Hủy</a>
-                <div class="cach"></div>
+                <!-- /.box -->
               </div>
             </div>
-          </form>
           </div>
       </div>
     </div>
+
 <script type="text/javascript">
     document.title = "VLUTE | Thêm thành viên";
     var finder = new CKFinder();
@@ -114,6 +160,6 @@
 	$(document).ready(function() {
       document.getElementById('ngaythamgiaa').valueAsDate = new Date();
       document.getElementById("ngaythamgiaa").readOnly = true;
-    	$("#thanhvien").addClass("active");
+    	$("#nhanvien").addClass("active");
 	});
 </script>

@@ -12,7 +12,7 @@
     <section class="content-header">
       <h1>
         Chỉnh sửa bài viết
-        <div class="line"></div>
+        <div class="cach"></div>
         <div class="cach"></div>
       </h1>
     </section>
@@ -21,76 +21,106 @@
         <div class="col-md-12">
     <!-- Main content -->
             <div class="col-md-12 khung-chua-bai">
-              <!-- Cột trái -->
-              <div class="col-md-8 khung-tin-trai">
-                <div class="form-group">
-                  <label>Tên bài viết</label>
-                  <input type="text" class="form-control" name="tenbaiviet" id="tbv" placeholder="Tên bài viết" onKeyPress="lamlink('tbv','lbv')" required autocomplete="on" value="<?php echo $tenbv; ?>">
+              <div class="col-md-8">
+                <!-- Cột trái -->
+                <div class="box">
+                  <div class="box-header with-border">
+                    <h3 class="box-title">Collapsible Box Example</h3>
+                    <div class="box-tools pull-right">
+                      <!-- Collapse Button -->
+                      <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                        <i class="fa fa-minus"></i>
+                      </button>
+                    </div>
+                    <!-- /.box-tools -->
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body">
+                      <div class="col-md-12 khung-tin-trai">
+                        <div class="form-group">
+                          <label>Tên bài viết</label>
+                          <input type="text" class="form-control" name="tenbaiviet" id="tbv" placeholder="Tên bài viết" onKeyPress="lamlink('tbv','lbv')" required autocomplete="on" value="<?php echo $tenbv; ?>">
+                        </div>
+                        <div class="form-group">
+                          <label>Chọn chuyên mục</label>
+                          <select class="form-control" name="chuyenmuc" id="chuyenmuc-sua">
+                            <?php vlu_load_chuyen_muc_khong_chua_chuyen_muc_bai_viet($idbv); ?>
+                            <?php vlu_load_chuyen_muc_tu_bai_viet($idbv) ?>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label>Tóm tắt</label>
+                          <textarea type="text" class="form-control" id="tomtat-sua" name="tomtat" id="" placeholder="Tóm tắt" required autocomplete="on" rows="8"><?php echo $mota; ?></textarea>
+                        </div>
+                        <div class="form-group">
+                          <label>Nội dung</label>
+                          <textarea class="form-control" name="noidung" id="noidungbaiviet" ><?php echo $noidung; ?></textarea>
+                        </div>
+                        <div class="form-group">
+                          <label>Chọn hình ảnh</label>
+                          <input type="button" class="btn btn-info" onclick="BrowseServer()" value="Chọn từ ...">
+                        </div>
+                        <div class="form-group chua-hinh-anh">
+                          <img src="../<?php echo $thumb; ?>" id="id-hinhanh" />
+                          <input type="text" hidden="hidden" name="hinhanh" id="id-hinhanh-ct" value="">
+                        </div>
+                      </div>
+                  </div>
+                  <!-- /.box-body -->
                 </div>
-                <div class="form-group">
-                  <label>Chọn chuyên mục</label>
-                  <select class="form-control" name="chuyenmuc" id="chuyenmuc-sua">
-                    <?php vlu_load_chuyen_muc_khong_chua_chuyen_muc_bai_viet($idbv); ?>
-                    <?php vlu_load_chuyen_muc_tu_bai_viet($idbv) ?>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Tóm tắt</label>
-                  <textarea type="text" class="form-control" id="tomtat-sua" name="tomtat" id="" placeholder="Tóm tắt" required autocomplete="on" rows="8"><?php echo $mota; ?></textarea>
-                </div>
-                <div class="form-group">
-                  <label>Nội dung</label>
-                  <textarea class="form-control" name="noidung" id="noidungbaiviet" ><?php echo $noidung; ?></textarea>
-                </div>
+                <!-- /.box -->
               </div>
               <!-- Cột phải -->
-              <div class="col-md-4 khung-tin-phai">
-                <div class="form-group">
-                  <label>Chọn hình ảnh</label>
-                  <input type="button" class="btn btn-info" onclick="BrowseServer()" value="Chọn từ ...">
-                </div>
-                <div class="form-group chua-hinh-anh">
-                  <img src="../<?php echo $thumb; ?>" id="id-hinhanh" />
-                  <input type="text" hidden="hidden" name="hinhanh" id="id-hinhanh-ct" value="">
-                </div>
-                <div class="form-group">
-                  <label>Tên bài viết (SEO)</label>
-                  <input type="text" class="form-control" name="tukhoaseo" id="" placeholder="Tên bài viết SEO" value="<?php echo $tieude; ?>">
-                  <p class="help-block">Tiêu đề SEO của bài viết.</p>
-                </div>
-
-                <div class="form-group">
-                  <label>Từ khóa</label>
-                  <input name="tags" id="tags" value="" />
-                  <p class="help-block">Các từ khóa cách nhau bằng dấu phẩy.</p>
-                </div>
-                <div class="form-group hide">
-                  <label>Ngày đăng</label>
-                  <input type="date" class="form-control" name="ngaydang" id="ngaydangtin" value="<?php echo $ngaydang; ?>">
-                </div>
-                <div class="form-group hide">
-                  <label>Lượt xem</label>
-                  <input type="text" class="form-control" name="luotxem" id="" placeholder="Lượt xem" value="<?php echo $luotxem; ?>">
-                </div>
-                <div class="form-group">
-                  <label>Ẩn/Hiện bài viết</label>
-                  <br>
-                  <input type="checkbox" <?php if($hienthi=='1'){echo "checked=\"checked\"";} ?> class="iCheck-helper" name="anhien" id=""> Ẩn/Hiện bài viết
-                  <p class="help-block">Nếu được kích hoạt bài viết sẽ được phép hiển thị trên trang web</p>
-                </div>
-                <div class="form-group">
-                  <label>Bật/Tắt bài viết nổi bật</label>
-                  <br>
-                  <input type="checkbox" <?php if($tinnoibac=='1'){echo "checked=\"checked\"";} ?> class="iCheck-helper" name="noibat" id=""> Bật/Tắt bài viết nổi bật
-                  <p class="help-block">Nếu được kích hoạt bài viết sẽ hiển thị nổi bật trên trang web</p>
-                </div>
-              </div>
-
               <div class="col-md-4">
-                <div class="cach"></div>
-                  <button class="btn btn-success" id="cap-nhat-bai-viet">Cập nhật</button>
-                  <a href="?p=baiviet" class="btn btn-danger">Hủy</a>
-                <div class="cach"></div>
+                <div class="box">
+                  <div class="box-header with-border">
+                    <h3 class="box-title">Collapsible Box Example</h3>
+                    <div class="box-tools pull-right">
+                      <!-- Collapse Button -->
+                      <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                        <i class="fa fa-minus"></i>
+                      </button>
+                    </div>
+                    <!-- /.box-tools -->
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body">
+                      <div class="form-group">
+                        <label>Tên bài viết (SEO)</label>
+                        <input type="text" class="form-control" name="tukhoaseo" id="" placeholder="Tên bài viết SEO" value="<?php echo $tieude; ?>">
+                        <p class="help-block">Tiêu đề SEO của bài viết.</p>
+                      </div>
+                      <div class="form-group">
+                        <label>Từ khóa</label>
+                        <input name="tags" id="tags" value="" />
+                        <p class="help-block">Các từ khóa cách nhau bằng dấu phẩy.</p>
+                      </div>
+                      <div class="form-group hide">
+                        <label>Ngày đăng</label>
+                        <input type="date" class="form-control" name="ngaydang" id="ngaydangtin" value="<?php echo $ngaydang; ?>">
+                      </div>
+                      <div class="form-group hide">
+                        <label>Lượt xem</label>
+                        <input type="text" class="form-control" name="luotxem" id="" placeholder="Lượt xem" value="<?php echo $luotxem; ?>">
+                      </div>
+                      <div class="form-group">
+                        <input type="checkbox" <?php if($hienthi=='1'){echo "checked=\"checked\"";} ?> class="iCheck-helper" name="anhien" id="">&nbsp;&nbsp;<b>Ẩn/Hiện bài viết</b>
+                        <p class="help-block">Nếu được kích hoạt bài viết sẽ được phép hiển thị trên trang web</p>
+                      </div>
+                      <div class="form-group">
+                        <input type="checkbox" <?php if($tinnoibac=='1'){echo "checked=\"checked\"";} ?> class="iCheck-helper" name="noibat" id="">&nbsp;&nbsp;<b>Bật/Tắt bài viết nổi bật</b>
+                        <p class="help-block">Nếu được kích hoạt bài viết sẽ hiển thị nổi bật trên trang web</p>
+                      </div>
+                    <div class="col-md-12">
+                      <div class="cach"></div>
+                        <button class="btn btn-success" id="cap-nhat-bai-viet">Cập nhật</button>
+                        <a href="?p=baiviet" class="btn btn-danger">Hủy</a>
+                      <div class="cach"></div>
+                    </div>
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
               </div>
             </div>
           </div>

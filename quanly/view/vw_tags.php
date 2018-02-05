@@ -2,15 +2,14 @@
 <script src="js/datatables.min.js" type="text/javascript"></script>
 
 <!-- Content Header (Page header) -->
-    <section class="content-header">
+    <section class="content-header background-container">
       <h1>
-        Thẻ (Tags)
-        <div class="line"></div>
+        Thẻ
       </h1>
     </section>
 
     <!-- Main content -->
-    <section class="content">
+    <section class="content background-container">
       <div class="row">
         <div class="col-md-12 col-ms-12">
           <a class="btn btn-success" id="them-the"><i class="fa fa-pencil" aria-hidden="true"></i> Thêm thẻ</a>
@@ -18,6 +17,19 @@
         <div class="col-md-12 col-ms-12 cach"></div>
         <div class="col-md-12 col-ms-12 cach"></div>
       </div>
+<div class="box">
+  <div class="box-header with-border">
+    <h3 class="box-title">Danh sách các thẻ</h3>
+    <div class="box-tools pull-right">
+      <!-- Collapse Button -->
+      <button type="button" class="btn btn-box-tool" data-widget="collapse">
+        <i class="fa fa-minus"></i>
+      </button>
+    </div>
+    <!-- /.box-tools -->
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body">
       <?php 
         while ($row = mysqli_fetch_assoc($dulieu)) {
           ?>
@@ -29,12 +41,21 @@
           <?php
         }
       ?>
+  </div>
+  <!-- /.box-body -->
+  <div class="box-footer">
+    
+  </div>
+  <!-- box-footer -->
+</div>
+<!-- /.box -->
+
     </section>
 <!-- Modal: Thêm tag -->
 <div class="modal fade" id="qltv-modal-them-tag" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm" role="document">
     <!-- Modal content-->
-    <div class="modal-content">
+    <div class="modal-content" style="box-shadow: none;">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Thêm thẻ</h4>
@@ -54,20 +75,22 @@
   </div>
 </div><!-- Modal: Thêm tag -->
 <!-- Modal: Xoa tag -->
-<div class="modal fade in" id="qltv-modal-xoa-tags" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal modal-danger fade" id="qltv-modal-xoa-tags">
   <div class="modal-dialog modal-sm">
-    <div class="modal-content">
+    <div class="modal-content" style="box-shadow: none;">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <h4 class="modal-title" id="myModalLabel">Xóa thẻ</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Xóa thẻ</h4>
       </div>
       <div class="modal-body">
-        <div class="alert alert-danger" role="alert">Bạn có chắc muốn xóa thẻ này?</div>
+        Bạn có chắc chắc xóa thẻ này?<br>
+        Hành động này sẽ không ảnh hưởng đến các bài viết trên website!
       </div>
       <input type="text" hidden="hidden" name="" id="ma-loai-sach-xoa">
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Tôi không chắc</button>
-        <button type="button" class="btn btn-danger" id="nut-xoa-loai-sach">Tôi chắc chắn</button>
+        <button type="button" class="btn btn-outline" data-dismiss="modal">Đóng</button>
+        <button type="button" class="btn btn-outline" style="border: 1px solid;" id="nut-xoa-the">Tôi chắc chắn</button>
       </div>
     </div> 
   </div>
