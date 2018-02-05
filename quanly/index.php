@@ -128,7 +128,12 @@
             <li><a href="control/ctrl_login_out.php"><i class="fa fa-circle-o"></i> Đăng xuất</a></li>
           </ul>
         </li>
-        
+        <li id="thetags">
+          <a href="?p=tags">
+            <i class="fa fa-tag"></i>
+            <span>Thẻ (Tags)</span>
+          </a>
+        </li>
       <?php if ($quyen_user=='1') { ?>
         <li id="danhmuc">
           <a href="?p=chuyenmuc">
