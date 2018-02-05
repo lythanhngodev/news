@@ -74,6 +74,18 @@
     -webkit-transition: all 0.4s;
     box-shadow: 4px 4px 10px 1px #e2e2e2;
  }
+ .description-block h5{
+
+margin-bottom: 0;
+color: #212121;
+}
+ .description-text i{
+    font-size: 20px;
+    color: #212121;
+ }
+ .description-block:hover,.description-text:hover{
+     text-decoration:none;
+ }
  .sao{
     s
     text-shadow: 2px 1px 4px #ababab;

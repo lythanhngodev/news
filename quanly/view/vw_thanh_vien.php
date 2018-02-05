@@ -37,8 +37,10 @@
                   <!-- /.col -->
                   <div class="col-sm-6">
                     <div class="description-block">
-                      <h5 class="description-header">35</h5>
-                      <span class="description-text">PRODUCTS</span>
+                      <a href="#">
+                        <h5>Xem chi tiết</h5>
+                        <span class="description-text"><i class="fa fa-arrow-circle-right"></i></span>
+                      </a>
                     </div>
                     <!-- /.description-block -->
                   </div>

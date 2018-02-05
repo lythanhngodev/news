@@ -1,13 +1,6 @@
 <link rel="stylesheet" href="css/datatables.min.css">
 <script src="js/datatables.min.js" type="text/javascript"></script>
 <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        <div class="cach"></div>
-        <div class="cach"></div>
-      </h1>
-    </section>
-
     <!-- Main content -->
     <section class="content">
       <div class="row">
