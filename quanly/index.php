@@ -242,6 +242,8 @@
         include_once('control/ctrl_tags.php');
       else if(isset($_GET['p']) && $_GET['p']=='chuyenmuc')
         include_once('control/ctrl_chuyen_muc.php');
+      else if(isset($_GET['p']) && $_GET['p']=='thongtinwebsite')
+        include_once('control/ctrl_thong_tin_website.php');
       else
         include_once("control/ctrl_trang_chu.php");
      ?>
