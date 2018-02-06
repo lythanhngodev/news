@@ -30,7 +30,6 @@
 				    `tinnoibac`=b'$tinnoibac' 
 				   WHERE `idbv` = '$idbv'
 		";
-		echo $hoi;
 		$kq1 = mysqli_query($conn, $hoi);
 		/*for ($i=0; $i < count($mang); $i++) { 
 			
