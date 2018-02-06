@@ -78,6 +78,7 @@
       function dongmodal(id) {
         $("#"+id).modal("hide");
       }
+      
       function khongthanhcong(chuoi) {
            $.notify(chuoi, {
               animate: {
@@ -91,6 +92,9 @@
               type: 'danger',
               delay: 3500
             });
+      }
+      function dongmodal(tenmodal){
+        $("#"+tenmodal).modal("hide");
       }
       function trangchu(){
          location.href = "<?php echo $vlute['HOST']; ?>";
