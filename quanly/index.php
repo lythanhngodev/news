@@ -87,6 +87,9 @@
               delay: 3500
             });
       }
+      function trangchu(){
+         location.href = "<?php echo $vlute['HOST']; ?>";
+      }
 </script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini" style="min-height: 0%;">
@@ -149,7 +152,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="?p=thembai"><i class="fa fa-circle-o"></i> Thêm bài viết</a></li>
+            <li id="thembaiviet"><a href="?p=thembai"><i class="fa fa-circle-o"></i> Thêm bài viết</a></li>
             <li><a href="?p=baiviet"><i class="fa fa-circle-o"></i> Tất cả bài viết</a></li>
           </ul>
         </li>

@@ -81,16 +81,17 @@
               <input type="text" class="form-control" id="sdt" placeholder="Số điện thoại" autocomplete="on" value="<?php echo $row_tv['sdt'] ?>">
             </div>
           </div>
-
-          <div class="col-md-4">
-            <div class="cach"></div>
-              <button class="btn btn-success nut-thao-tac">Lưu thay đổi</button>
-              <button type="reset" class="btn btn-warning nut-thao-tac">Nhập lại</button>
-            <div class="cach"></div>
-          </div>
         </div>
       </div>
       <!-- /.box-body -->
+      <div class="box-footer">
+          <div class="col-md-4 pull-right">
+              <div class="pull-right">
+                <button class="btn btn-success nut-thao-tac">Lưu thay đổi</button>
+                <button type="reset" class="btn btn-warning nut-thao-tac">Nhập lại</button>
+              </div>
+          </div>
+      </div>
     </div>
     <!-- /.box -->
     <div class="box">
@@ -119,15 +120,18 @@
               <label>Xác nhận mật khẩu mới</label>
               <input type="password" class="form-control" name="tenuser" id="pa3" placeholder="Xác nhận mật khẩu mới" required>
           </div>
-          <div class="pull-right">
-              <button class="btn btn-success">Lưu thay đổi</button>
-              <button type="reset" class="btn btn-warning">Nhập lại</button>
-          </div>
-          
           <div class="cach"></div>
         </div>
       </div>
       <!-- /.box-body -->
+      <div class="box-footer">
+          <div class="col-md-4 pull-right">
+              <div class="pull-right">
+                <button class="btn btn-success nut-thao-tac">Lưu thay đổi</button>
+                <button type="reset" class="btn btn-warning nut-thao-tac">Nhập lại</button>
+              </div>
+          </div>
+      </div>
     </div>
     <!-- /.box -->
           </div>
