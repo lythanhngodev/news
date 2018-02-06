@@ -2,11 +2,11 @@
 	session_start();
 	include_once("ajax_config.php");
 	$idbvbvbv;
-	function vlu_them_gv($tenbv,$idcm,$noidung,$thumb,$hienthi,$linkbv,$tieude,$tukhoa,$mota,$ngaydang,$iduser,$tinnoibac){
+	function vlu_them_gv($tenbv,$idcm,$noidung,$thumb,$hienthi,$tieude,$tukhoa,$mota,$tinnoibac, $idbv){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
 		// xử lý từ khóa
-		$mang = explode(',', $tukhoa);
+		/*$mang = explode(',', $tukhoa);
 		for ($i=0; $i < count($mang); $i++) { 
 			$tv = "SELECT * FROM `tags` WHERE `tentag` = N'$mang[$i]'";
 			$kttv = mysqli_query($conn, $tv);
@@ -15,12 +15,24 @@
 				$tv1="INSERT INTO `tags` (`idtag`, `tentag`) VALUES (NULL, '$mang[$i]')";
 				mysqli_query($conn, $tv1);
 			}
-		}
+		}*/
 		$hoi = "
-				INSERT INTO tblbaiviet (tenbv, idcm, noidung, thumb, hienthi, linkbv, tieude, mota, ngaydang, iduser,tinnoibac) VALUES ('$tenbv', '$idcm', '$noidung', '$thumb', b'$hienthi', '$linkbv', '$tieude', '$mota', '$ngaydang', '$iduser',b'$tinnoibac')
+				UPDATE `tblbaiviet` 
+				SET 
+					`tenbv`='$tenbv',
+				    `idcm`='$idcm',
+				    `noidung`='$noidung',
+				    `thumb`='$thumb',
+				    `hienthi`= b'$hienthi',
+				    `tieude`='$tieude',
+				    `tukhoa`='$tukhoa',
+				    `mota`='$mota',
+				    `tinnoibac`=b'$tinnoibac' 
+				   WHERE `idbv` = '$idbv'
 		";
+		echo $hoi;
 		$kq1 = mysqli_query($conn, $hoi);
-		for ($i=0; $i < count($mang); $i++) { 
+		/*for ($i=0; $i < count($mang); $i++) { 
 			
 			$tv="SELECT idtag FROM `tags` WHERE `tentag`=N'$mang[$i]'";
 			$kttv = mysqli_query($conn, $tv);
@@ -34,7 +46,7 @@
 
 			$tv3 = "INSERT INTO `bv_tag` (`id`, `idbv`, `idtag`) VALUES (NULL, '$idbvbvbv', '$idtag')";
 			mysqli_query($conn, $tv3);
-		}
+		}*/
 		return true;
 	}
 	if (isset($_SESSION['username']) && isset($_SESSION['password'])) {
@@ -42,8 +54,8 @@
 			<script type="text/javascript">trangchu();</script>
 		<?php }
 		else{
-			if (vlu_them_gv($_POST['tenbv'], $_POST['idcm'], $_POST['noidung'], $_POST['thumb'], $_POST['hienthi'], $_POST['linkbv'], $_POST['tieude'], $_POST['tukhoa'], $_POST['mota'], $_POST['ngaydang'], $_POST['iduser'], $_POST['noibat'])) { ?>
-				<script type="text/javascript">thanhcong("Bài viết đã được thêm. <a href=\"?p=baiviet\">Xem chi tiết</a>");dentrang("http://localhost/news/quanly/?p=baiviet")</script>
+			if (vlu_them_gv($_POST['tenbv'], $_POST['idcm'], $_POST['noidung'], $_POST['thumb'], $_POST['hienthi'],$_POST['tieude'], $_POST['tukhoa'], $_POST['mota'], $_POST['noibat'], $_POST['idbv'])) { ?>
+				<script type="text/javascript">thanhcong("Bài viết đã được chỉnh sửa. <a href=\"?p=baiviet\">Xem chi tiết</a>");</script>
 			<?php }
 			else{ ?>
 				<script type="text/javascript">khongthanhcong("Bài viết chưa được thêm! Vui lòng kiểm trả lại thông tin bài viết");</script>

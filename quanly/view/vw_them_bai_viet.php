@@ -162,12 +162,11 @@
       xetrong('tomtat');
       xetrongCKEDIT('noidung');
       xetrong('tieudeseo');
-      xetrong('tukhoa');
       xetrong('linkbaiviet');
       var ht=0,nb=0;
       if (document.getElementById('hienthi').checked) ht=1;
       if (document.getElementById('noibat').checked) nb=1;
-      if (xetrong('tenbaiviet')&&xetrong('tomtat')&&xetrongCKEDIT('noidung')&&xetrong('tieudeseo')&&xetrong('tukhoa')&&xetrong('linkbaiviet')) {
+      if (xetrong('tenbaiviet')&&xetrong('tomtat')&&xetrongCKEDIT('noidung')&&xetrong('tieudeseo')&&xetrong('linkbaiviet')) {
         $.ajax({
           url : "ajax/ajax_them_bai_viet.php",
           type : "post",

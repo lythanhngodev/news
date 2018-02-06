@@ -70,6 +70,11 @@
           location.reload();
         }, 3000);
       }
+      function dentrang(trang){
+        setTimeout(function(){ 
+           location.href = trang;
+        }, 3000);
+      }
       function dongmodal(id) {
         $("#"+id).modal("hide");
       }

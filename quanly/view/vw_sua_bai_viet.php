@@ -5,13 +5,12 @@
 <script src="js/lslug-tien-bai-viet.js"></script>
 <script type="text/javascript">
   $(function(){
-    $('#tags').tagsInput();
+    $('#tukhoa').tagsInput();
   });
 </script>
 <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Chỉnh sửa bài viết
         <div class="cach"></div>
         <div class="cach"></div>
       </h1>
@@ -37,64 +36,61 @@
                   <!-- /.box-header -->
                   <div class="box-body">
                       <div class="col-md-8 khung-tin-trai">
-                        <div class="form-group">
+                        <div id="f-tenbaiviet" class="form-group">
                           <label>Tên bài viết</label>
-                          <input type="text" class="form-control" name="tenbaiviet" id="tbv" placeholder="Tên bài viết" onKeyPress="lamlink('tbv','lbv')" required autocomplete="on" value="<?php echo $tenbv; ?>">
+                          <input type="text" class="form-control" id="tenbaiviet" placeholder="Tên bài viết" required autocomplete="on" value="<?php echo $tenbv; ?>">
                         </div>
                         <div class="form-group">
                           <label>Chọn chuyên mục</label>
-                          <select class="form-control" name="chuyenmuc" id="chuyenmuc-sua">
+                          <select class="form-control" id="chuyenmuc">
                             <?php vlu_load_chuyen_muc_khong_chua_chuyen_muc_bai_viet($idbv); ?>
                             <?php vlu_load_chuyen_muc_tu_bai_viet($idbv) ?>
                           </select>
                         </div>
-                        <div class="form-group">
+                        <div id="f-tomtat" class="form-group">
                           <label>Tóm tắt</label>
-                          <textarea type="text" class="form-control" id="tomtat-sua" name="tomtat" id="" placeholder="Tóm tắt" required autocomplete="on" rows="8"><?php echo $mota; ?></textarea>
+                          <textarea type="text" class="form-control" id="tomtat" placeholder="Tóm tắt" required autocomplete="on" rows="8"><?php echo $mota; ?></textarea>
                         </div>
-                        <div class="form-group">
+                        <div id="f-noidung" class="form-group">
                           <label>Nội dung</label>
-                          <textarea class="form-control" name="noidung" id="noidungbaiviet" ><?php echo $noidung; ?></textarea>
+                          <textarea class="form-control" name="noidung" id="noidung" ><?php echo $noidung; ?></textarea>
                         </div>
                       </div>
                       <div class="col-md-4 khung-tin-phai">
                         <div class="form-group">
-                          <label>Chọn hình ảnh</label>
-                          <input type="button" class="btn btn-info" onclick="BrowseServer()" value="Chọn từ ...">
+                          <label>Hình ảnh bài viết</label>
+                          <div class="chua-hinh-anh">
+                            <img src="../<?php echo $thumb; ?>" id="id-hinhanh" class="col-md-12" />
+                            <input type="text" hidden="hidden" id="id-hinhanh-ct" value="images/mac-dinh.png">
+                            <input type="button" class="btn btn-info col-md-12 form-control" onclick="BrowseServer()" value="Chọn ảnh từ máy chủ ...">
+                          </div>
+                          <div class="col-md-12 cach"></div>
                         </div>
-                        <div class="form-group chua-hinh-anh">
-                          <img src="../<?php echo $thumb; ?>" id="id-hinhanh" />
-                          <input type="text" hidden="hidden" name="hinhanh" id="id-hinhanh-ct" value="">
-                        </div>
-                        <div class="form-group">
+                        <div id="f-tieudeseo" class="form-group">
                           <label>Tên bài viết (SEO)</label>
-                          <input type="text" class="form-control" name="tukhoaseo" id="" placeholder="Tên bài viết SEO" value="<?php echo $tieude; ?>">
+                          <input type="text" class="form-control" id="tieudeseo" placeholder="Tên bài viết SEO" value="<?php echo $tieude; ?>">
                           <p class="help-block">Tiêu đề SEO của bài viết.</p>
                         </div>
-                        <div class="form-group">
+                        <div id="id-tukhoa" class="form-group">
                           <label>Từ khóa</label>
-                          <input name="tags" id="tags" value="" />
+                          <input name="tags" id="tukhoa" value="" />
                           <p class="help-block">Các từ khóa cách nhau bằng dấu phẩy.</p>
                         </div>
-                        <div class="form-group hide">
-                          <label>Ngày đăng</label>
-                          <input type="date" class="form-control" name="ngaydang" id="ngaydangtin" value="<?php echo $ngaydang; ?>">
-                        </div>
-                        <div class="form-group hide">
+                        <div class="form-group">
                           <label>Lượt xem</label>
-                          <input type="text" class="form-control" name="luotxem" id="" placeholder="Lượt xem" value="<?php echo $luotxem; ?>">
+                          <input type="text" class="form-control" id="" placeholder="Lượt xem" value="<?php echo $luotxem; ?>" readonly>
                         </div>
                         <div class="form-group">
-                          <input type="checkbox" <?php if($hienthi=='1'){echo "checked=\"checked\"";} ?> class="iCheck-helper" name="anhien" id="">&nbsp;&nbsp;<b>Ẩn/Hiện bài viết</b>
+                          <input type="checkbox" <?php if($hienthi=='1'){echo "checked=\"checked\"";} ?> class="iCheck-helper" name="anhien" id="hienthi">&nbsp;&nbsp;<b>Ẩn/Hiện bài viết</b>
                           <p class="help-block">Nếu được kích hoạt bài viết sẽ được phép hiển thị trên trang web</p>
                         </div>
                         <div class="form-group">
-                          <input type="checkbox" <?php if($tinnoibac=='1'){echo "checked=\"checked\"";} ?> class="iCheck-helper" name="noibat" id="">&nbsp;&nbsp;<b>Bật/Tắt bài viết nổi bật</b>
+                          <input type="checkbox" <?php if($tinnoibac=='1'){echo "checked=\"checked\"";} ?> class="iCheck-helper" id="noibat">&nbsp;&nbsp;<b>Bật/Tắt bài viết nổi bật</b>
                           <p class="help-block">Nếu được kích hoạt bài viết sẽ hiển thị nổi bật trên trang web</p>
                         </div>
                       <div class="pull-right">
                         <div class="cach"></div>
-                          <button class="btn btn-success" id="cap-nhat-bai-viet">Cập nhật</button>
+                          <button class="btn btn-success" id="nut-luu-bai">Cập nhật</button>
                           <a href="?p=baiviet" class="btn btn-danger">Hủy</a>
                         <div class="cach"></div>
                       </div>
@@ -110,7 +106,7 @@
     </div>
 
 <script>
-    CKEDITOR.replace( 'noidungbaiviet', {
+    CKEDITOR.replace( 'noidung', {
       filebrowserBrowseUrl : 'ckfinder/ckfinder.html',
       filebrowserImageBrowseUrl : 'ckfinder/ckfinder.html?type=Images',
       filebrowserFlashBrowseUrl : 'ckfinder/ckfinder.html?type=Flash',
@@ -124,7 +120,64 @@
     document.title = "VLUTE - Thêm bài viết";
     var finder = new CKFinder();
 </script>
-
+<script type="text/javascript">
+  function xetrong(id){
+    $("#f-"+id).removeClass('has-error');
+      if ($("#"+id).val().trim()=='') {
+            $("#f-"+id).addClass("has-error");
+            return false;
+      }
+      else{
+          $("#f-"+id).addClass("has-success");
+          return true;
+      }
+  }
+  function xetrongCKEDIT(id){
+    $("#f-"+id).removeClass('has-error');
+      if (CKEDITOR.instances[id].getData()=='') {
+            $("#f-"+id).addClass("has-error");
+            return false;
+      }
+      else{
+          $("#f-"+id).addClass("has-success");
+          return true;
+      }
+  }
+  $(document).ready(function() {
+    $("#nut-luu-bai").click(function(){
+      xetrong('tenbaiviet');
+      xetrong('tomtat');
+      xetrongCKEDIT('noidung');
+      xetrong('tieudeseo');
+      var ht=0,nb=0;
+      if (document.getElementById('hienthi').checked) ht=1;
+      if (document.getElementById('noibat').checked) nb=1;
+      if (xetrong('tenbaiviet')&&xetrong('tomtat')&&xetrongCKEDIT('noidung')&&xetrong('tieudeseo')) {
+        $.ajax({
+          url : "ajax/ajax_sua_bai_viet.php",
+          type : "post",
+          dataType:"text",
+          data : {
+            tenbv: $("#tenbaiviet").val().trim(),
+            idcm: $("#chuyenmuc").val(),
+            noidung: CKEDITOR.instances['noidung'].getData(),
+            thumb: $("#id-hinhanh-ct").val().trim(),
+            hienthi: ht,
+            noibat: nb,
+            tieude: $("#tieudeseo").val().trim(),
+            tukhoa: $("#tukhoa").val().trim(),
+            mota: $("#tomtat").val().trim(),
+            idbv: <?php echo $idbv; ?>,
+            iduser: <?php echo $id_user; ?>
+          },
+          success : function (data){
+              $("body").append(data);
+          }
+        });
+      }
+    });
+  });
+</script>
 <script type="text/javascript">
     function BrowseServer() {
 
@@ -142,11 +195,8 @@
 </script>
 <script type="text/javascript">
 	$(document).ready(function() {
-    document.getElementById('ngaydangtin').valueAsDate = new Date();
+    $("#id-tieu-de-chinh").html("Chỉnh sửa bài viết");
     	$("#baiviet").addClass("active");
-    $("#cap-nhat-bai-viet").click(function(){
-      alert($("#tags").val());
-    });
 	});
 
 </script>

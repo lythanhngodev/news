@@ -46,6 +46,7 @@
     else{
       // trường hợp chỉnh sửa bài viết
       $row_bv = mysqli_fetch_assoc($baiviet);
+      $idbv = $row_bv['idbv'];
       $tenbv = $row_bv['tenbv'];
       $idcm = $row_bv['idcm'];
       $mota = $row_bv['mota'];
