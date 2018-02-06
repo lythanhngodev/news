@@ -5,6 +5,7 @@
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
 		$hoi = "UPDATE `tags` SET `tentag` = '$tentag' WHERE `tags`.`idtag` = '$idtag'";
+		echo $hoi;
 		if(mysqli_query($conn, $hoi)===TRUE)
 			return true;
 		else

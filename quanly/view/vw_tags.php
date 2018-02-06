@@ -146,7 +146,7 @@
           <label>Tên tag</label>
           <input type="text" class="form-control" name="" id="ten-tag-sua" placeholder="tên tag" required autocomplete="on" >
         </div>
-        
+        <input type="text" hidden value="" id="ma-tag-sua" name="">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
@@ -175,7 +175,7 @@
       $(".sua-tag").click(function(){
         var id = $(this).attr("data-vlute");
         $("#ten-tag-sua").val($("#id-ten-tag-"+id).text().trim());
-        $("#idtag-sua").val(id);
+        $("#ma-tag-sua").val(id);
         $("#modal-sua-tag").modal("show");
       });
 
@@ -204,7 +204,7 @@
             dataType:"text",
             data : {
               tentag: $("#ten-tag-sua").val(),
-              id: $("#ma-the-xoa").val()
+              id: $("#ma-tag-sua").val()
             },
             success : function (data){
                 $("body").append(data);
