@@ -126,7 +126,6 @@
             },
             success : function (data){
                 $("body").append(data);
-                location.reload();
             }
           });
         }

@@ -1,8 +1,8 @@
 <?php 
 	session_start();
-	if (!isset($_POST['id'])) {
-		header("Location: ../login.php");
-	}
+	if (!isset($_POST['id'])) { ?>
+		<script type="text/javascript">trangchu();</script>
+	<?php }
 
 	include_once("ajax_config.php");
 
@@ -17,19 +17,9 @@
 		else
 			return false;
 	}
-	if (isset($_SESSION['username']) && isset($_SESSION['password'])) {
-		if(!vlu_login($_SESSION['username'],$_SESSION['password'])){ ?>
-			<script type="text/javascript">trangchu();</script>
-		<?php }
-		else{
-			if (vlu_xoa_bai($_POST['id'])) { ?>
-				<script type="text/javascript">thanhcong("Bài viết đã được chỉnh xóa. <a href=\"?p=baiviet\">Xem chi tiết</a>");tailai()</script>
-			<? }
-			else{ ?>
-				<script type="text/javascript">khongthanhcong("Bài viết chưa được xóa! Vui lòng kiểm trả lại thông tin bài viết");</script>
-			<?php }
-		}
-	}
-	else
-		header("Location: ../login.php");
- ?>
+	if (vlu_xoa_bai($_POST['id'])) { ?>
+		<script type="text/javascript">thanhcong("Bài viết đã được chỉnh xóa. Vui lòng load lại trang web.");</script>
+	<?php }
+	else{ ?>
+		<script type="text/javascript">khongthanhcong("Bài viết chưa được xóa! Vui lòng kiểm trả lại thông tin bài viết");</script>
+	<?php }

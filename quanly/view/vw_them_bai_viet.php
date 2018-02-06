@@ -125,12 +125,17 @@
 
 <script type="text/javascript">
     function BrowseServer() {
+
+        //finder.basePath = 'http://localhost:8080/vlute3/';
         finder.selectActionFunction = SetFileField;
         finder.popup();
     }
     function SetFileField(fileUrl) {
         document.getElementById('id-hinhanh').src = fileUrl;
-        document.getElementById('id-hinhanh-ct').value = fileUrl;
+        var host = "<?php echo $vlute['HOST']; ?>";
+        host = host.substr(0,host.lastIndexOf("\/"));
+        //alert(fileUrl.substr(host.length+1,fileUrl.length-host.length));
+        document.getElementById('id-hinhanh-ct').value=fileUrl.substr(host.length+1,fileUrl.length-host.length);
     }
 </script>
 <script type="text/javascript">
