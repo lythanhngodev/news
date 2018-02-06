@@ -215,14 +215,16 @@ td > a:hover{
     color:#fff;
     padding:5px 8px;
     border-radius:4px;
-    border:1px solid #30a2e4;
 }
 .c-tag:hover{
     transition:all 0.234s;
     color:#fff;
     text-decoration:none;
     cursor:pointer;
-    box-shadow: 0px 2px 2px 0px #15374ce6;
+    background:#fa5252;
+}
+.c-tag:hover .nd-tag{
+    background: #f58282;
 }
 .nd-tag{
     background:#6bc6e8;
@@ -243,8 +245,19 @@ td > a:hover{
     -ms-filter: blur(8px);
     filter: blur(8px);
 }
+.den{
+    color: #232d33;
+}
+.den a{
+    color: #232d33;
+}
 .modal{
     background: none;
+}
+.nut-thao-tac{
+    font-size: 17px;
+    font-weight: 400;
+    padding: 4px 12px;
 }
 .qc-1,.qc-2,.qc-3{
     padding: 0px 12px;

@@ -43,7 +43,7 @@
                         </div>
                         <div class="form-group">
                           <label>Tóm tắt</label>
-                          <textarea type="text" class="form-control" name="tomtat" id="" placeholder="Tóm tắt" required autocomplete="on" rows="9"></textarea>
+                          <textarea type="text" class="form-control" name="tomtat" id="" placeholder="Tóm tắt" rows="9"></textarea>
                         </div>
                         <div class="form-group">
                           <label>Nội dung</label>
@@ -86,8 +86,8 @@
                           <p class="help-block">Nếu được kích hoạt bài viết sẽ hiển thị nổi bật trên trang web</p>
                         </div>
                     <div class="pull-right">
-                      <button class="btn btn-success" name="luuBai">Lưu bài viết</button>
-                      <a href="?p=baiviet" class="btn btn-danger">Hủy</a>
+                      <button class="btn btn-success nut-thao-tac" name="luuBai">Lưu bài viết</button>
+                      <a href="?p=baiviet" class="btn btn-danger nut-thao-tac">Hủy</a>
                     </div>
                       </div>
                   </div>

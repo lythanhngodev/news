@@ -84,8 +84,8 @@
 
           <div class="col-md-4">
             <div class="cach"></div>
-              <button class="btn btn-success">Lưu thay đổi</button>
-              <button type="reset" class="btn btn-warning">Nhập lại</button>
+              <button class="btn btn-success nut-thao-tac">Lưu thay đổi</button>
+              <button type="reset" class="btn btn-warning nut-thao-tac">Nhập lại</button>
             <div class="cach"></div>
           </div>
         </div>

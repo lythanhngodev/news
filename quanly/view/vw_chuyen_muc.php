@@ -6,13 +6,6 @@
     </section>
     <!-- Main content -->
     <section class="content background-container">
-      <div class="row">
-        <div class="col-md-12 col-ms-12">
-          <a class="btn btn-primary" id="them-chuyen-muc"><i class="fa fa-pencil" aria-hidden="true"></i> Thêm chuyên mục</a>
-        </div>
-        <div class="col-md-12 col-ms-12 cach"></div>
-        <div class="col-md-12 col-ms-12 cach"></div>
-      </div>
       <div class="windows-table">
         <div class="box">
           <div class="box-header with-border">
@@ -25,6 +18,11 @@
             </div>
             <!-- /.box-tools -->
           </div>
+          <div class="col-md-12 cach"></div>
+          <div class="col-md-12 col-ms-12">
+            <a class="btn btn-primary" id="them-chuyen-muc"><i class="fa fa-plus" aria-hidden="true"></i> Thêm chuyên mục</a>
+          </div>
+          <div class="col-md-12 cach"></div>
           <!-- /.box-header -->
           <div class="box-body">
             <table id="vlutenn" class="table">

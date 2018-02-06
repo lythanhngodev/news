@@ -3,13 +3,6 @@
 <!-- Content Header (Page header) -->
     <!-- Main content -->
     <section class="content">
-      <div class="row">
-        <div class="col-md-12 col-ms-12">
-          <a href="?p=thembai" class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i> Thêm bài viết</a>
-        </div>
-        <div class="col-md-12 col-ms-12 cach"></div>
-        <div class="col-md-12 col-ms-12 cach"></div>
-      </div>
       <div class="windows-table">
         <div class="box">
           <div class="box-header with-border">
@@ -22,6 +15,11 @@
             </div>
             <!-- /.box-tools -->
           </div>
+          <div class="col-md-12 col-ms-12 cach"></div>
+          <div class="col-md-12 col-ms-12">
+            <a href="?p=thembai" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Thêm bài viết</a>
+          </div>
+          <div class="col-md-12 col-ms-12 cach"></div>
           <!-- /.box-header -->
           <div class="box-body">
              <table id="vlute" class="table">

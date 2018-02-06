@@ -5,15 +5,14 @@
     <!-- Main content -->
     <section class="content background-container">
       <div class="row">
-        <div class="col-md-12 col-ms-12">
-          <a class="btn btn-primary" id="them-the"><i class="fa fa-pencil" aria-hidden="true"></i> Thêm thẻ</a>
-        </div>
-        <div class="col-md-12 col-ms-12 cach"></div>
-        <div class="col-md-12 col-ms-12 cach"></div>
+          <div class="col-md-12 col-ms-12">
+            <a class="btn btn-primary them-the"><i class="fa fa-plus" aria-hidden="true"></i> Thêm thẻ</a>
+          </div>
+          <div class="col-md-12 col-ms-12 cach"></div>
       </div>
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Danh sách các thẻ</h3>
+          <h3 class="box-title">Danh sách các thẻ dạng liệt kê</h3>
           <div class="box-tools pull-right">
             <!-- Collapse Button -->
             <button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -23,6 +22,7 @@
           <!-- /.box-tools -->
         </div>
         <!-- /.box-header -->
+        
         <div class="box-body">
             <?php 
               while ($row = mysqli_fetch_assoc($dulieu)) {
@@ -54,7 +54,12 @@
             </div>
             <!-- /.box-tools -->
           </div>
-          <!-- /.box-header -->
+            <!-- /.box-header -->
+          <div class="col-md-12 col-ms-12 cach"></div>
+          <div class="col-md-12 col-ms-12">
+            <a class="btn btn-primary them-the"><i class="fa fa-plus" aria-hidden="true"></i> Thêm thẻ</a>
+          </div>
+          <div class="col-md-12 col-ms-12 cach"></div>
           <div class="box-body">
             <table id="vlute" class="table">
                 <thead>
@@ -149,7 +154,7 @@
       $(document).ready(function() {
         $("#id-tieu-de-chinh").html("Thẻ");
         $('#vlute').DataTable();
-        $("#them-the").click(function(){
+        $(".them-the").click(function(){
           $("#qltv-modal-them-tag").modal("show");
         });
         $(".xoa-tag").click(function(){
