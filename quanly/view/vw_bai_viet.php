@@ -79,7 +79,7 @@
       </div>
     </section>
 <script type="text/javascript">
-    document.title = "VLUTE - Quản lý bài viết";
+    document.title = "CNV - Quản lý bài viết";
 </script>
 <script type="text/javascript">
   $(document).ready(function() {
@@ -135,6 +135,7 @@
 <script type="text/javascript">
 	$(document).ready(function() {
     	$("#baiviet").addClass("active");
+      $("#tatcabaiviet").addClass("active");
 	});
 </script>
 <script type="text/javascript" charset="utf-8">

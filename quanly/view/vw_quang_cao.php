@@ -124,6 +124,7 @@
 <script type="text/javascript">
 	$(document).ready(function() {
     	$("#quangcao").addClass("active");
+      $("#tatcaquangcao").addClass("active");
       $("#id-tieu-de-chinh").html("Quảng cáo trên website");
       $('.them-quang-cao').click(function(){
         

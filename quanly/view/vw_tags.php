@@ -159,7 +159,7 @@
 </div><!-- Modal: Sửa tag -->
 
 <script type="text/javascript">
-    document.title = "VLUTE | Quản lý thành viên";
+    document.title = "CNV | Quản lý thẻ";
 </script>
 <script type="text/javascript">
 	$(document).ready(function() {

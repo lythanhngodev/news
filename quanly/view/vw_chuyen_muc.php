@@ -94,7 +94,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-        <button type="button" class="btn btn-primary" id="nut-them-chuyen-muc">Lưu</button>
+        <button type="button" class="btn btn-success" id="nut-them-chuyen-muc">Lưu chuyên mục</button>
       </div>
     </div>
     <!-- /.modal-content -->
@@ -128,9 +128,10 @@
           <input type="checkbox"  class="nut-check" id="an-hien-chuyen-muc-sua" name="" style="width: 20px;height: 20px;float: left;"><span style="float: left;padding: 4px 10px;">Ẩn/Hiện chuyên mục</span>
         </div>
       </div>
+
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-        <button type="button" class="btn btn-primary" id="nut-sua-chuyen-muc">Lưu thay đổi</button>
+        <button type="button" class="btn btn-success" id="nut-sua-chuyen-muc">Lưu thay đổi</button>
       </div>
     </div>
     <!-- /.modal-content -->
@@ -161,7 +162,7 @@
 <!-- /.modal -->
 
 <script type="text/javascript">
-    document.title = "VLUTE | Quản lý chuyên mục";
+    document.title = "CNV | Quản lý chuyên mục";
 </script>
 <script type="text/javascript">
 	$(document).ready(function() {

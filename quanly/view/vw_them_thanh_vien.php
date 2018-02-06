@@ -142,5 +142,6 @@
       document.getElementById("ngaythamgiaa").readOnly = true;
     	$("#nhanvien").addClass("active");
       $("#id-tieu-de-chinh").html("Thêm nhân viên");
+      $("#themnhanvienl").addClass("active");
 	});
 </script>

@@ -14,7 +14,7 @@
     </section>
 
 <script type="text/javascript">
-    document.title = "VLUTE - Lỗi";
+    document.title = "CNV - Lỗi";
 </script>
 <script type="text/javascript">
 	$(document).ready(function() {

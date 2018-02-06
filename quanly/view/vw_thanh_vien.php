@@ -55,11 +55,12 @@
     </section>
     <a href="?p=themthanhvien"><div class="nut-them-o-goc"><span>+</span></div></a>
 <script type="text/javascript">
-    document.title = "VLUTE | Quản lý thành viên";
+    document.title = "CNV | Thêm nhân viên";
 </script>
 <script type="text/javascript">
 	$(document).ready(function() {
     	$("#thanhvien").addClass("active");
+      
 	});
 </script>
 <script type="text/javascript" charset="utf-8">

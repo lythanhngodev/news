@@ -138,7 +138,7 @@
       </div>
     </div>
 <script type="text/javascript">
-    document.title = "VLUTE | Profile";
+    document.title = "CNV | Thông tin";
     var finder = new CKFinder();
     $("#thongtin").addClass("active");
 

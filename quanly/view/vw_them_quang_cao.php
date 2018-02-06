@@ -106,8 +106,8 @@
                           <div class="cach"></div>
                         </div>
                         <div class="col-md-12">
-                          <input type="button" class="btn btn-info col-md-12 col-ms-12" onclick="BrowseServer()" value="Chọn ảnh đại diện">
-                          <p class="help-block">Nên chọn hình ảnh có tỉ lệ 1:1 để có ảnh đại diện đẹp nhất!</p>
+                          <input type="button" class="btn btn-info col-md-12 col-ms-12" onclick="BrowseServer()" value="Chọn ảnh quảng cáo">
+                          <p class="help-block">Nên chọn hình ảnh có tỉ lệ phù hợp với vị trí cần đặt quảng cáo!</p>
                         </div>
                         <div class="form-group">
                           <label>Ngày tạo quảng cáo</label>

@@ -9,6 +9,8 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
    <base href="<?php echo $vlute['HOST']; ?>/" />
+   <link rel="icon" type="image/png" href="../images/favicon-32x32.png" sizes="32x32">
+
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="plugin/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
@@ -152,7 +154,7 @@
         <li class="header">MENU</li>
         <li class="" id="trangchu">
           <a href=".." target="_blank">
-            <i class="fa fa-dashboard"></i><span>Trang chủ</span>
+            <i class="fa fa-dashboard"></i><span>Trang chủ website</span>
           </a>
         </li>
         <li class="treeview" id="thongtin">
@@ -178,7 +180,7 @@
           </a>
           <ul class="treeview-menu">
             <li id="thembaiviet"><a href="?p=thembai"><i class="fa fa-circle-o"></i> Thêm bài viết</a></li>
-            <li><a href="?p=baiviet"><i class="fa fa-circle-o"></i> Tất cả bài viết</a></li>
+            <li id="tatcabaiviet"><a href="?p=baiviet"><i class="fa fa-circle-o"></i> Tất cả bài viết</a></li>
           </ul>
         </li>
         <li id="thetags">
@@ -198,6 +200,7 @@
           </a>
           <ul class="treeview-menu">
             <li id="themquangcao"><a href="?p=themquangcao"><i class="fa fa-circle-o"></i> Thêm quảng cáo</a></li>
+            <li id="tatcaquangcao"><a href="?p=quangcao"><i class="fa fa-circle-o"></i> Tất cả quảng cáo</a></li>
           </ul>
         </li>
         <li id="danhmuc">
@@ -221,7 +224,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="?p=themthanhvien"><i class="fa fa-circle-o"></i> Thêm nhân viên</a></li>
+            <li id="themnhanvienl"><a href="?p=themthanhvien"><i class="fa fa-circle-o"></i> Thêm nhân viên</a></li>
              <li><a href="?p=thanhvien"><i class="fa fa-circle-o"></i> Danh sách nhân viên</a></li> 
           </ul>
         </li>
