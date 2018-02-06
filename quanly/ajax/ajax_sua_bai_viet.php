@@ -5,8 +5,11 @@
 	function vlu_them_gv($tenbv,$idcm,$noidung,$thumb,$hienthi,$tieude,$tukhoa,$mota,$tinnoibac, $idbv){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
+		// xóa các thẻ củ
+		$tvvv = "DELETE FROM `bv_tag` WHERE `bv_tag`.`idbv` = '$idbv'";
+		$kttvvv = mysqli_query($conn, $tvvv);
 		// xử lý từ khóa
-		/*$mang = explode(',', $tukhoa);
+		$mang = explode(',', $tukhoa);
 		for ($i=0; $i < count($mang); $i++) { 
 			$tv = "SELECT * FROM `tags` WHERE `tentag` = N'$mang[$i]'";
 			$kttv = mysqli_query($conn, $tv);
@@ -15,7 +18,7 @@
 				$tv1="INSERT INTO `tags` (`idtag`, `tentag`) VALUES (NULL, '$mang[$i]')";
 				mysqli_query($conn, $tv1);
 			}
-		}*/
+		}
 		$hoi = "
 				UPDATE `tblbaiviet` 
 				SET 
@@ -31,21 +34,16 @@
 				   WHERE `idbv` = '$idbv'
 		";
 		$kq1 = mysqli_query($conn, $hoi);
-		/*for ($i=0; $i < count($mang); $i++) { 
+		for ($i=0; $i < count($mang); $i++) { 
 			
 			$tv="SELECT idtag FROM `tags` WHERE `tentag`=N'$mang[$i]'";
 			$kttv = mysqli_query($conn, $tv);
 			$kqkq = mysqli_fetch_array($kttv);
 			$idtag = $kqkq[0];
 
-			$tv2="SELECT Max(idbv) FROM `tblbaiviet`";
-			$kttv2 = mysqli_query($conn, $tv2);
-			$kqkq2 = mysqli_fetch_array($kttv2);
-			$idbvbvbv = $kqkq2[0];
-
-			$tv3 = "INSERT INTO `bv_tag` (`id`, `idbv`, `idtag`) VALUES (NULL, '$idbvbvbv', '$idtag')";
+			$tv3 = "INSERT INTO `bv_tag` (`id`, `idbv`, `idtag`) VALUES (NULL, '$idbv', '$idtag')";
 			mysqli_query($conn, $tv3);
-		}*/
+		}
 		return true;
 	}
 	if (isset($_SESSION['username']) && isset($_SESSION['password'])) {

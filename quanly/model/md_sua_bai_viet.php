@@ -27,30 +27,21 @@
 		$baiviet = mysqli_query($ketnoi->ketnoi(), $hoi);
 		return $baiviet;
 	}
-	function vlu_sua_bai_viet($idbv,$tenbv, $idcm, $mota, $noidung, $hinhanh, $tukhoa, $linkbv, $ngaydang, $luotxem, $hienthi){
+	function vlu_lay_tu_khoa($idbv){
 		$ketnoi = new clsKetnoi();
-		$hoi = "
-			UPDATE `baiviet` 
-			SET 
-				`tenbv`='$tenbv',
-				`idcm`=$idcm,
-				`noidung`='$noidung',
-				`hinhanh`='$hinhanh',
-				`luotxem`='$luotxem',
-				`hienthi`=$hienthi,
-				`linkbv`='$linkbv',
-				`tieude`='$tenbv',
-				`tukhoa`='$tukhoa',
-				`mota`='$mota',
-				`ngaydang`='$ngaydang'
-			WHERE
-				`idbv` = '$idbv'
-		";
-		if(mysqli_query($ketnoi->ketnoi(), $hoi)===TRUE){
-			$suathanhcong = 1;
-		}
-		else {
-			$suathanhcong = 0;
-		}
+		$hoi = "SELECT tentag FROM `bv_tag` bt, tags t WHERE idbv = '$idbv' AND bt.idtag = t.idtag";
+		$baiviet = mysqli_query($ketnoi->ketnoi(), $hoi);
+		$dem = mysqli_num_rows($baiviet);
+		if ($dem>0) {
+			$kq="";
+			$kqct="";
+			while ($row=mysqli_fetch_array($baiviet)) {
+				$kq.=$row[0].",";
+			}
+			for ($i=0; $i < strlen($kq)-1; $i++) { 
+				$kqct.=$kq[$i];
+			}
+			return $kqct;
+		}else return "";
 	}
  ?>

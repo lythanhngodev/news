@@ -61,7 +61,7 @@
                           <label>Hình ảnh bài viết</label>
                           <div class="chua-hinh-anh">
                             <img src="../<?php echo $thumb; ?>" id="id-hinhanh" class="col-md-12" />
-                            <input type="text" hidden="hidden" id="id-hinhanh-ct" value="images/mac-dinh.png">
+                            <input type="text" hidden="hidden" id="id-hinhanh-ct" value="<?php echo $thumb; ?>">
                             <input type="button" class="btn btn-info col-md-12 form-control" onclick="BrowseServer()" value="Chọn ảnh từ máy chủ ...">
                           </div>
                           <div class="col-md-12 cach"></div>
@@ -73,7 +73,7 @@
                         </div>
                         <div id="id-tukhoa" class="form-group">
                           <label>Từ khóa</label>
-                          <input name="tags" id="tukhoa" value="" />
+                          <input name="tags" id="tukhoa" value="<?php echo vlu_lay_tu_khoa($idbv); ?>" />
                           <p class="help-block">Các từ khóa cách nhau bằng dấu phẩy.</p>
                         </div>
                         <div class="form-group">
@@ -88,15 +88,15 @@
                           <input type="checkbox" <?php if($tinnoibac=='1'){echo "checked=\"checked\"";} ?> class="iCheck-helper" id="noibat">&nbsp;&nbsp;<b>Bật/Tắt bài viết nổi bật</b>
                           <p class="help-block">Nếu được kích hoạt bài viết sẽ hiển thị nổi bật trên trang web</p>
                         </div>
-                      <div class="pull-right">
-                        <div class="cach"></div>
-                          <button class="btn btn-success" id="nut-luu-bai">Cập nhật</button>
-                          <a href="?p=baiviet" class="btn btn-danger">Hủy</a>
-                        <div class="cach"></div>
-                      </div>
                       </div>
                   </div>
                   <!-- /.box-body -->
+                  <div class="box-footer">
+                      <div class="pull-right">
+                          <button class="btn btn-success nut-thao-tac" id="nut-luu-bai">Cập nhật</button>
+                          <a href="?p=baiviet" class="btn btn-danger nut-thao-tac">Hủy</a>
+                      </div>
+                  </div>
                 </div>
                 <!-- /.box -->
               </div>
@@ -117,7 +117,7 @@
 
 </script>
 <script type="text/javascript">
-    document.title = "VLUTE - Thêm bài viết";
+    document.title = "CNV - Chỉnh sửa bài viết";
     var finder = new CKFinder();
 </script>
 <script type="text/javascript">

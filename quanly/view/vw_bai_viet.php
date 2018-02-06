@@ -125,7 +125,7 @@
               id: id
             },
             success : function (data){
-                alert(data);
+                $("body").append(data);
                 location.reload();
             }
           });
