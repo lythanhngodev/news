@@ -19,15 +19,15 @@
                   }else echo "Người quản trị"; ?></p>
 
               <ul class="list-group list-group-unbordered">
-                <li class="list-group-item">
+                <li class="list-group-item list-group-unbordered">
                   <b>Bài viết</b> <a class="pull-right">30</a>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item list-group-unbordered">
                   <a href="../author/<?php echo $id_user; ?>/<?php echo $ten_user; ?>" target="_blank">Xem chi tiết bài viết</a>
                 </li>
               </ul>
 
-              <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+              <a href="../author/<?php echo $id_user; ?>/<?php echo $ten_user; ?>" target="_blank" class="btn btn-primary btn-block"><b>Xem bài viết của bạn</b></a>
             </div>
             <!-- /.box-body -->
           </div>

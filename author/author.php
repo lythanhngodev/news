@@ -88,7 +88,7 @@
  ?>
 <div class="tac-gia-bai-viet-ct" id="author-content">
 	<!-- This is Author -->
-	<div class="hinh-author"><img src="<?php echo $row1["thumbus"] ?>" title="" width=123 height=auto class="animated zoomIn" style="animation-delay:0.123456789s;" /></div>
+	<div class="hinh-author"><img src="<?php echo $row1["thumbus"]; ?>" title="" width=123 height=auto class="animated zoomIn" style="animation-delay:0.123456789s;" /></div>
 	<div class="description-author">
 		<b><h3><?php echo $row1["tennd"] ?></h3></b>
 		<p><?php echo $row1["slogan"] ?></p>
