@@ -14,7 +14,6 @@
         </div>
         <div class="box-body">
           <div class="callout callout-info callout-dismissible">
-            <h4><i class="icon fa fa-info-circle"></i> Chú ý!</h4>
               Vui lòng check mail sau khi tạo tài khoản để có được mật khẩu đăng nhập.
           </div>
         </div>

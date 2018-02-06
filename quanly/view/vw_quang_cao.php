@@ -44,7 +44,7 @@
                   </div>
                   <div class="col-md-12 cach"></div>
                   <div class="col-md-12 col-ms-12">
-                    <a class="btn btn-primary them-quang-cao"><i class="fa fa-plus" aria-hidden="true"></i> Thêm quảng cáo</a>
+                    <a class="btn btn-primary them-quang-cao" href="?p=themquangcao"><i class="fa fa-plus" aria-hidden="true"></i> Thêm quảng cáo</a>
                   </div>
                   <div class="col-md-12 cach"></div>
                   <!-- /.box-header -->

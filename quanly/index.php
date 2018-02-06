@@ -108,6 +108,8 @@
     <a href="#" class="logo" style="background: #232d33;">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <!-- logo for regular state and mobile devices -->
+      <span class="logo-mini"><img src="../images/favicon-32x32.png"></span>
+      <span class="logo-lg"><img src="../images/favicon-32x32.png"></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top" style="background: #1565c0;">
@@ -115,6 +117,7 @@
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
       </a>
+
       <span id="id-tieu-de-chinh" class="tieu-de-chinh"></span>
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
@@ -122,7 +125,7 @@
           <li class="dropdown user user-menu">
             <a href="?p=suathanhvien">
               <img src="../<?php echo $hinh_user; ?>" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?php echo $ten_user; ?></span>
+              <span class="hidden-xs">Xin chào! <?php echo $ten_user; ?></span>
             </a>
           </li>
         </ul>
@@ -152,6 +155,19 @@
             <i class="fa fa-dashboard"></i><span>Trang chủ</span>
           </a>
         </li>
+        <li class="treeview" id="thongtin">
+          <a href="#">
+            <i class="fa fa-address-card"></i>
+            <span>Hồ sơ cá nhân</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="?p=suathanhvien"><i class="fa fa-circle-o"></i> Chi tiết hồ sơ</a></li>
+            <li><a href="control/ctrl_login_out.php"><i class="fa fa-circle-o"></i> Đăng xuất</a></li>
+          </ul>
+        </li>
         <li class="treeview" id="baiviet">
           <a href="#">
             <i class="fa fa-files-o"></i>
@@ -165,19 +181,6 @@
             <li><a href="?p=baiviet"><i class="fa fa-circle-o"></i> Tất cả bài viết</a></li>
           </ul>
         </li>
-        <li class="treeview" id="thongtin">
-          <a href="#">
-            <i class="fa fa-address-card"></i>
-            <span>Cá nhân</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="?p=suathanhvien"><i class="fa fa-circle-o"></i> Thông tin cá nhân</a></li>
-            <li><a href="control/ctrl_login_out.php"><i class="fa fa-circle-o"></i> Đăng xuất</a></li>
-          </ul>
-        </li>
         <li id="thetags">
           <a href="?p=tags">
             <i class="fa fa-tag"></i>
@@ -185,11 +188,17 @@
           </a>
         </li>
       <?php if ($quyen_user=='1') { ?>
-        <li id="quangcao">
-          <a href="?p=quangcao">
+        <li class="treeview" id="quangcao">
+          <a href="#">
             <i class="fa fa-money"></i>
-            <span>Quảng cáo</span>
+            <span>Quản lý quảng cáo</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
           </a>
+          <ul class="treeview-menu">
+            <li id="themquangcao"><a href="?p=themquangcao"><i class="fa fa-circle-o"></i> Thêm quảng cáo</a></li>
+          </ul>
         </li>
         <li id="danhmuc">
           <a href="?p=chuyenmuc">
@@ -256,6 +265,8 @@
         include_once('control/ctrl_chuyen_muc.php');
       else if(isset($_GET['p']) && $_GET['p']=='quangcao')
         include_once('control/ctrl_quang_cao.php');
+      else if(isset($_GET['p']) && $_GET['p']=='themquangcao')
+        include_once('control/ctrl_them_quang_cao.php');
       else if(isset($_GET['p']) && $_GET['p']=='thongtinwebsite')
         include_once('control/ctrl_thong_tin_website.php');
       else

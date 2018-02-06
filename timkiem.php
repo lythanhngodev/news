@@ -78,6 +78,12 @@
 	.author-post > h3{
 
 	}
+	#dong1,#dong2,#dong3,#dong4,#dong5,#tin-hot{
+		display: none;
+	}
+	.author-post h3{
+		margin-top: 0px; 
+	}
 </style>
 <?php
   $tutim = $_GET['timkiem'];
@@ -91,32 +97,18 @@
     $kn = new ketnoi();
 	   $kt = 1;
     $kq = $kn->get_search($tutim);
-    while($row=mysql_fetch_array($kq)){
-		if($kt==1){ ?>
-        	<div class="khung-chua-tin-cm">
-	<a class="nam-tren-hinh-cm" href="<?php echo $row["linkbv"] ?>-<?php echo $row["idbv"] ?>.html">
-    	<img src="<?php echo $row['thumb'] ?>" width="1176" height="auto" alt="<?php echo $row['tenbv'] ?>" class="anh-thu-nho-cm" />
-            <div class="nen-noi-cm">
-                <div class="tieu-de-ngan-cm">
-                <h2><?php echo $row['tenbv'] ?></h2>
-            </div>
-            <div class="ngay-thang-dang-cm"><span class="fa fa-calendar" itemprop="dateCreated">&nbsp;&nbsp;<?php echo $row['ngaydang'] ?></span></div>
-            </div>
-    </a>
-</div>
-        <?php $kt++; }
-		else {?>
-    <div class="su-kien-sk">
-        <a href="<?php echo $row["linkbv"] ?>-<?php echo $row["idbv"] ?>.html" class="" id="">
-        <div class="khung-chua-hinh-sk">
-          <img src="<?php echo $row['thumb'] ?>" alt="" class="" title="<?php echo $row['tenbv'] ?>" />
-        </div>
-      <div class="khung-chua-tin-sk">
-            <div class="tieu-de-sk"><h2><?php echo $row['tenbv'] ?></h2></div>
-            <div class="ngay-thang-sk"><i class="fa fa-calendar" style="font-size:14px;">&nbsp;&nbsp;<?php echo $row['ngaydang'] ?></i></div>
-            <div class="mo-ta-sk"><?php echo $row['mota'] ?></div>
-      </div>
-        </a>
-    </div>
-<?php }
+    while($row=mysql_fetch_array($kq)){ ?>
+	    <div class="su-kien-sk">
+	        <a href="<?php echo $row["linkbv"] ?>-<?php echo $row["idbv"] ?>.html" class="" id="">
+	        <div class="khung-chua-hinh-sk">
+	          <img src="<?php echo $row['thumb'] ?>" alt="" class="" title="<?php echo $row['tenbv'] ?>" />
+	        </div>
+	      <div class="khung-chua-tin-sk">
+	            <div class="tieu-de-sk"><h2><?php echo $row['tenbv'] ?></h2></div>
+	            <div class="ngay-thang-sk"><i class="fa fa-calendar" style="font-size:14px;">&nbsp;&nbsp;<?php echo $row['ngaydang'] ?></i></div>
+	            <div class="mo-ta-sk"><?php echo $row['mota'] ?></div>
+	      </div>
+	        </a>
+	    </div>
+<?php
 	} ?>
