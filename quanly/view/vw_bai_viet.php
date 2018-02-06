@@ -48,7 +48,7 @@
                               else{ ?>
                                 <td class="giua nutnb" id="noibat-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a><i class="fa fa-star-o sao" aria-hidden="true"></i></a></td>
                         <?php } ?>
-                        <td><a href="#"><?php echo $row['tenbv']; ?></a></td>
+                        <td><a href="<?php echo $row["linkbv"] ?>-<?php echo $row["idbv"] ?>.html"><?php echo $row['tenbv']; ?></a></td>
                         <td class="giua"><?php echo $row['ngaydang']; ?></td>
                         <?php if ($row['hienthi']=='1') { ?>
                                 <td class="giua nuttt" id="anhienbai-<?php echo $row['idbv']; ?>" data-vlute="<?php echo $row['idbv']; ?>" ><a class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></a></td>
