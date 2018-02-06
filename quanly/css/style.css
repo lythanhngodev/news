@@ -25,6 +25,13 @@
      color:#d4e8ff;
      text-decoration: none;
  }
+ [data-notify="container"].alert{max-width: 350px;width: fit-content;padding: 10px;border: none;}
+ .modal div .modal-content{
+    box-shadow: none;
+}
+[data-notify="container"] button{
+margin-left: 8px;
+}
  .trang:hover{
      text-decoration: none;
      color:#ffffff;
@@ -257,7 +264,7 @@ td > a:hover{
 .nut-thao-tac{
     font-size: 17px;
     font-weight: 400;
-    padding: 4px 12px;
+    padding: 3px 10px;
 }
 .qc-1,.qc-2,.qc-3{
     padding: 0px 12px;

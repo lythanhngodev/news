@@ -58,11 +58,11 @@
                 exit: 'animated fadeOut'
               },
               placement: {
-                from: 'bottom',
-                align: 'left'
+                from: 'top',
+                align: 'right'
               },
               type: 'success',
-              delay: 2000
+              delay: 3500
             });
       }
       function tailai() {
@@ -80,11 +80,11 @@
                 exit: 'animated fadeOut'
               },
               placement: {
-                from: 'bottom',
-                align: 'left'
+                from: 'top',
+                align: 'right'
               },
               type: 'danger',
-              delay: 2000
+              delay: 3500
             });
       }
 </script>
@@ -189,12 +189,6 @@
           <a href="?p=thongtinwebsite">
             <i class="fa fa-globe"></i>
             <span>Thông tin website</span>
-          </a>
-        </li>
-        <li id="thetags">
-          <a href="?p=tags">
-            <i class="fa fa-tag"></i>
-            <span>Thẻ (Tags)</span>
           </a>
         </li>
         <li class="treeview" id="nhanvien">

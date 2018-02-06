@@ -4,7 +4,7 @@
       <!-- Default box -->
       <div class="box box-info">
         <div class="box-header with-border">
-          <h3 class="box-title">Chỉ dẫn</h3>
+          <h3 class="box-title">Mẹo!</h3>
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Gom gọn">
               <i class="fa fa-minus"></i></button>
@@ -106,9 +106,9 @@
                   <div class="box-footer">
                     (*) Không được bỏ trống
                     <div class="pull-right">
-                          <button class="btn btn-success">Thêm thành viên</button>
-                          <button type="reset" class="btn btn-warning">Nhập lại</button>
-                          <a href="?p=thanhvien" class="btn btn-danger">Hủy</a>
+                          <button class="btn btn-success nut-thao-tac">Thêm thành viên</button>
+                          <button type="reset" class="btn btn-warning nut-thao-tac">Nhập lại</button>
+                          <a href="?p=thanhvien" class="btn btn-danger nut-thao-tac">Hủy</a>
                     </div>
                   </div>
                   <!-- box-footer -->

@@ -4,12 +4,6 @@
 <!-- Content Header (Page header) -->
     <!-- Main content -->
     <section class="content background-container">
-      <div class="row">
-          <div class="col-md-12 col-ms-12">
-            <a class="btn btn-primary them-the"><i class="fa fa-plus" aria-hidden="true"></i> Thêm thẻ</a>
-          </div>
-          <div class="col-md-12 col-ms-12 cach"></div>
-      </div>
       <div class="box">
         <div class="box-header with-border">
           <h3 class="box-title">Danh sách các thẻ dạng liệt kê</h3>
@@ -55,10 +49,6 @@
             <!-- /.box-tools -->
           </div>
             <!-- /.box-header -->
-          <div class="col-md-12 col-ms-12 cach"></div>
-          <div class="col-md-12 col-ms-12">
-            <a class="btn btn-primary them-the"><i class="fa fa-plus" aria-hidden="true"></i> Thêm thẻ</a>
-          </div>
           <div class="col-md-12 col-ms-12 cach"></div>
           <div class="box-body">
             <table id="vlute" class="table">

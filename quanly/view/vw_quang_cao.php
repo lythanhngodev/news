@@ -6,7 +6,7 @@
       <!-- Default box -->
       <div class="box box-info">
         <div class="box-header with-border">
-          <h3 class="box-title">Chỉ dẫn</h3>
+          <h3 class="box-title">Mẹo!</h3>
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Gom gọn">
               <i class="fa fa-minus"></i></button>
@@ -44,7 +44,7 @@
                   </div>
                   <div class="col-md-12 cach"></div>
                   <div class="col-md-12 col-ms-12">
-                    <a href="?p=thembai" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Thêm quảng cáo</a>
+                    <a class="btn btn-primary them-quang-cao"><i class="fa fa-plus" aria-hidden="true"></i> Thêm quảng cáo</a>
                   </div>
                   <div class="col-md-12 cach"></div>
                   <!-- /.box-header -->
@@ -125,6 +125,9 @@
 	$(document).ready(function() {
     	$("#quangcao").addClass("active");
       $("#id-tieu-de-chinh").html("Quảng cáo trên website");
+      $('.them-quang-cao').click(function(){
+        
+      });
       $("#vlute").DataTable();
 	});
 </script>
