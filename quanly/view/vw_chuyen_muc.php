@@ -138,7 +138,7 @@
   </div>
   <!-- /.modal-dialog -->
 </div><!-- Modal: Xửa chuyên mục -->
-<div class="modal modal-danger fade" id="modal-xoa-chuyen-muc">
+<div class="modal fade" id="modal-xoa-chuyen-muc">
   <div class="modal-dialog modal-sm">
     <div class="modal-content" style="box-shadow: none;">
       <div class="modal-header">
@@ -151,8 +151,8 @@
         <input type="text" value="" hidden="hidden" id="id-id-xoa-chuyen-muc" name="">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline" data-dismiss="modal">Đóng</button>
-        <button type="button" class="btn btn-outline" style="border: 1px solid;" id="nut-xoa-chuyen-muc">Tôi chắc chắn</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+        <button type="button" class="btn btn-danger" style="border: 1px solid;" id="nut-xoa-chuyen-muc">Tôi chắc chắn</button>
       </div>
     </div>
     <!-- /.modal-content -->

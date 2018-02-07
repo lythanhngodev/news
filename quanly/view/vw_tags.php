@@ -111,7 +111,7 @@
   </div>
 </div><!-- Modal: Thêm tag -->
 <!-- Modal: Xoa tag -->
-<div class="modal modal-danger fade" id="qltv-modal-xoa-tags">
+<div class="modal fade" id="qltv-modal-xoa-tags">
   <div class="modal-dialog modal-sm">
     <div class="modal-content" style="box-shadow: none;">
       <div class="modal-header">
@@ -125,8 +125,8 @@
       </div>
       <input type="text" hidden="hidden" name="" id="ma-the-xoa">
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline" data-dismiss="modal">Đóng</button>
-        <button type="button" class="btn btn-outline" style="border: 1px solid;" id="nut-xoa-the">Tôi chắc chắn</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+        <button type="button" class="btn btn-danger" style="border: 1px solid;" id="nut-xoa-the">Tôi chắc chắn</button>
       </div>
     </div> 
   </div>
